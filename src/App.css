@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Lusitana");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+  div::selection, span::selection, applet::selection, object::selection, iframe::selection, blockquote::selection, pre::selection,
+  a::selection, abbr::selection, acronym::selection, address::selection, big::selection, cite::selection, code::selection,
+  del::selection, dfn::selection, em::selection, img::selection, ins::selection, kbd::selection, q::selection, s::selection, samp::selection,
+  small::selection, strike::selection, strong::selection, sub::selection, sup::selection, tt::selection, var::selection,
+  b::selection, u::selection, i::selection, center::selection,
+  dl::selection, dt::selection, dd::selection, ol::selection, ul::selection, li::selection,
+  fieldset::selection, form::selection, label::selection, legend::selection,
+  caption::selection, tbody::selection, tfoot::selection, thead::selection, tr::selection, th::selection, td::selection,
+  article::selection, aside::selection, canvas::selection, details::selection, embed::selection,
+  figure::selection, figcaption::selection, footer::selection, header::selection, hgroup::selection,
+  menu::selection, nav::selection, output::selection, ruby::selection, section::selection, summary::selection,
+  time::selection, mark::selection, audio::selection, video::selection {
+    background-color: gainsboro !important; }
+
+p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, br::selection {
+  background-color: gainsboro !important; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+html {
+  cursor: url("brush.png"), auto; }
+
+body {
+  font-family: "Lusitana", serif;
+  font-size: 2em;
+  line-height: 1.5; }
+  body a {
+    color: firebrick; }
+  body #narrow {
+    margin: 5% 5% 0 5%; }
+    @media (min-width: 961px) {
+      body #narrow {
+        margin-left: 50px; }
+        body #narrow p, body #narrow ul {
+          margin-right: 20%; } }
+  body .noun > img {
+    height: 0.8em; }
+  body h1 > .noun > img {
+    height: 1em; }
+
+#logo {
+  height: 75px; }
+
+@keyframes flip {
+  0% {
+    transform: rotateY(190deg); }
+  100% {
+    transform: rotateY(-10deg); } }
+#jett img {
+  animation-name: flip;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  transition: none; }
+
+#float {
+  transform: rotateZ(90deg);
+  position: fixed;
+  right: -70px;
+  top: 150px;
+  background-color: white;
+  padding: 5px 15px;
+  background-color: firebrick;
+  color: white;
+  text-decoration: none; }
+
+b {
+  color: firebrick; }
+  b::selection {
+    background-color: firebrick !important;
+    color: white; }
+
+table {
+  border: 1px solid black;
+  font-size: 0.5em; }
+  table td {
+    border: 1px solid black;
+    vertical-align: middle;
+    padding: 20px; }
+  table td.td3rd {
+    width: 60%; }
+  table .tdImg {
+    display: flex;
+    flex-wrap: wrap; }
+  table .workImg > div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 2px;
+    overflow: hidden; }
+    table .workImg > div > img {
+      height: 50px;
+      width: 50px;
+      max-width: initial !important;
+      max-height: initial !important;
+      object-fit: cover; }
+  @media screen and (max-width: 961px) {
+    table tr {
+      display: block; }
+    table td {
+      display: block;
+      text-align: center; }
+      table td .tdImg {
+        justify-content: center; }
+    table td.td3rd {
+      width: auto; }
+    table td::before {
+      content: attr(data-label);
+      float: left; } }
+
+/*# sourceMappingURL=App.css.map */
