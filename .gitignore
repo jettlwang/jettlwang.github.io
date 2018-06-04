@@ -25,4 +25,4 @@ yarn-debug.log*
 yarn-error.log*
 
 .sass_cache
-sass/.sass_cache
+sass/.sass-cache/

@@ -35,7 +35,7 @@ time, mark, audio, video {
   time::selection, mark::selection, audio::selection, video::selection {
     background-color: gainsboro !important; }
 
-p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, br::selection {
+p::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, br::selection, small::selection {
   background-color: gainsboro !important; }
 
 /* HTML5 display-role reset for older browsers */
@@ -61,6 +61,8 @@ body {
   font-family: "Lusitana", serif;
   font-size: 2em;
   line-height: 1.5; }
+  body small {
+    font-size: 14px; }
   body a {
     color: firebrick; }
   body #narrow {
@@ -73,7 +75,7 @@ body {
   body .noun > img {
     height: 0.8em; }
   body h1 > .noun > img {
-    height: 1em; }
+    height: 1.2em; }
 
 #logo {
   height: 75px; }
