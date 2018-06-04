@@ -10,7 +10,7 @@
       /*pass window height (w/o scroll bars) down to react app, note can't use vh becasue that
       includes scroll bars and mobile browser footer, etc so doesn't give viewable area*/
       html, body { height: 100%; }
-      #root { min-height: 100%; }
+      #root { min-height: 100%; margin: 20px 0; }
 
       /*required for IE/Edge to be compatible with left:50vw & transform:translate(-50%, 0),
       otherwise there is a phantom div on the right side of the screen (from the left:50vw),
