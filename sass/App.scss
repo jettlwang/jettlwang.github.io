@@ -30,6 +30,7 @@ time, mark, audio, video {
     &::selection {
     background-color: gainsboro !important;
     }
+    text-rendering:optimizeLegibility;
 }
 p,h1,h2,h3,h4,h5,br,small{
     &::selection {

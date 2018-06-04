@@ -20,7 +20,8 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility; }
   div::selection, span::selection, applet::selection, object::selection, iframe::selection, blockquote::selection, pre::selection,
   a::selection, abbr::selection, acronym::selection, address::selection, big::selection, cite::selection, code::selection,
   del::selection, dfn::selection, em::selection, img::selection, ins::selection, kbd::selection, q::selection, s::selection, samp::selection,
