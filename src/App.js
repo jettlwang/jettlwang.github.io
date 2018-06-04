@@ -4,7 +4,7 @@ import { WorkImg } from './WorkImg';
 
 const nounImg = {
     "jett": ["Jett Wang", "jett.png"],
-    "htmlcss": ["HTML CSS", "htmlcss.svg"],
+    "htmlcss": ["HTML CSS", "htmlcss.png"],
     "bootstrap": ["BootstrapCSS", "bootstrap.png"],
     "sass" : ["SaSS","sass.png"],
     "jquery" : ["jQuery","jquery.png"],
