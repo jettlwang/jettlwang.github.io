@@ -23,8 +23,8 @@ const nounImg = {
     "weebly" : ["Weebly","weebly.png"],
     "webflow" : ["Webflow","webflow.jpg"],
     "squarespace" : ["Squarespace","squarespace.svg"],
-    "firebase" : ["FirebaseDB",""],
-    "wordpress" : ["Wordpress",""],
+    "firebase" : ["FirebaseDB","firebase.png"],
+    "wp" : ["Wordpress","wp.png"],
     "uiuc" : ["University of Illinois at Urbana-Champaign","uiuc.png"],
     "ga" : ["General Assembly","ga.png"],
     "huawei" : ["Huawei Mobile Technologies","huawei.png"],
@@ -56,7 +56,7 @@ class App extends Component {
     <li> <Noun name="origami" /> / <Noun name="flinto" /> / <Noun name="invision" /> / <Noun name="marvel" /> / <Noun name="pop" /></li>
     <li> <Noun name="wix" /> / <Noun name="weebly" /> / <Noun name="webflow" /> / <Noun name="squarespace" /></li>
 </ul>
-<p>Currently , I am also learning <Noun name="firebase" /> / <Noun name="wordpress" /></p>
+<p>Currently , I am also learning <Noun name="firebase" /> / <Noun name="wp" /></p>
                
 <p>I have a degree in <b>Economics</b> at <Noun name="uiuc" />, while also have taken classes in <b>Computer Science</b> including Data Structure / UI Design & Development / Data Visualization.</p>
 <p> I received <b>design education</b> through the 3-month UX Design Immersive at <Noun name="ga" /> in San Francisco, CA.</p>
@@ -86,7 +86,10 @@ class App extends Component {
     <td className="td3rd">I worked on various projects in <b>web</b> & <b>mobile</b> as well as <b>information</b> design.</td></tr>
 </tbody></table>
 
-<p>Here's my <a href="#">resume</a>.</p>
+<p>And here's my <a href="#">resume</a>.</p>
+
+<hr></hr>
+<small>Copyright Jett Wang @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and <Noun name="jett"/> quirks.</small>
 </div>
         </div>
         );}
