@@ -69,15 +69,21 @@ class App extends Component {
 
 
 <table><tbody>
-<tr><td><WorkImg src={["huawei.gif"]} alt="huawei" /></td>
+<tr><td><WorkImg src={["huawei.gif","huawei2.gif"]} alt="huawei" /></td>
     <td><h2>Huawei Shanghai Internship</h2></td>
-    <td className="td3rd">I worked on a lot of high level feature design involving AI & mobile prototyping with <Noun name="flinto"/> & <Noun name="origami" />. I also conducted a few field user research tasks.</td></tr>
+    <td className="td3rd">I worked on a lot of high level feature design involving <b>AI</b> & <b>mobile prototyping</b> with <Noun name="flinto"/> & <Noun name="origami" />. I was able to prototype complex interations including <b>voice input</b>, <b>text selection</b>, <b>interaction-triggered transitions</b>. I also conducted a few field <b>user research</b> tasks to gether data & feedback.</td></tr>
 <tr><td><WorkImg src={["cssa1.png","cssa2.png","cssa3.png"]} alt="CSSA" /></td>
     <td><h2>CSSA 2018 Website</h2></td>
-    <td>In about a school week, I redesigned the website for our Chinese Student & Scholar Association and coded it with <Noun name="bootstrap"/>, <Noun name="sass"/> and a simple front-end <Noun name="jquery"/> framework. I also organized a quick workshop and wrote some basic documentations to explain my apporach to the newer members of the web team.</td></tr>
-<tr><td><WorkImg src={["noof1.png","noof2.jpeg","noof3.png","noof4.png","noof5.png","noof6.gif","noof7.png"]} alt="noofie" /></td>
+    <td>In about a school week, I <b>redesigned</b> the website for our Chinese Student & Scholar Association and <b>coded</b> it with <Noun name="bootstrap"/>, <Noun name="sass"/> and a simple front-end <Noun name="jquery"/> framework. I also organized a series of quick <b>workshops</b> and wrote some basic <b>documentations</b> to explain my apporach to the newer members of the web team.</td></tr>
+<tr><td><WorkImg src={["noof1.png","noof3.png","noof4.png","noof5.png","noof6.gif","noof7.png","noof2.jpeg"]} alt="noofie" /></td>
     <td><h2>Noofie App</h2></td>
-    <td>I designed this app as a personal project from ideas to multiple iterations of tested low to high fidelity protytopes, along with a website & pitch deck. I even coded the main interface on iOS with Swift.</td></tr>
+    <td>I designed this app as a personal project from <b>ideas</b> to multiple iterations of <b>tested</b> low to high fidelity <b>protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <Noun name="pop"/> and <Noun name="marvel" />. I even <b>coded</b> the main interface on iOS with Swift.</td></tr>
+<tr><td><WorkImg src={["honeit1.png","honeit2.jpg","honeit3.jpg","honeit4.jpg"]} alt="honeit" /></td>
+    <td><h2>HoneIT Consulting</h2></td>
+    <td className="td3rd">I did a two week consulting project with 2 fellow peers at <Noun name="ga"/> for recruting platform startup HoneIt. We conducted <b>user interview & testing</b> on the existing product and created wireframes for <b>potential redesign</b>. I also created a <b>usability report</b> from user feedback and the <b>documentation</b> for our redesign in <Noun name="omni"/>. Many of our design suggestions have been adopted in HoneIt's current design.</td></tr>
+<tr><td><WorkImg src={["free1.png","free2.png","free3.png","free4.png","free5.png","free6.png","free7.png"]} alt="freelance" /></td>
+    <td><h2>Startup & Freelance Works</h2></td>
+    <td className="td3rd">I worked on various projects in <b>web</b> & <b>mobile</b> as well as <b>information</b> design.</td></tr>
 </tbody></table>
 
 <p>Here's my <a href="#">resume</a>.</p>
