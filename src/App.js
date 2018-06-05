@@ -83,7 +83,7 @@ class App extends Component {
     <td className="td3rd">I worked on a lot of high level feature design involving <b>AI</b> & <b>mobile prototyping</b> with <Noun name="flinto"/> & <Noun name="origami" />. I was able to prototype complex interations including <b>voice input</b>, <b>text selection</b>, <b>interaction-triggered transitions</b>. I also conducted a few field <b>user research</b> tasks to gether data & feedback.</td></tr>
 <tr><td><WorkImg src={["cssa1.png","cssa2.png","cssa3.png"]} alt="CSSA" /></td>
     <td><h2>CSSA 2018 Website</h2></td>
-    <td>In about a school week, I <b>redesigned</b> the website for our Chinese Student & Scholar Association and <b>coded</b> it with <Noun name="bootstrap"/>, <Noun name="sass"/> and a simple front-end <Noun name="jquery"/> framework. I also organized a series of quick <b>workshops</b> and wrote some basic <b>documentations</b> to explain my apporach to the newer members of the web team.</td></tr>
+    <td>In about a school week, I <b>redesigned</b> the website for our Chinese Student & Scholar Association and <b>coded</b> it with <Noun name="bootstrap"/>, <Noun name="sass"/> and a simple front-end <Noun name="jquery"/> framework. I also organized a series of quick <b>workshops</b> and wrote some basic <b>documentations</b> to explain my apporach to the newer members of the web team. <a href="https://uiuccssa.github.io/uiuc-cssa-web-2018/">(see it live)</a></td></tr>
 <tr><td><WorkImg src={["noof1.png","noof3.png","noof4.png","noof5.png","noof6.gif","noof7.png","noof2.jpeg"]} alt="noofie" /></td>
     <td><h2>Noofie App</h2></td>
     <td>I designed this app as a personal project from <b>ideas</b> to multiple iterations of <b>tested</b> low to high fidelity <b>protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <Noun name="pop"/> and <Noun name="marvel" />. I even <b>coded</b> the main interface on iOS with Swift.</td></tr>
@@ -95,7 +95,7 @@ class App extends Component {
     <td className="td3rd">I worked on various projects in <b>web</b> & <b>mobile</b> as well as <b>information</b> design.</td></tr>
 </tbody></table>
 
-<p>And here&rsquo;s my <a href="#">resume</a>.</p>
+<p>And here&rsquo;s my <a href="/resume/resume.pdf">resume</a>.</p>
 
 <hr></hr>
 <p className="small">Copyright Jett Wang @ 2018. Made with <Noun name="sass"/> / <Noun name="react"/> and <Noun name="jett"/> quirks.</p>
