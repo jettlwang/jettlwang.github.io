@@ -73,9 +73,9 @@ body {
         margin-left: 50px; }
         body #narrow p, body #narrow ul {
           margin-right: 20%; } }
-  body .noun > img {
+  body .noun img {
     height: 0.8em; }
-  body h1 > .noun > img {
+  body h1 > .noun img {
     height: 1.2em; }
 
 #logo {
