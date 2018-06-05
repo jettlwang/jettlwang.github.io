@@ -67,7 +67,7 @@ class App extends Component {
 </ul>
 <p>Currently , I am also learning <Noun name="firebase" /> / <Noun name="wp" /></p>
                
-<p>I have a degree in <b>Economics</b> at <Noun name="uiuc" />, while also have 21 hours of classes in <b>Computer Science</b> including Data Structure / UI Design & Development / Data Visualization.</p>
+<p>I have a degree in <b>Economics</b> at <Noun name="uiuc" />, as well as 21 credit hours of classes in <b>Computer Science</b> including Data Structure / UI Design & Development / Data Visualization.</p>
 <p> I received <b>design education</b> through the 3-month UX Design Immersive at <Noun name="ga" /> in San Francisco, CA.</p>
 
 <p>I've interned as a <b>designer</b> at <br/><Noun name="huawei" /> in Shanghai, China,<br/>and as a <b>software engineer</b> at <br/><Noun name="emc" /> in Beijing, China / <Noun name="lenovo" /> in Beijing, China.<br/> I have also done many <b>freelance</b> design work.</p>
