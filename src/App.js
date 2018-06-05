@@ -98,7 +98,7 @@ class App extends Component {
 <p>And here&rsquo;s my <a href="#">resume</a>.</p>
 
 <hr></hr>
-<p class="small">Copyright Jett Wang @ 2018. Made with <Noun name="sass"/> / <Noun name="react"/> and <Noun name="jett"/> quirks.</p>
+<p className="small">Copyright Jett Wang @ 2018. Made with <Noun name="sass"/> / <Noun name="react"/> and <Noun name="jett"/> quirks.</p>
 </div>
         </div>
         );}
