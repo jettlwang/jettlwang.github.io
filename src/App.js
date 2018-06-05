@@ -33,8 +33,17 @@ const nounImg = {
 }
 
 function Noun(props) {
-    return <span className="noun"><img src={"/src/assets/noun/"+ nounImg[props.name][1]} alt="" />{" "+nounImg[props.name][0]}</span>;
-//    return <p>"noun"</p>;
+    var name = nounImg[props.name][0];
+
+    var nounElem;
+    if(name.indexOf(' ') != -1){
+        let tempELem = <span style={{"whiteSpace":"nowrap"}}><img src={"/src/assets/noun/"+ nounImg[props.name][1]} alt="" />{" "+name.substr(0,name.indexOf(' '))}</span>;
+        nounElem = <span>{tempELem}{ " "+name.substr(name.indexOf(' ')+1) }</span>;
+    }else{
+        nounElem = <span style={{"whiteSpace":"nowrap"}}><img src={"/src/assets/noun/"+ nounImg[props.name][1]} alt="" />{" "+name}</span>;
+    }
+    
+    return <span className="noun">{nounElem}</span>;
 }
 
 
