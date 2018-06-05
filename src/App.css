@@ -62,7 +62,7 @@ body {
   font-family: "Lusitana", serif;
   font-size: 2em;
   line-height: 1.5; }
-  body small {
+  body .small {
     font-size: 14px; }
   body a {
     color: firebrick; }
