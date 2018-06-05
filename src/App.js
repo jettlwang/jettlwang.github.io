@@ -60,9 +60,9 @@ class App extends Component {
 <p>I do web & mobile design and front end development. I have experiences in freelance, start ups & corporates. I am a motivated <b>self-starter</b> & <b>fast learner</b> who thrives on <b>complexity</b> & <b>flexiblility</b>.</p>
 <p>Things I&rsquo;ve learned:</p>
 <ul>
-    <li> <Noun name="htmlcss" /> / <Noun name="bootstrap" /> / <Noun name="sass" /> / <Noun name="jquery" /> / <Noun name="react" /></li>
-    <li> <Noun name="sketch" /> / <Noun name="photoshop" /> / <Noun name="illustrator" /> / <Noun name="indesign" /> / <Noun name="omni" /></li>
-    <li> <Noun name="origami" /> / <Noun name="flinto" /> / <Noun name="invision" /> / <Noun name="marvel" /> / <Noun name="pop" /></li>
+    <li> <Noun name="htmlcss" /> / <Noun name="bootstrap" /> / <Noun name="sass" /> / <Noun name="jquery" /> / <Noun name="react" /> /</li>
+    <li> <Noun name="sketch" /> / <Noun name="photoshop" /> / <Noun name="illustrator" /> / <Noun name="indesign" /> / <Noun name="omni" /> /</li>
+    <li> <Noun name="origami" /> / <Noun name="flinto" /> / <Noun name="invision" /> / <Noun name="marvel" /> / <Noun name="pop" /> /</li>
     <li> <Noun name="wix" /> / <Noun name="weebly" /> / <Noun name="webflow" /> / <Noun name="squarespace" /></li>
 </ul>
 <p>Currently , I am also learning <Noun name="firebase" /> / <Noun name="wp" /></p>
@@ -98,7 +98,7 @@ class App extends Component {
 <p>And here&rsquo;s my <a href="/resume/resume.pdf">resume</a>.</p>
 
 <hr></hr>
-<p className="small">Copyright Jett Wang @ 2018. Made with <Noun name="sass"/> / <Noun name="react"/> and <Noun name="jett"/> quirks.</p>
+<p className="small">Copyright Jett Wang @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and <Noun name="jett"/> quirks.</p>
 </div>
         </div>
         );}
