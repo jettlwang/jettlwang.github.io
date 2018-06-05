@@ -60,9 +60,9 @@ class App extends Component {
 <p>I do web & mobile design and front end development. I have experiences in freelance, start ups & corporates. I am a motivated <b>self-starter</b> & <b>fast learner</b> who thrives on <b>complexity</b> & <b>flexiblility</b>.</p>
 <p>Things I&rsquo;ve learned:</p>
 <ul>
-    <li> <Noun name="htmlcss" /> / <Noun name="bootstrap" /> / <Noun name="sass" /> / <Noun name="jquery" /> / <Noun name="react" /> /</li>
-    <li> <Noun name="sketch" /> / <Noun name="photoshop" /> / <Noun name="illustrator" /> / <Noun name="indesign" /> / <Noun name="omni" /> /</li>
-    <li> <Noun name="origami" /> / <Noun name="flinto" /> / <Noun name="invision" /> / <Noun name="marvel" /> / <Noun name="pop" /> /</li>
+    <li> <Noun name="htmlcss" /> / <Noun name="bootstrap" /> / <Noun name="sass" /> / <Noun name="jquery" /> / <Noun name="react" /></li>
+    <li> <Noun name="sketch" /> / <Noun name="photoshop" /> / <Noun name="illustrator" /> / <Noun name="indesign" /> / <Noun name="omni" /></li>
+    <li> <Noun name="origami" /> / <Noun name="flinto" /> / <Noun name="invision" /> / <Noun name="marvel" /> / <Noun name="pop" /></li>
     <li> <Noun name="wix" /> / <Noun name="weebly" /> / <Noun name="webflow" /> / <Noun name="squarespace" /></li>
 </ul>
 <p>Currently , I am also learning <Noun name="firebase" /> / <Noun name="wp" /></p>
@@ -70,11 +70,11 @@ class App extends Component {
 <p>I have a degree in <b>Economics</b> at <Noun name="uiuc" />, while also have 21 hours of classes in <b>Computer Science</b> including Data Structure / UI Design & Development / Data Visualization.</p>
 <p> I received <b>design education</b> through the 3-month UX Design Immersive at <Noun name="ga" /> in San Francisco, CA.</p>
 
-<p>I've interned as a <b>designer</b> at <br/><Noun name="huawei" /> in Shanghai, China / YTTRO Mobile in Palo Alto, CA. <br/>As a <b>software engineer</b> at <br/><Noun name="emc" /> in Beijing, China / <Noun name="lenovo" /> in Beijing, China.</p><p> I have also done some <b>freelance</b> design work.</p>
+<p>I've interned as a <b>designer</b> at <br/><Noun name="huawei" /> in Shanghai, China,<br/>and as a <b>software engineer</b> at <br/><Noun name="emc" /> in Beijing, China / <Noun name="lenovo" /> in Beijing, China.<br/> I have also done many <b>freelance</b> design work.</p>
 
 <p>In my free time I enjoy stargazing, picnics, Chinese culture, meditation & spiritual matters, and writing raps.</p>               
 
-<p>Here are some examples of my work (& funs):</p>
+<p>Here are some examples of my work:</p>
 
 
 <table><tbody>
