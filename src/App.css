@@ -101,6 +101,7 @@ body {
   top: 150px;
   background-color: white;
   padding: 5px 15px;
+  z-index: 1;
   background-color: firebrick;
   color: white;
   text-decoration: none; }
