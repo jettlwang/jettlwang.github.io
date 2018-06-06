@@ -95,7 +95,7 @@ class App extends Component {
     <td className="td3rd">I worked on various projects in <b>web</b> & <b>mobile</b> as well as <b>information</b> design.</td></tr>
 </tbody></table>
 
-<p>And here&rsquo;s my <a href="/resume/resume.pdf">resume</a>.</p>
+<p>And here&rsquo;s my <a href="/resume.pdf">resume</a>.</p>
 
 <hr></hr>
 <p className="small">Copyright Jett Wang @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and <Noun name="jett"/> quirks.</p>
