@@ -1,15 +1,24 @@
 $body-font: 'Open Sans', serif;
 $j-black: #2A2B2E;
 
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
 
 body {
 	font-family: $body-font;
 	color: $j-black;
+    margin: 0;
     strong{
 		font-weight: 300;
 	}
+//    position: relative;
+}
+
+h5,p{
+    margin: 0;
 }
 
 h1, h2, h3, h4 {
@@ -21,6 +30,7 @@ h1, h2, h3, h4 {
 	}
 	h2 {
 		color: #5A5A66;
+        @extend .text-center;
 	}
 	h2, h4{
 		font-weight: 700;
@@ -45,118 +55,136 @@ a, a:hover {
 
 // util==========
 
-.relative{
-	position: relative;
+.img-responsive{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
 }
 
-.vph {
-	height: 100vh;
+.text-center{
+    text-align: center;
 }
 
-
-.flex{
-	display: flex;
-	display: -webkit-flex;
-}
-.vcenter {
-    @extend .flex;
-    align-items: center;
-    justify-content: center;
-}
-.vspread {
-    @extend .flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.canvas {
-    position: relative;
-    
-    img {
-        position: absolute;
-    }
-}
-
-.thumb {
-    position: relative;
-    @extend .vcenter;
+.flex-center-container{
+    display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 .caption {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
+//    background-color: rgba(0,0,0,0.5);
+    @extend .flex-center-container;
 }
 
-
-// landing ==================
-
-.hero{
-    @extend .vcenter;
-    @extend .vph;
-    
-    #img-logo {
-	height: 20vh;
-    }
-}
-
-#profile{
-    @extend .thumb;
-    height: 80vh;
-    
-    img {
-        height: 50vh;
-    }
-}
 
 
 // individual assets ============
 
-#bln1 {
-    width: 45%;
-    max-width: 35em;
-}
-
-#bln2 {
-    width: 35%;
-    max-width: 30em;
-}
-
-#bln3 {
-    width: 25%;
-    max-width: 25em;
-}
-
-
-#skills {
-    img{
-        fill: #aaa;
+#intro{
+    @extend .text-center;
+    @extend .flex-center-container;
+    flex-direction: column;
+    
+    position: relative;
+    height: 100vh;
+    &>div{
+        img{
+            display: inline;
+            height: 2em;
+            vertical-align: middle;
+        }
     }
 }
 
+#profile{
+    .background{
+        height: 100%;
+        width: 100%;
+        @extend .flex-center-container;}
+    
+    height: 80vh;
+    position: relative;
+    
+    .overlay{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        @extend .flex-center-container;
+    }
+    #blnb {
+        z-index: 1;
+        width: 100em;
+        position: relative;
+        top: 25px;
+        .caption {
+            top: 4em;
+            right: 8em;
+            width: 500px;
+            height: 11em;
+        }
+    }  
+}
 
 #education {
-    @extend .canvas;
-    height: 100vw;
+    
+    #bln1,#bln2,#bln3{
+        position: relative;
+        width: 80vw;
+        margin: 20px auto;
+        @extend .flex-center-container;
+        
+     .caption{
+        text-align: center;
+         height: 40%;
+         width: 60%;
+         transform: translateY(-20%);
+        }
+    }
+    
+    @media #{$desktop}{
+        height: 120vh;
+        #bln1 {
+        width: 25em;
+            position:relative;
+            left: 5vw;
+            z-index: 3;
+        }
+
+        #bln2 {
+            width: 18em;
+            position: relative;
+            left: 50vw;
+            top: -20vh;
+            z-index: 2;
+        }
+
+        #bln3 {
+            width: 12em;
+            position: relative;
+            left: 25vw;
+            top:-50vh;
+        }
+    }
 }
 
 
 #experience{
-    @extend .canvas;
-    height: 200vw;
-
     .cld {
-        width: 80%;
-        max-width: 60em;
+        width: 50em;
+        .caption{
+            height: 10em;
+            bottom: 0.5em;
+            left: 12em;
+            right: 9em;
+        }
     }
     
     .cld-sm {
-        width: 45%;
-        max-width: 30em;
+        width: 25em;
+        .caption {
+            top:5em; bottom: 2em; left: 3em; right: 4em;
+        }
     }
 }
 
@@ -168,26 +196,60 @@ a, a:hover {
     }
 }
 
-
-.cld-bar {
-	overflow: hidden;
+#skills{
+    .skill-bar{
+        text-align: center;
+        margin: 1em auto;
+        
+        h4{
+            display: inline-block;
+            vertical-align: middle;
+            color: white;
+        }
+        .cld-bar-cover{
+            margin-right: 2em;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+    }
+    
+    
+    
+    .cld-bar {
+        img{
+            float: left;
+            height: 4em;
+            margin: 0 10px;
+        }
+    }
 }
-	.skill-r {
-		margin-top: 3vh;
-		margin-bottom: 3vh;
-	}
+
 
 #footer{
-    position: relative;
+    position: absolute;
     height: 100vh;
+//    background-color: antiquewhite;
     
-    #earth, svg {
+    #rainbow{
+        width: 80vw;
         position: absolute;
-        bottom: 0;
-        right: 0;
+        display: block;
+        right: -10%;
+        z-index: 1;
     }
-    
-    svg {
-        bottom: 10%;
+
+    #earth{
+        position: relative;
+        z-index: 2;
+        @extend .flex-center-container;
+        .caption{
+            width: 50vw;
+            height: 50vh;
+        }
     }
 }
+
+
+

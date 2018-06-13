@@ -1,17 +1,17 @@
-var skills = [
-    {
-        "name": "HTML/CSS",
-        "level": 4
-    },
-    {
-        "name": "jQuery",
-        "level": 2
-    },
-    {
-        "name": "C/C++",
-        "level": 4
-    }
-];
+//var skills = [
+//    {
+//        "name": "HTML/CSS",
+//        "level": 4
+//    },
+//    {
+//        "name": "jQuery",
+//        "level": 2
+//    },
+//    {
+//        "name": "C/C++",
+//        "level": 4
+//    }
+//];
 
 
 
@@ -30,9 +30,9 @@ $(document).ready(function(){
         });
     }
     
-    setPos("#bln1","20%",-1,-1,"10%");
-    setPos("#bln2","45%","10%",-1,-1);
-    setPos("#bln3",-1,-1,"5%","40%");
+//    setPos("#bln1","20%",-1,-1,"10%");
+//    setPos("#bln2","45%","10%",-1,-1);
+//    setPos("#bln3",-1,-1,"5%","40%");
     
     setPos("#cld1","5%",-1,-1,-1);
     setPos("#cld2","14%",0,-1,-1);
@@ -47,15 +47,15 @@ $(document).ready(function(){
     
     
     function setAni(id,startX,startY,endX,endY) {
-        $(id).attr("data-bottom-top", "-webkit-transform: translate(" + startX + "%," + startY + "%);opacity:1;" );
-        $(id).attr("data-top-bottom", "-webkit-transform: translate(" + endX + "%," + endY + "%);opacity:0.9;" );
+        $(id).attr("data-bottom-top", "-webkit-transform: translate(" + startX + "%," + startY + "%);" );
+        $(id).attr("data-top-bottom", "-webkit-transform: translate(" + endX + "%," + endY + "%);" );
     }
     
     setAni("#blnb",50,0,-100,0);
     
-    setAni("#bln1",0,0,0,-80);
-    setAni("#bln2",0,0,0,-120);
-    setAni("#bln3",0,0,0,-220);
+//    setAni("#bln1",0,0,0,-20);
+//    setAni("#bln2",0,0,0,-60);
+//    setAni("#bln3",0,0,0,-100);
     
     setAni("#cld1",0,0,-30,0);
     setAni("#cld2",-20,0,40,0);
@@ -74,16 +74,16 @@ $(document).ready(function(){
     s.refresh();
     
     
-    skills.forEach(function(skill){
-        var clds = $();
-        for(i=0;i<skill.level;i++) {
-            var puff = document.createElement("img");
-            puff.src = "../img/cldpff.svg";
-            clds = clds.add(puff);
-        }
-        
-        $("#skills").append(clds);
-    });
+//    skills.forEach(function(skill){
+//        var clds = $();
+//        for(i=0;i<skill.level;i++) {
+//            var puff = document.createElement("img");
+//            puff.src = "../img/cldpff.svg";
+//            clds = clds.add(puff);
+//        }
+//        
+//        $("#skills").append(clds);
+//    });
     
 
 });

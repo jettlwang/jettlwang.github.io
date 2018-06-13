@@ -2,9 +2,13 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
 body {
   font-family: "Open Sans", serif;
-  color: #2A2B2E; }
+  color: #2A2B2E;
+  margin: 0; }
   body strong {
     font-weight: 300; }
+
+h5, p {
+  margin: 0; }
 
 h1, h2, h3, h4 {
   font-family: 'Roboto Condensed', 'Impact', serif; }
@@ -34,95 +38,132 @@ a, a:hover {
   color: inherit;
   text-decoration: inherit; }
 
-.relative {
-  position: relative; }
+.img-responsive {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; }
 
-.vph, .hero {
-  height: 100vh; }
+.text-center, h2, #intro {
+  text-align: center; }
 
-.flex, .vcenter, .thumb, #profile, .hero, .vspread {
+.flex-center-container, .caption, #intro, #profile .background, #profile .overlay, #education #bln1, #education #bln2, #education #bln3, #footer #earth {
   display: flex;
-  display: -webkit-flex; }
-
-.vcenter, .thumb, #profile, .hero {
-  align-items: center;
-  justify-content: center; }
-
-.vspread {
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around; }
-
-.canvas, #education, #experience {
-  position: relative; }
-  .canvas img, #education img, #experience img {
-    position: absolute; }
-
-.thumb, #profile {
-  position: relative; }
+  justify-content: center;
+  align-items: center; }
 
 .caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%; }
+  position: absolute; }
 
-.hero #img-logo {
-  height: 20vh; }
+#intro {
+  flex-direction: column;
+  position: relative;
+  height: 100vh; }
+  #intro > div img {
+    display: inline;
+    height: 2em;
+    vertical-align: middle; }
 
 #profile {
-  height: 80vh; }
-  #profile img {
-    height: 50vh; }
+  height: 80vh;
+  position: relative; }
+  #profile .background {
+    height: 100%;
+    width: 100%; }
+  #profile .overlay {
+    position: absolute;
+    top: 0;
+    height: 100%; }
+  #profile #blnb {
+    z-index: 1;
+    width: 100em;
+    position: relative;
+    top: 25px; }
+    #profile #blnb .caption {
+      top: 4em;
+      right: 8em;
+      width: 500px;
+      height: 11em; }
 
-#bln1 {
-  width: 45%;
-  max-width: 35em; }
+#education #bln1, #education #bln2, #education #bln3 {
+  position: relative;
+  width: 80vw;
+  margin: 20px auto; }
+  #education #bln1 .caption, #education #bln2 .caption, #education #bln3 .caption {
+    text-align: center;
+    height: 40%;
+    width: 60%;
+    transform: translateY(-20%); }
+@media (min-width: 1024px) {
+  #education {
+    height: 120vh; }
+    #education #bln1 {
+      width: 25em;
+      position: relative;
+      left: 5vw;
+      z-index: 3; }
+    #education #bln2 {
+      width: 18em;
+      position: relative;
+      left: 50vw;
+      top: -20vh;
+      z-index: 2; }
+    #education #bln3 {
+      width: 12em;
+      position: relative;
+      left: 25vw;
+      top: -50vh; } }
 
-#bln2 {
-  width: 35%;
-  max-width: 30em; }
-
-#bln3 {
-  width: 25%;
-  max-width: 25em; }
-
-#skills img {
-  fill: #aaa; }
-
-#education {
-  height: 100vw; }
-
-#experience {
-  height: 200vw; }
-  #experience .cld {
-    width: 80%;
-    max-width: 60em; }
-  #experience .cld-sm {
-    width: 45%;
-    max-width: 30em; }
+#experience .cld {
+  width: 50em; }
+  #experience .cld .caption {
+    height: 10em;
+    bottom: 0.5em;
+    left: 12em;
+    right: 9em; }
+#experience .cld-sm {
+  width: 25em; }
+  #experience .cld-sm .caption {
+    top: 5em;
+    bottom: 2em;
+    left: 3em;
+    right: 4em; }
 
 #hashtags img {
   max-width: 30%;
   float: left;
   clear: both; }
 
-.cld-bar {
-  overflow: hidden; }
-
-.skill-r {
-  margin-top: 3vh;
-  margin-bottom: 3vh; }
+#skills .skill-bar {
+  text-align: center;
+  margin: 1em auto; }
+  #skills .skill-bar h4 {
+    display: inline-block;
+    vertical-align: middle;
+    color: white; }
+  #skills .skill-bar .cld-bar-cover {
+    margin-right: 2em;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle; }
+#skills .cld-bar img {
+  float: left;
+  height: 4em;
+  margin: 0 10px; }
 
 #footer {
-  position: relative;
+  position: absolute;
   height: 100vh; }
-  #footer #earth, #footer svg {
+  #footer #rainbow {
+    width: 80vw;
     position: absolute;
-    bottom: 0;
-    right: 0; }
-  #footer svg {
-    bottom: 10%; }
+    display: block;
+    right: -10%;
+    z-index: 1; }
+  #footer #earth {
+    position: relative;
+    z-index: 2; }
+    #footer #earth .caption {
+      width: 50vw;
+      height: 50vh; }
 
 /*# sourceMappingURL=custom.css.map */
