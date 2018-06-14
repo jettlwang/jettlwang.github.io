@@ -46,7 +46,7 @@ class Thumb extends Component {
         return (<div>
             <button onClick={this.toggleLightbox} display={this.state.isOpen.toString()}>OPEN</button>
             {this.state.isOpen && 
-                <LightboxSet index='0' onClose={()=> alert("im working") } display={this.state.isOpen.toString()}/> }
+                <LightboxSet index='0' onClose={()=> alert("call me maybe") } display={this.state.isOpen.toString()}/> }
         </div>);}
 }
 
