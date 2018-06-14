@@ -53,9 +53,9 @@ $(document).ready(function(){
     
     setAni("#blnb",50,0,-100,0);
     
-//    setAni("#bln1",0,0,0,-20);
-//    setAni("#bln2",0,0,0,-60);
-//    setAni("#bln3",0,0,0,-100);
+    setAni("#bln1",0,0,0,-20);
+    setAni("#bln2",0,0,0,-150);
+    setAni("#bln3",0,0,0,-300);
     
     setAni("#cld1",0,0,-30,0);
     setAni("#cld2",-20,0,40,0);

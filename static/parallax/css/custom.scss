@@ -11,6 +11,8 @@ body {
 	font-family: $body-font;
 	color: $j-black;
     margin: 0;
+    position: relative;
+    background-color: aliceblue;
     strong{
 		font-weight: 300;
 	}
@@ -25,7 +27,7 @@ h1, h2, h3, h4 {
 	font-family: 'Roboto Condensed', 'Impact', serif;
 }
 	h1 {
-		font-size: 5em;
+		font-size: 4em;
 		font-weight: 700;
 	}
 	h2 {
@@ -71,9 +73,11 @@ a, a:hover {
   align-items: center; 
 }
 
+// sets text overlay on img
+// <div position:relative><img/><.caption/></div>
 .caption {
     position: absolute;
-//    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
     @extend .flex-center-container;
 }
 
@@ -86,14 +90,16 @@ a, a:hover {
     @extend .flex-center-container;
     flex-direction: column;
     
-    position: relative;
     height: 100vh;
-    &>div{
-        img{
-            display: inline;
-            height: 2em;
-            vertical-align: middle;
-        }
+
+    #logo::after{
+        background-image: url(../img/logo.svg);
+        background-size: 1.5em 2em;
+        width: 1.5em;
+        height: 2em;
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
     }
 }
 
@@ -103,7 +109,7 @@ a, a:hover {
         width: 100%;
         @extend .flex-center-container;}
     
-    height: 80vh;
+    height: 100vh;
     position: relative;
     
     .overlay{
@@ -113,10 +119,11 @@ a, a:hover {
         @extend .flex-center-container;
     }
     #blnb {
+        position: relative;
         z-index: 1;
         width: 100em;
-        position: relative;
         top: 25px;
+        right: 60em;
         .caption {
             top: 4em;
             right: 8em;
@@ -129,7 +136,7 @@ a, a:hover {
 #education {
     
     #bln1,#bln2,#bln3{
-        position: relative;
+        position: absolute;
         width: 80vw;
         margin: 20px auto;
         @extend .flex-center-container;
@@ -143,27 +150,25 @@ a, a:hover {
     }
     
     @media #{$desktop}{
-        height: 120vh;
+//        height: 120vh;
         #bln1 {
         width: 25em;
             position:relative;
-            left: 5vw;
+//            left: 5vw;
             z-index: 3;
         }
 
         #bln2 {
             width: 18em;
             position: relative;
-            left: 50vw;
-            top: -20vh;
+//            left: 50vw;
             z-index: 2;
         }
 
         #bln3 {
             width: 12em;
             position: relative;
-            left: 25vw;
-            top:-50vh;
+//            left: 25vw;
         }
     }
 }
@@ -172,6 +177,7 @@ a, a:hover {
 #experience{
     .cld {
         width: 50em;
+        position: relative;
         .caption{
             height: 10em;
             bottom: 0.5em;
@@ -182,6 +188,7 @@ a, a:hover {
     
     .cld-sm {
         width: 25em;
+        position: relative;
         .caption {
             top:5em; bottom: 2em; left: 3em; right: 4em;
         }
@@ -228,26 +235,30 @@ a, a:hover {
 
 
 #footer{
-    position: absolute;
-    height: 100vh;
 //    background-color: antiquewhite;
+    position: relative;
+    display: flow-root;
     
     #rainbow{
         width: 80vw;
-        position: absolute;
+        max-width: 80em;
         display: block;
-        right: -10%;
+        position: relative;
+        float: right;
         z-index: 1;
     }
 
-    #earth{
-        position: relative;
-        z-index: 2;
-        @extend .flex-center-container;
-        .caption{
-            width: 50vw;
-            height: 50vh;
-        }
+}
+
+#earth{
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0;
+    z-index: 3;
+    @extend .flex-center-container;
+    .caption{
+        width: 50vw;
+        height: 50vh;
     }
 }
 

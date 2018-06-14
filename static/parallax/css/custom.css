@@ -3,7 +3,9 @@
 body {
   font-family: "Open Sans", serif;
   color: #2A2B2E;
-  margin: 0; }
+  margin: 0;
+  position: relative;
+  background-color: aliceblue; }
   body strong {
     font-weight: 300; }
 
@@ -14,7 +16,7 @@ h1, h2, h3, h4 {
   font-family: 'Roboto Condensed', 'Impact', serif; }
 
 h1 {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700; }
 
 h2 {
@@ -46,25 +48,29 @@ a, a:hover {
 .text-center, h2, #intro {
   text-align: center; }
 
-.flex-center-container, .caption, #intro, #profile .background, #profile .overlay, #education #bln1, #education #bln2, #education #bln3, #footer #earth {
+.flex-center-container, .caption, #intro, #profile .background, #profile .overlay, #education #bln1, #education #bln2, #education #bln3, #earth {
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .caption {
-  position: absolute; }
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); }
 
 #intro {
   flex-direction: column;
-  position: relative;
   height: 100vh; }
-  #intro > div img {
-    display: inline;
+  #intro #logo::after {
+    background-image: url(../img/logo.svg);
+    background-size: 1.5em 2em;
+    width: 1.5em;
     height: 2em;
-    vertical-align: middle; }
+    display: inline-block;
+    vertical-align: middle;
+    content: ""; }
 
 #profile {
-  height: 80vh;
+  height: 100vh;
   position: relative; }
   #profile .background {
     height: 100%;
@@ -74,10 +80,11 @@ a, a:hover {
     top: 0;
     height: 100%; }
   #profile #blnb {
+    position: relative;
     z-index: 1;
     width: 100em;
-    position: relative;
-    top: 25px; }
+    top: 25px;
+    right: 60em; }
     #profile #blnb .caption {
       top: 4em;
       right: 8em;
@@ -85,7 +92,7 @@ a, a:hover {
       height: 11em; }
 
 #education #bln1, #education #bln2, #education #bln3 {
-  position: relative;
+  position: absolute;
   width: 80vw;
   margin: 20px auto; }
   #education #bln1 .caption, #education #bln2 .caption, #education #bln3 .caption {
@@ -94,34 +101,29 @@ a, a:hover {
     width: 60%;
     transform: translateY(-20%); }
 @media (min-width: 1024px) {
-  #education {
-    height: 120vh; }
-    #education #bln1 {
-      width: 25em;
-      position: relative;
-      left: 5vw;
-      z-index: 3; }
-    #education #bln2 {
-      width: 18em;
-      position: relative;
-      left: 50vw;
-      top: -20vh;
-      z-index: 2; }
-    #education #bln3 {
-      width: 12em;
-      position: relative;
-      left: 25vw;
-      top: -50vh; } }
+  #education #bln1 {
+    width: 25em;
+    position: relative;
+    z-index: 3; }
+  #education #bln2 {
+    width: 18em;
+    position: relative;
+    z-index: 2; }
+  #education #bln3 {
+    width: 12em;
+    position: relative; } }
 
 #experience .cld {
-  width: 50em; }
+  width: 50em;
+  position: relative; }
   #experience .cld .caption {
     height: 10em;
     bottom: 0.5em;
     left: 12em;
     right: 9em; }
 #experience .cld-sm {
-  width: 25em; }
+  width: 25em;
+  position: relative; }
   #experience .cld-sm .caption {
     top: 5em;
     bottom: 2em;
@@ -151,19 +153,24 @@ a, a:hover {
   margin: 0 10px; }
 
 #footer {
-  position: absolute;
-  height: 100vh; }
+  position: relative;
+  display: flow-root; }
   #footer #rainbow {
     width: 80vw;
-    position: absolute;
+    max-width: 80em;
     display: block;
-    right: -10%;
-    z-index: 1; }
-  #footer #earth {
     position: relative;
-    z-index: 2; }
-    #footer #earth .caption {
-      width: 50vw;
-      height: 50vh; }
+    float: right;
+    z-index: 1; }
+
+#earth {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3; }
+  #earth .caption {
+    width: 50vw;
+    height: 50vh; }
 
 /*# sourceMappingURL=custom.css.map */

@@ -18,15 +18,15 @@
 
   </head>
   <body>
-  <div style="overflow:hidden" id="skrollr-body"
+  <div style="overflow:hidden;height: 100%;" id="skrollr-body"
    data-start="background:linear-gradient(top, rgb(234,226,222), rgb(199,229,109));" data-center="background:linear-gradient(top, rgb(124,201,191), rgb(43,130,173) );" data-end="background:linear-gradient(top, rgb(199,229,109),rgb(52,59,108));">
 
-        <div class="fullpage" id="intro">
+        <div id="intro">
             <div>
                 <h2>UX Designer & Developer</h2>
-                <h1>Jett<img src="img/logo.svg" class="img-responsive" id='img-logo' alt="logo">Wang</h1>
+                <h1>Jett <span id="logo"></span> Wang</h1>
             </div>
-            <h1><a id="toprofile"><i class="text-negative fa fa-angle-double-down"></i></a></h1>
+            <span style="font-size: 5em;"><a id="toprofile"><i class="text-negative fa fa-angle-double-down"></i></a></span>
         </div>
 
       
@@ -45,9 +45,9 @@
 	  <!-- education -->
       <div id="education">
         <h2>education</h2>
-        <div id="bln1"><img src="img/bln1.svg" alt="" class="img-responsive"><div class="caption"><span><b>University of Illinois at Urbana-Champaign</b><br>BA in <i>Economics</i> & 21 course credits in <i>Computer Science</i><br>GPA 3.57<br> 2014.8-2018.5</span></div></div>
-        <div id="bln2"><img src="img/bln2.svg" alt="" class="img-responsive"><div class="caption"><span><b>General Assembly San Francisco</b><br><i>UX Design Immersive</i>2016.6-8</span></div></div>
-        <img src="img/bln3.svg" alt="" class="img-responsive" id="bln3">
+        <div id="bln1" data-anchor-target="#education"><img src="img/bln1.svg" alt="" class="img-responsive"><div class="caption"><span><b>University of Illinois at Urbana-Champaign</b><br>BA in <i>Economics</i> & 21 course credits in <i>Computer Science</i><br>GPA 3.57<br> 2014.8-2018.5</span></div></div>
+        <div id="bln2" data-anchor-target="#education"><img src="img/bln2.svg" alt="" class="img-responsive"><div class="caption"><span><b>General Assembly San Francisco</b><br><i>UX Design Immersive</i>2016.6-8</span></div></div>
+        <img src="img/bln3.svg" alt="" class="img-responsive" id="bln3"  data-anchor-target="#education">
         
       </div>
 	
@@ -166,7 +166,6 @@
 	<!-- path -->
 
 <div id="footer">
-<!--
     <div id="rainbow"><svg class="img-responsive" xmlns="http://www.w3.org/1000/svg" version="1.1" height="100%" width="100%" viewBox="0 0 1196 1468"  style="overflow:visible;">
 					    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
                             <g id="rainbow" sketch:type="MSArtboardGroup" stroke-width="50">
@@ -182,14 +181,13 @@
                             </g>
                         </g>
 				</svg></div> 
--->
       
+</div>		
+
     <div id="earth">
         <img src="img/earth.svg" class="img-responsive">
         <div class="caption">aaa</div>
     </div>
-</div>		
-
 
 </div>
 
@@ -198,8 +196,9 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="js/custom.js"></script>
+
 	<script type="text/javascript" src="js/skrollr.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
 	<script type="text/javascript">
 		var s = skrollr.init({
             constants: {
@@ -207,9 +206,11 @@
             }  
         });
         
+//        s.destroy();
+        
         $(document).ready(function(){
              $("#toprofile").click(function() {
-                scrollToAnchor('profile_an');
+                scrollToAnchor('profile');
             });             
         });
         
