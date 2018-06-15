@@ -129,7 +129,7 @@ table {
       border: 1px solid black;
       margin: 2px;
       overflow: hidden; }
-    table .workImg > img {
+    table .workImg > div > img {
       height: 50px;
       width: 50px;
       max-width: initial !important;

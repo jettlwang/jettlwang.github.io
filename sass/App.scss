@@ -153,7 +153,7 @@ table{
         overflow: hidden;
         }
         
-        &>img{
+        &>div>img{
             height: $workImgSize;
             width: $workImgSize;
             max-width: initial !important;
