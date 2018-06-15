@@ -25,6 +25,7 @@ h5,p{
 
 h1, h2, h3, h4 {
 	font-family: 'Roboto Condensed', 'Impact', serif;
+    margin: 0;
 }
 	h1 {
 		font-size: 4em;
@@ -123,7 +124,9 @@ a, a:hover {
         z-index: 1;
         width: 100em;
         top: 25px;
-        right: 60em;
+        
+        transform: translateX(-40%);
+        
         .caption {
             top: 4em;
             right: 8em;
@@ -134,11 +137,12 @@ a, a:hover {
 }
 
 #education {
+    display: flow-root;
     
     #bln1,#bln2,#bln3{
-        position: absolute;
-        width: 80vw;
-        margin: 20px auto;
+//        position: absolute;
+//        width: 80vw;
+        margin: 0 10vw;
         @extend .flex-center-container;
         
      .caption{
@@ -152,20 +156,22 @@ a, a:hover {
     @media #{$desktop}{
 //        height: 120vh;
         #bln1 {
-        width: 25em;
+            width: 25em;
+            float: left;
             position:relative;
-//            left: 5vw;
             z-index: 3;
         }
 
         #bln2 {
             width: 18em;
+            float: right;
             position: relative;
-//            left: 50vw;
             z-index: 2;
         }
 
         #bln3 {
+            clear: both;
+            margin: auto;
             width: 12em;
             position: relative;
 //            left: 25vw;

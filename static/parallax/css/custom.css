@@ -13,7 +13,8 @@ h5, p {
   margin: 0; }
 
 h1, h2, h3, h4 {
-  font-family: 'Roboto Condensed', 'Impact', serif; }
+  font-family: 'Roboto Condensed', 'Impact', serif;
+  margin: 0; }
 
 h1 {
   font-size: 4em;
@@ -84,34 +85,38 @@ a, a:hover {
     z-index: 1;
     width: 100em;
     top: 25px;
-    right: 60em; }
+    transform: translateX(-40%); }
     #profile #blnb .caption {
       top: 4em;
       right: 8em;
       width: 500px;
       height: 11em; }
 
-#education #bln1, #education #bln2, #education #bln3 {
-  position: absolute;
-  width: 80vw;
-  margin: 20px auto; }
-  #education #bln1 .caption, #education #bln2 .caption, #education #bln3 .caption {
-    text-align: center;
-    height: 40%;
-    width: 60%;
-    transform: translateY(-20%); }
-@media (min-width: 1024px) {
-  #education #bln1 {
-    width: 25em;
-    position: relative;
-    z-index: 3; }
-  #education #bln2 {
-    width: 18em;
-    position: relative;
-    z-index: 2; }
-  #education #bln3 {
-    width: 12em;
-    position: relative; } }
+#education {
+  display: flow-root; }
+  #education #bln1, #education #bln2, #education #bln3 {
+    margin: 0 10vw; }
+    #education #bln1 .caption, #education #bln2 .caption, #education #bln3 .caption {
+      text-align: center;
+      height: 40%;
+      width: 60%;
+      transform: translateY(-20%); }
+  @media (min-width: 1024px) {
+    #education #bln1 {
+      width: 25em;
+      float: left;
+      position: relative;
+      z-index: 3; }
+    #education #bln2 {
+      width: 18em;
+      float: right;
+      position: relative;
+      z-index: 2; }
+    #education #bln3 {
+      clear: both;
+      margin: auto;
+      width: 12em;
+      position: relative; } }
 
 #experience .cld {
   width: 50em;
