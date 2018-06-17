@@ -119,17 +119,16 @@ table {
     border: 1px solid black;
     vertical-align: middle;
     padding: 20px; }
-  table td.td3rd {
-    width: 60%; }
-  table .tdImg {
-    display: flex;
-    flex-wrap: wrap; }
-  table .workImg > div {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    margin: 2px;
-    overflow: hidden; }
+    table td:nth-child(3) {
+      width: 60%; }
+  table .workImg {
+    display: inline-block; }
+    table .workImg > div {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      margin: 2px;
+      overflow: hidden; }
     table .workImg > div > img {
       height: 50px;
       width: 50px;
@@ -138,16 +137,19 @@ table {
       object-fit: cover; }
   @media screen and (max-width: 961px) {
     table tr {
-      display: block; }
+      display: block;
+      margin-bottom: 2px;
+      border-top: 1px solid;
+      border-bottom: 1px solid; }
     table td {
       display: block;
       text-align: center; }
+      table td::before {
+        content: attr(data-label);
+        float: left; }
+      table td:nth-child(3) {
+        width: auto; }
       table td .tdImg {
-        justify-content: center; }
-    table td.td3rd {
-      width: auto; }
-    table td::before {
-      content: attr(data-label);
-      float: left; } }
+        justify-content: center; } }
 
 /*# sourceMappingURL=App.css.map */

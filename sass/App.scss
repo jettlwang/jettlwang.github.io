@@ -131,27 +131,29 @@ b {
 table{
     border: 1px solid black;
     font-size: 0.5em;
-    
+
     td{
         border: 1px solid black;
         vertical-align: middle;
         padding: 20px;
+
+        &:nth-child(3){
+            width: 60%;
+        }
     }
-    td.td3rd{
-        width: 60%;
-    }
-    .tdImg{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .workImg > div {
+
+    .workImg {
+        display: inline-block;
+        &> div {
         width: $workImgSize;
         height: $workImgSize;
+            
         border: 1px solid black;
         margin: 2px;
         overflow: hidden;
+        }
         
-        &>img{
+        &>div>img{
             height: $workImgSize;
             width: $workImgSize;
             max-width: initial !important;
@@ -163,19 +165,23 @@ table{
     @media screen and (max-width: $media) {
         tr {
             display: block;
+            margin-bottom: 2px;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
         }
         td {
             display: block;
             text-align: center;
             
+            &::before {
+                content: attr(data-label);
+                float: left;
+            }
+            &:nth-child(3){ width: auto;}
+            
             .tdImg{
                 justify-content: center;
             }
-        }
-        td.td3rd{ width: auto ;}
-        td::before {
-            content: attr(data-label);
-            float: left;
         }
     }
 }
