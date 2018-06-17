@@ -2,7 +2,7 @@ $body-font: 'Open Sans', serif;
 $j-black: #2A2B2E;
 
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+$desktop: "(min-width: 860px)";
 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
@@ -30,10 +30,12 @@ h1, h2, h3, h4 {
 	h1 {
 		font-size: 4em;
 		font-weight: 700;
+        margin: 0.5em;
 	}
 	h2 {
 		color: #5A5A66;
         @extend .text-center;
+        margin: 0.5em;
 	}
 	h2, h4{
 		font-weight: 700;
@@ -52,7 +54,7 @@ h1, h2, h3, h4 {
 
 a, a:hover {
 	color: inherit;
-	text-decoration: inherit;
+//	text-decoration: inherit;
 }
 
 
@@ -78,13 +80,28 @@ a, a:hover {
 // <div position:relative><img/><.caption/></div>
 .caption {
     position: absolute;
-    background-color: rgba(0,0,0,0.5);
+//    background-color: rgba(0,0,0,0.5);
     @extend .flex-center-container;
 }
 
 
 
 // individual assets ============
+
+#warning{
+    height: 80vh;
+    width: 90vw;
+    position: fixed;
+    top:10vh; left: 5vw; z-index: 100;
+    background-color: white;
+    border-radius: 5pt;
+    
+    .caption{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 
 #intro{
     @extend .text-center;
@@ -138,11 +155,12 @@ a, a:hover {
 
 #education {
     display: flow-root;
+    margin: 0 10vw;
     
     #bln1,#bln2,#bln3{
 //        position: absolute;
 //        width: 80vw;
-        margin: 0 10vw;
+
         @extend .flex-center-container;
         
      .caption{
@@ -186,8 +204,8 @@ a, a:hover {
         position: relative;
         .caption{
             height: 10em;
-            bottom: 0.5em;
-            left: 12em;
+            bottom: 0.1em;
+            left: 10em;
             right: 9em;
         }
     }
@@ -203,7 +221,7 @@ a, a:hover {
 
 #hashtags {
     img {
-        max-width: 30%;
+        width: 25vw;
         float: left;
         clear: both;
     }
@@ -211,13 +229,17 @@ a, a:hover {
 
 #skills{
     .skill-bar{
-        text-align: center;
-        margin: 1em auto;
+        
+        width: 60vw;
+        text-align: right;
+            margin: 10px auto;
         
         h4{
             display: inline-block;
             vertical-align: middle;
             color: white;
+            text-align: center;
+            width: 5em;
         }
         .cld-bar-cover{
             margin-right: 2em;
@@ -229,12 +251,13 @@ a, a:hover {
     }
     
     
-    
     .cld-bar {
+//        width: 40em;
         img{
-            float: left;
-            height: 4em;
-            margin: 0 10px;
+            float: right;
+            width: 7vw;
+            max-width: 4em;
+            margin: 0.5em 10px;
         }
     }
 }
@@ -265,6 +288,7 @@ a, a:hover {
     .caption{
         width: 50vw;
         height: 50vh;
+        flex-direction: column;
     }
 }
 

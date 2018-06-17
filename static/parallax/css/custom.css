@@ -18,10 +18,12 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 4em;
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 0.5em; }
 
 h2 {
-  color: #5A5A66; }
+  color: #5A5A66;
+  margin: 0.5em; }
 
 h2, h4 {
   font-weight: 700; }
@@ -38,8 +40,7 @@ h5 {
   font-size: 1.15em; }
 
 a, a:hover {
-  color: inherit;
-  text-decoration: inherit; }
+  color: inherit; }
 
 .img-responsive {
   max-width: 100%;
@@ -55,8 +56,20 @@ a, a:hover {
   align-items: center; }
 
 .caption {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5); }
+  position: absolute; }
+
+#warning {
+  height: 80vh;
+  width: 90vw;
+  position: fixed;
+  top: 10vh;
+  left: 5vw;
+  z-index: 100;
+  background-color: white;
+  border-radius: 5pt; }
+  #warning .caption {
+    flex-direction: column;
+    text-align: center; }
 
 #intro {
   flex-direction: column;
@@ -93,15 +106,14 @@ a, a:hover {
       height: 11em; }
 
 #education {
-  display: flow-root; }
-  #education #bln1, #education #bln2, #education #bln3 {
-    margin: 0 10vw; }
-    #education #bln1 .caption, #education #bln2 .caption, #education #bln3 .caption {
-      text-align: center;
-      height: 40%;
-      width: 60%;
-      transform: translateY(-20%); }
-  @media (min-width: 1024px) {
+  display: flow-root;
+  margin: 0 10vw; }
+  #education #bln1 .caption, #education #bln2 .caption, #education #bln3 .caption {
+    text-align: center;
+    height: 40%;
+    width: 60%;
+    transform: translateY(-20%); }
+  @media (min-width: 860px) {
     #education #bln1 {
       width: 25em;
       float: left;
@@ -123,8 +135,8 @@ a, a:hover {
   position: relative; }
   #experience .cld .caption {
     height: 10em;
-    bottom: 0.5em;
-    left: 12em;
+    bottom: 0.1em;
+    left: 10em;
     right: 9em; }
 #experience .cld-sm {
   width: 25em;
@@ -136,26 +148,30 @@ a, a:hover {
     right: 4em; }
 
 #hashtags img {
-  max-width: 30%;
+  width: 25vw;
   float: left;
   clear: both; }
 
 #skills .skill-bar {
-  text-align: center;
-  margin: 1em auto; }
+  width: 60vw;
+  text-align: right;
+  margin: 10px auto; }
   #skills .skill-bar h4 {
     display: inline-block;
     vertical-align: middle;
-    color: white; }
+    color: white;
+    text-align: center;
+    width: 5em; }
   #skills .skill-bar .cld-bar-cover {
     margin-right: 2em;
     overflow: hidden;
     display: inline-block;
     vertical-align: middle; }
 #skills .cld-bar img {
-  float: left;
-  height: 4em;
-  margin: 0 10px; }
+  float: right;
+  width: 7vw;
+  max-width: 4em;
+  margin: 0.5em 10px; }
 
 #footer {
   position: relative;
@@ -176,6 +192,7 @@ a, a:hover {
   z-index: 3; }
   #earth .caption {
     width: 50vw;
-    height: 50vh; }
+    height: 50vh;
+    flex-direction: column; }
 
 /*# sourceMappingURL=custom.css.map */
