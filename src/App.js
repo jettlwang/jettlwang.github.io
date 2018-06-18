@@ -9,10 +9,10 @@ import 'react-image-lightbox/style.css';
 class App extends Component {
     
     render(){
-        return(<div>
+        return(<div> 
 <a href="mailto:jettlwang@gmail.com" id="float">e m a i l m e</a>
 
-<div id="narrow">               
+<div id="narrow">     
 <div><img id="logo" alt="" src="src/assets/jwhy.svg" /></div>
 <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
 <h2>I’m a UX <b>Designer</b> & <b>Developer</b>.</h2>
@@ -55,6 +55,7 @@ class App extends Component {
 </tbody></table>
 
 <p>And here&rsquo;s my <a href="/resume.pdf">resume</a>.</p>
+
     <WorkSet />
 
 <hr></hr>

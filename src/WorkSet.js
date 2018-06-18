@@ -2,27 +2,30 @@ import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 import { Noun } from './Noun';
 
-const images = ['/src/assets/work/huawei.gif','/src/assets/work/huawei2.gif',];
+const images = ['/src/assets/work/noof1.png','/src/assets/work/noof1.png',];
 
-const imgs = [
+const imgs = 
     { 'huawei' : [
         {
-            'src' : 'huawei.gif',
+            'src' : '/src/assets/work/huawei.gif',
             'title' : 'Huawei Touch Position Menu',
             'cap' : <p>I made with <Noun name="origami"/>.</p>
         },
         {
-            'src' : 'huawei1.gif',
+            'src' : '/src/assets/work/huawei2.gif',
             'title' : 'Huawei Text Selection Prototype',
             'cap' : <p>I made also with <Noun name="origami"/>.</p>
         }
-    ]}
-];
+    ]};
 
 export class WorkSet extends Component {
     render(){
+        var rows = [];
+        imgs["huawei"].forEach(function(e,i){
+            rows.push(<Thumb set="huawei" index={i} key={"a"+i}/>)
+        });
         return (<div>
-            <Thumb set="huawei" index="0"/>
+            {rows}
         </div>);
     }
 }
@@ -39,14 +42,13 @@ class Thumb extends Component {
     
     toggleLightbox(){
         this.setState({ isOpen : !this.state.isOpen });
-        console.log("called toggleLightbox()")
     }
     
     render(){
+        let {set,index} = this.props;
         return (<div>
-            <button onClick={this.toggleLightbox} display={this.state.isOpen.toString()}>OPEN</button>
-            {this.state.isOpen && 
-                <LightboxSet index='0' onClose={()=> alert("call me maybe") } display={this.state.isOpen.toString()}/> }
+            <a onClick={this.toggleLightbox}>{imgs[set][index].title}</a>
+            <LightboxSet index={index} set={set} onClose={this.toggleLightbox} isOpen={this.state.isOpen}/> 
         </div>);}
 }
 
@@ -59,35 +61,35 @@ class LightboxSet extends Component {
         
         this.state = {
           photoIndex: this.props.index,
-//            isOpen: true,
         };
     }
     
+
     handleClose(){
-        console.log("called handleClose()");
-        this.props.onClose;
+        this.props.onClose();
+        this.setState({photoIndex:this.props.index});
     }
 
     render() {
         const { photoIndex } = this.state;
-        console.log("LBS is rendering. this.props.display="+this.props.display);
+        let {set,index} = this.props;
+        let length = imgs[set].length;
 
         return (<div>
-                {/*<button type="button" onClick={() => this.setState({ isOpen: true })}>{this.props.set+" "+this.props.index}</button>*/}
-            {this.props.display && (
+            {this.props.isOpen && (
               <Lightbox
-                mainSrc={images[photoIndex]}
-                nextSrc={images[(photoIndex + 1) % images.length]}
-                prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+                mainSrc={imgs[set][photoIndex].src}
+                nextSrc={imgs[set][(photoIndex + 1) % length].src}
+                prevSrc={imgs[set][(photoIndex + length - 1) % length].src}
                 onCloseRequest={this.handleClose}
                 onMovePrevRequest={() =>
                   this.setState({
-                    photoIndex: (photoIndex + images.length - 1) % images.length,
+                    photoIndex: (photoIndex + length - 1) % length,
                   })
                 }
                 onMoveNextRequest={() =>
                   this.setState({
-                    photoIndex: (photoIndex + 1) % images.length,
+                    photoIndex: (photoIndex + 1) % length,
                   })
                 }
               />
