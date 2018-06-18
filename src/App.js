@@ -37,7 +37,7 @@ class App extends Component {
 
 
 <table><tbody>
-<tr><td><WorkImg src={["huawei.gif","huawei2.gif"]} alt="huawei" /></td>
+<tr><td><WorkSet set="huawei"/></td>
     <td><h2>Huawei Shanghai Internship</h2></td>
     <td className="td3rd">I worked on a lot of high level feature design involving <b>AI</b> & <b>mobile prototyping</b> with <Noun name="flinto"/> & <Noun name="origami" />. I was able to prototype complex interations including <b>voice input</b>, <b>text selection</b>, and <b>interaction-triggered transitions</b>. I also conducted a few field <b>user research</b> tasks to gather data & feedback.</td></tr>
 <tr><td><WorkImg src={["cssa1.png","cssa2.png","cssa3.png"]} alt="CSSA" /></td>
@@ -56,7 +56,7 @@ class App extends Component {
 
 <p>And here&rsquo;s my <a href="/resume.pdf">resume</a>.</p>
 
-    <WorkSet />
+     <WorkSet set="noof"/>
 
 <hr></hr>
 <p className="small">Copyright Jett Wang @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and <Noun name="jett"/> quirks.</p>

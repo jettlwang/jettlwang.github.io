@@ -2,27 +2,39 @@ import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 import { Noun } from './Noun';
 
-const images = ['/src/assets/work/noof1.png','/src/assets/work/noof1.png',];
-
-const imgs = 
-    { 'huawei' : [
+const imgs = {
+    'huawei' : [
         {
-            'src' : '/src/assets/work/huawei.gif',
+            'src' : 'huawei.gif',
             'title' : 'Huawei Touch Position Menu',
             'cap' : <p>I made with <Noun name="origami"/>.</p>
         },
         {
-            'src' : '/src/assets/work/huawei2.gif',
+            'src' : 'huawei2.gif',
             'title' : 'Huawei Text Selection Prototype',
             'cap' : <p>I made also with <Noun name="origami"/>.</p>
-        }
-    ]};
+        }],
+     'noof' : [
+         {
+             'src' : 'noof1.png',
+             'title' : "aaa",
+             'cap' : <p>wownoof</p>
+         }
+     ]
+    }
+
+;
+
+function getSrc(src){
+    return "/src/assets/work/"+src;
+}
 
 export class WorkSet extends Component {
     render(){
+        let set = this.props.set;
         var rows = [];
-        imgs["huawei"].forEach(function(e,i){
-            rows.push(<Thumb set="huawei" index={i} key={"a"+i}/>)
+        imgs[set].forEach(function(e,i){
+            rows.push(<Thumb set={set} index={i} key={"a"+i}/>)
         });
         return (<div>
             {rows}
@@ -37,24 +49,54 @@ class Thumb extends Component {
         super(props);
         this.toggleLightbox = this.toggleLightbox.bind(this);
         
-        this.state = { isOpen: false };
+        this.state = {
+            isOpen: false,
+            photoIndex:this.props.index
+        };
       }
     
     toggleLightbox(){
         this.setState({ isOpen : !this.state.isOpen });
+        this.setState({photoIndex:this.props.index});
     }
     
     render(){
-        let {set,index} = this.props;
+        var {set,index} = this.props;
+        var photoIndex  = this.state.photoIndex;
+        let length = imgs[set].length;
+        
         return (<div>
-            <a onClick={this.toggleLightbox}>{imgs[set][index].title}</a>
-            <LightboxSet index={index} set={set} onClose={this.toggleLightbox} isOpen={this.state.isOpen}/> 
-        </div>);}
+            <div className="workImg"><img onClick={this.toggleLightbox} src={getSrc(imgs[set][index].src)}/></div>
+ 
+            {this.state.isOpen && (
+              <Lightbox
+                mainSrc={getSrc(imgs[set][photoIndex].src)}
+                nextSrc={getSrc(imgs[set][(photoIndex + 1) % length].src)}
+                prevSrc={getSrc(imgs[set][(photoIndex + length - 1) % length].src)}
+                imageTitle={imgs[set][photoIndex].title}
+                imageCaption={imgs[set][photoIndex].cap}
+                onCloseRequest={this.toggleLightbox}
+                onMovePrevRequest={() =>
+                  this.setState({
+                    photoIndex: (photoIndex + length - 1) % length,
+                  })
+                }
+                onMoveNextRequest={() =>
+                  this.setState({
+                    photoIndex: (photoIndex + 1) % length,
+                  })
+                }
+              />
+            )}
+        </div>);
+        
+         {/*<LightboxSet index={index} set={set} onClose={this.toggleLightbox} isOpen={this.state.isOpen}/> */}
+    }
 }
 
 //=====================
 
-class LightboxSet extends Component {
+/*class LightboxSet extends Component {
     constructor(props) {
         super(props);
         this.handleClose = this.handleClose.bind(this);
@@ -96,4 +138,4 @@ class LightboxSet extends Component {
             )}
         </div>);
     }
-}
+}*/
