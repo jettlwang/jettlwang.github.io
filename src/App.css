@@ -128,7 +128,7 @@ table {
     border: 1px solid black;
     margin: 2px;
     overflow: hidden; }
-    table .workImg > div > img {
+    table .workImg > img {
       height: 50px;
       width: 50px;
       max-width: initial !important;
@@ -147,8 +147,11 @@ table {
         content: attr(data-label);
         float: left; }
       table td:nth-child(3) {
-        width: auto; }
-      table td .tdImg {
-        justify-content: center; } }
+        width: auto; } }
+
+.lightbox .title {
+  font-size: 0.8em; }
+.lightbox .caption {
+  font-size: 0.5em; }
 
 /*# sourceMappingURL=App.css.map */
