@@ -1,4 +1,3 @@
-
 const webpack = require('webpack');
 
 module.exports = {
@@ -8,8 +7,18 @@ module.exports = {
     publicPath: '/build/',
     filename: 'bundle.js',
   },
+//  debug: true,
+  devtool: '#eval-source-map',
+
 
   module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel',
+      },
+    ],
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
@@ -23,12 +32,17 @@ module.exports = {
     ],
   },
 
+  plugins: [
+     new webpack.LoaderOptionsPlugin({
+       debug: true,
+     }),
+  ],
 
-  plugins: process.argv.indexOf('-p') === -1 ? [] : [
+/*  plugins: process.argv.indexOf('-p') === -1 ? [] : [
     new webpack.optimize.UglifyJsPlugin({
       output: {
         comments: false,
       },
     }),
-  ],
+  ],*/
 };
