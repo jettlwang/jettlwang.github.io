@@ -142,18 +142,18 @@ table{
         }
     }
 
+
     .workImg {
         display: inline-block;
-        &> div {
         width: $workImgSize;
         height: $workImgSize;
             
         border: 1px solid black;
         margin: 2px;
         overflow: hidden;
-        }
+    
         
-        &>div>img{
+        &>img{
             height: $workImgSize;
             width: $workImgSize;
             max-width: initial !important;
@@ -178,12 +178,16 @@ table{
                 float: left;
             }
             &:nth-child(3){ width: auto;}
-            
-            .tdImg{
-                justify-content: center;
-            }
         }
     }
 }
 
 
+.lightbox{
+    & .title{
+        font-size: 0.8em;
+    }
+    & .caption{
+        font-size: 0.5em;
+    }
+}
