@@ -12,7 +12,7 @@ const imgs = {
         {
             'src' : 'hwdiagram.png',
             'title' : 'Huawei Thought Diagrams',
-            'cap' : <Caption>A collection of <b>thought diagrams</b> to conceptualize potential product directions. I would spend time brain storming and present my findings to my manager following the diagrams.</Caption>
+            'cap' : <Caption>A collection of <b>thought diagrams</b> I used to help myself work through complex problems and present to my manager.</Caption>
         },{
             'src' : 'huawei.gif',
             'title' : 'Huawei Touch Position Menu',
@@ -47,7 +47,7 @@ const imgs = {
          {
              'src' : 'noof1.png',
              'title' : "Noofie Visual Assets",
-             'cap' : <Caption>A simple reference of the final design of Noofie that shows the <b>color pallet</b> and <b>typefaces</b>.</Caption>
+             'cap' : <Caption>A simple reference of the UI design of Noofie that shows the <b>color pallet</b> and <b>typefaces</b>.</Caption>
          },{
              'src' : 'noof3.png',
              'title' : "Noofie Personas",
@@ -59,7 +59,7 @@ const imgs = {
          },{
              'src' : 'noof5.png',
              'title' : "Noofie UI",
-             'cap' : <Caption>The latest version of UI designs.</Caption>
+             'cap' : <Caption>Some shots of the UI designs.</Caption>
          },{
              'src' : 'noof9.png',
              'title' : "Noofie UI Compoments",
@@ -98,7 +98,7 @@ const imgs = {
          },{
              'src' : 'honeitdeck.png',
              'title' : "HoneIt Presentation Deck",
-             'cap' : <Caption>A set of <b>user flows</b> demostrating how our redesigns will fit into the platform navigation and task flow.</Caption>
+             'cap' : <Caption>Our keynote for the final client <b>presentation</b>.</Caption>
          },
     ],
     'freelance' : [
