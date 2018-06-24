@@ -31,16 +31,16 @@ class App extends Component {
 
 <p>In my free time I enjoy stargazing, picnics, Chinese culture, meditation & spiritual matters, and writing raps.</p>               
 
-<p>Here are some examples of my work:</p>
+<p>Here are some examples of my design work:</p>
 
 
 <table><tbody>
 <tr><td><WorkSet set="huawei"/></td>
     <td><h2>Huawei Shanghai Internship</h2><span>#mobile #corporate #UI #UX #research</span></td>
-    <td>I worked on a lot of high level feature design involving <b>AI</b> and spent a lot of time on brainstorming and drawing <b>thought diagrams</b>, as well as designing <b>wireframes</b> & <b>mock ups</b> for them following Huawei&rsquo;s external & internal <b>design guidelines</b>. I also worked on a lot of <b>mobile prototyping</b> with <Noun name="flinto"/> & <Noun name="origami" />.  I was able to prototype complex interations including <b>voice input</b>, <b>text selection</b>, and <b>interaction-triggered transitions</b>. I also conducted a few field <b>user research</b> tasks to gather data & feedback. Unfortunately, no photography or copying of information was allowed in office.</td></tr>
+    <td>I worked on a lot of high level feature design involving <b>AI</b> through brainstorming and <b>thought diagrams</b>, and later designing <b>wireframes</b> & <b>mock ups</b> for them following Huawei&rsquo;s external & internal <b>design guidelines</b>. I also worked on a lot of <b>mobile prototyping</b> with <Noun name="flinto"/> & <Noun name="origami" />.  I was able to prototype complex interations including <b>voice input</b>, <b>text selection</b>, and <b>interaction-triggered transitions</b>. I also conducted a few field <b>user research</b> tasks to gather data & feedback. Unfortunately, no photography or copying of information was allowed in office.</td></tr>
 <tr><td><WorkSet set="cssa"/></td>
     <td><h2>CSSA 2018 Website</h2><span>#web #UI</span></td>
-    <td>In about a school week, I <b>redesigned</b> the website for Chinese Student & Scholar Association from my own redesign 2 years ago and <b>coded</b> it with <Noun name="bootstrap"/>, <Noun name="sass"/> and a simple front-end <Noun name="jquery"/> framework and produced <b>visual assets</b> for the site. I also organized a series of quick <b>workshops</b> and wrote a brief <a href="https://github.com/uiuccssa/uiuc-cssa-web-2018">documentation</a> to explain my apporach to the newer members of the web team. <a href="https://uiuccssa.github.io/uiuc-cssa-web-2018/">(see it live)</a></td></tr>
+    <td>I have been on the Tech Team in our Chinese Student & Scholar Association from 2016-2018 and was the <b>Tech Officer</b> 17-18. In 2018, I <b>redesigned</b> the website for CSSA from my own redesign in 2016 and <b>coded</b> it with <Noun name="bootstrap"/>, <Noun name="sass"/> and a simple front-end <Noun name="jquery"/> framework and produced <b>visual assets</b> for the site. I also organized a series of quick <b>workshops</b> and wrote a brief <a href="https://github.com/uiuccssa/uiuc-cssa-web-2018">documentation</a> to explain my apporach to the newer members of the web team. <a href="https://uiuccssa.github.io/uiuc-cssa-web-2018/">(see it live)</a></td></tr>
 <tr><td><WorkSet set="noof"/></td>
     <td><h2>Noofie App</h2><span>#mobile #UI #UX #research</span></td>
     <td>I went through a full design cycle of an app as a personal project from <b>ideas</b> and <b>research</b> to multiple iterations of <b>wireframes</b> and <b>tested protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <Noun name="pop"/> and <Noun name="marvel" />. For UI, I used <Noun name="sketch"/> templates. I even <b>coded</b> the main interface on iOS with Swift.</td></tr>
