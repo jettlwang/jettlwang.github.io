@@ -24,9 +24,13 @@ const imgs = {
         }],
     'cssa' : [
         {
+             'src' : 'cssa0.jpg',
+             'title' : "CSSA Homepage Comparision",
+             'cap' : <Caption>A side-by-side comparision for the 3 versions of CSSA homepage from 2013, my redesign in 2016, and again in 2018.</Caption>
+         },{
              'src' : 'cssa1.png',
              'title' : "CSSA Homepage",
-             'cap' : <Caption>The homepage for the CSSA website I designed.</Caption>
+             'cap' : <Caption>The homepage for the CSSA website I designed in 2018.</Caption>
          },{
              'src' : 'cssa2.png',
              'title' : "CSSA Single Even Page",
@@ -104,31 +108,31 @@ const imgs = {
     'freelance' : [
         {
              'src' : 'free1.png',
-             'title' : "Freelance Design Work",
+             'title' : "Mid-fi Wireframes",
              'cap' : <Caption></Caption>
          },{
              'src' : 'free2.png',
-             'title' : "Freelance Design Work",
-             'cap' : <Caption></Caption>
+             'title' : "Andriod UI Design",
+             'cap' : <Caption>A set of app UI design I did for startup Yttor in 2017.</Caption>
          },{
              'src' : 'free3.png',
-             'title' : "Freelance Design Work",
-             'cap' : <Caption></Caption>
+             'title' : "Andriod UI Design",
+             'cap' : <Caption>A set of screen concepts I designed for an citizen-engagement app following the (then) <b>Material Design Guidelines</b> in 2016.</Caption>
          },{
              'src' : 'free4.png',
-             'title' : "Freelance Design Work",
-             'cap' : <Caption></Caption>
+             'title' : "iOS UI Design",
+             'cap' : <Caption>A set of app design I did for startup Orange Capital in 2016.</Caption>
          },{
              'src' : 'free5.png',
-             'title' : "Freelance Design Work",
-             'cap' : <Caption></Caption>
+             'title' : "Web Design",
+             'cap' : <Caption>The homepage of the website I made for Palo ALto VC Amino Capital in <Noun name="webflow"/> in 2016.</Caption>
          },{
              'src' : 'free6.png',
-             'title' : "Freelance Design Work",
+             'title' : "Infographics I",
              'cap' : <Caption></Caption>
          },{
              'src' : 'free7.png',
-             'title' : "Freelance Design Work",
+             'title' : "Infographics II",
              'cap' : <Caption></Caption>
          },
     ],
