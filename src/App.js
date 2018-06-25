@@ -27,7 +27,7 @@ class App extends Component {
 <p>I have a degree in <b>Economics</b> at <Noun name="uiuc" /> and also took classes in <b>Computer Science</b> including Data Structure / UI Design & Development / Data Visualization.</p>
 <p>I received my <b>design education</b> through the 3-month <a href="https://generalassemb.ly/education/user-experience-design-immersive?where=san-francisco">UX Design Immersive</a> at <Noun name="ga" /> in San Francisco, CA.</p>
 
-<p>I&rsquo;sve interned as a <b>designer</b> at <br/><Noun name="huawei" /> in Shanghai, China,<br/>and as a <b>software engineer</b> at <br/><Noun name="emc" /> in Beijing, China / <Noun name="lenovo" /> in Beijing, China.<br/> I have also done <b>freelance</b> design work for startups, student organizations, and small companies.</p>
+<p>I&rsquo;ve interned as a <b>designer</b> at <br/><Noun name="huawei" /> in Shanghai, China,<br/>and as a <b>software engineer</b> at <br/><Noun name="emc" /> in Beijing, China / <Noun name="lenovo" /> in Beijing, China.<br/> I have also done <b>freelance</b> design work for startups, student organizations, and small companies.</p>
 
 <p>In my free time I enjoy stargazing, picnics, Chinese culture, meditation & spiritual matters, and writing raps.</p>               
 
@@ -36,10 +36,10 @@ class App extends Component {
 
 <table><tbody>
 <tr><td><WorkSet set="huawei"/></td>
-    <td><h2>Huawei Shanghai Internship</h2><span>#mobile #corporate #UI #UX #research</span></td>
+    <td><h2>Huawei Shanghai Internship</h2><span>#mobile #UI #UX #research</span></td>
     <td>I worked on a lot of high level feature design involving <b>AI</b> through brainstorming and <b>thought diagrams</b>, and later designing <b>wireframes</b> & <b>mock ups</b> for them following Huawei&rsquo;s external & internal <b>design guidelines</b>. I also worked on a lot of <b>mobile prototyping</b> with <Noun name="flinto"/> & <Noun name="origami" />.  I was able to prototype complex interations including <b>voice input</b>, <b>text selection</b>, and <b>interaction-triggered transitions</b>. I also conducted a few field <b>user research</b> tasks to gather data & feedback. Unfortunately, no photography or copying of information was allowed in office.</td></tr>
 <tr><td><WorkSet set="cssa"/></td>
-    <td><h2>CSSA 2018 Website</h2><span>#web #UI</span></td>
+    <td><h2>CSSA 2018 Website</h2><span>#web #frontend #UI</span></td>
     <td>I have been on the Tech Team in our Chinese Student & Scholar Association from 2016-2018 and was the <b>Tech Officer</b> 17-18. In 2018, I <b>redesigned</b> the website for CSSA from my own redesign in 2016 and <b>coded</b> it with <Noun name="bootstrap"/>, <Noun name="sass"/> and a simple front-end <Noun name="jquery"/> framework and produced <b>visual assets</b> for the site. I also organized a series of quick <b>workshops</b> and wrote a brief <a href="https://github.com/uiuccssa/uiuc-cssa-web-2018">documentation</a> to explain my apporach to the newer members of the web team. <a href="https://uiuccssa.github.io/uiuc-cssa-web-2018/">(see it live)</a></td></tr>
 <tr><td><WorkSet set="noof"/></td>
     <td><h2>Noofie App</h2><span>#mobile #UI #UX #research</span></td>
@@ -48,7 +48,7 @@ class App extends Component {
     <td><h2>HoneIt Consulting Project</h2><span>#web #freelance #research #UX</span></td>
     <td>I did a two week consulting project with 2 fellow peers at <Noun name="ga"/> for recruting startup HoneIt. We conducted <b>user interviews & usability tests</b> on the existing product and created wireframes for <b>potential redesign</b> in <Noun name="sketch"/>. I also created a <b>usability report</b> from user feedback and <b>documentation</b> for our redesign in <Noun name="omni"/>. Many of our design suggestions have been adopted in HoneIt&rsquo;s current design.</td></tr>
 <tr><td><WorkSet set="parallax"/></td>
-    <td><h2>Hello, World! Parallax Experiment</h2><span>#web #UI</span></td>
+    <td><h2>Hello, World! Parallax Experiment</h2><span>#web #frontend #UI</span></td>
     <td>A single-page website I first made two years ago to experiment with <b>parallax scrolling</b> that featured my (then) resume. Made with <Noun name="htmlcss"/> and <a href="https://github.com/Prinzhorn/skrollr">Skrollr JS</a>. All visual assets are also drawn by me in <Noun name="sketch"/> and <Noun name="illustrator"/>. <a href="https://jettlwang.github.io/static/parallax/">See it live(Best on desktop)!</a></td></tr>
 <tr><td><WorkSet set="freelance"/></td>
     <td><h2>Startup & Freelance Works</h2><span>#web #mobile #freelance #UI</span></td>
