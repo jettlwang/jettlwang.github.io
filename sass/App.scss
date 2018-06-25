@@ -93,17 +93,17 @@ body {
 }
 
 @keyframes flip {
-    0% {transform: rotateY(190deg);}
-    100% {transform: rotateY(-10deg);}
+    0% {transform: rotateY(180deg);}
+    100% {transform: rotateY(-180deg);}
 }
 
 #jett img {
     animation-name: flip;
-    animation-duration: 0.3s;
+    animation-duration: 300ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
-    transition: none;
+    animation-timing-function: steps(2);
+    
 }
 
 #float{
