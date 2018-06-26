@@ -43,13 +43,14 @@ var trs = {};  //pair of projects key:<tr/>
 for(var e in projects){
     trs[e]=<Project id={e} key={e}/>;
 };
-
+ 
 const tags = {
     "ALL" : Object.values(trs),
     "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance']],
-    "#UI" : [trs['huawei'],trs['cssa'],trs['noofie'],trs['parallax'],trs['freelance']],
-    "#UX" : [trs['huawei'],trs['noof'],trs['honeit']],
+    "#mobile" : [trs['huawei'],trs['noof'],trs['freelance']],
     "#frontend" : [trs['cssa'],trs['parallax']],
+    "#UX" : [trs['huawei'],trs['noof'],trs['honeit']],
+    "#UI" : [trs['huawei'],trs['cssa'],trs['noof'],trs['parallax'],trs['freelance']],
 }
 
 
@@ -91,7 +92,6 @@ class TagController extends Component{
     
     handleClick(){
         this.setState({ isActive : true });
-        console.log("im handleclick");
         this.props.onClick();
     }
     

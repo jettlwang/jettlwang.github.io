@@ -136,6 +136,9 @@ table{
         vertical-align: middle;
         padding: 20px;
 
+        &:nth-child(2){
+            width: 20%;
+        }
         &:nth-child(3){
             width: 60%;
         }
@@ -171,12 +174,12 @@ table{
         td {
             display: block;
             text-align: center;
+            width: auto !important;
             
             &::before {
                 content: attr(data-label);
                 float: left;
             }
-            &:nth-child(3){ width: auto;}
         }
     }
 }
