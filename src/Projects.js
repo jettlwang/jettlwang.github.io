@@ -15,7 +15,7 @@ const projects = {
         },
 
     "noof" :
-        {"title" : "Noofie App</h2><span>#mobile #UI #UX #research</span></td>",
+        {"title" : "Noofie App",
     "blurb" : <td>I went through a full design cycle of an app as a personal project from <b>ideas</b> and <b>research</b> to multiple iterations of <b>wireframes</b> and <b>tested protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <Noun name='pop'/> and <Noun name='marvel' />. For UI, I used <Noun name='sketch'/> templates. I even <b>coded</b> the main interface on iOS with Swift.</td>,},
 
     "honeit" :
@@ -35,7 +35,7 @@ export const Project = (props) => {
     var proj = projects[props.id];
     return (<tr style={{display : props.display}}>
         <td><WorkSet set={props.id}/></td>
-        <td>{proj.title}</td>
+        <td><h2>{proj.title}</h2></td>
         {proj.blurb}
     </tr>);
 }
@@ -45,22 +45,19 @@ for(var e in projects){
 };
 
 const tags = {
-    "all" : Object.values(trs),
+    "ALL" : Object.values(trs),
     "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance']],
     "#UI" : [trs['huawei'],trs['cssa'],trs['noofie'],trs['parallax'],trs['freelance']],
     "#UX" : [trs['huawei'],trs['noof'],trs['honeit']],
     "#frontend" : [trs['cssa'],trs['parallax']],
 }
 
-for(var e in tags){
-    
-}
 
 export class Projects extends Component {
     constructor(props){
         super(props);
         this.selectTag = this.selectTag.bind(this);
-        this.state = { tag : 'all' }
+        this.state = { tag : 'ALL' }
     }
     
     selectTag(newstate){
@@ -70,18 +67,46 @@ export class Projects extends Component {
     render(){
         var taglist = [];
         for(var e in tags){
-            taglist.push(" / ");
+            if( e != "ALL") {taglist.push(" "+"/ ");}
             let newstate = {tag : e};
-            taglist.push(<a onClick={()=>this.selectTag(newstate)} key={e} className="tag">{e+" "}</a>);
-            
+            taglist.push(<TagController onClick={()=>this.selectTag(newstate)} key={e} name={e} init={e == "ALL"}/>);
          }
         
         return(<table>
-            <caption>Tags{taglist}</caption>
+            <caption>{taglist}</caption>
             
             <tbody>
                 {tags[this.state.tag]}
             </tbody>
         </table>);
+    }
+}
+
+class TagController extends Component{
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+        this.state = { isActive : this.props.init };
+    }
+    
+    handleClick(){
+        this.setState({ isActive : true });
+        console.log("im handleclick");
+        this.props.onClick();
+    }
+    
+    componentDidUpdate(prevProps, prevState, snapshot){
+        if(prevState.isActive){this.setState({ isActive : false })};
+        
+    }
+
+    
+    render(){
+        return (
+            <a
+                onClick={this.handleClick}
+                className={''+ (this.state.isActive && "active")}
+            >{this.props.name+" "}</a>
+        );
     }
 }

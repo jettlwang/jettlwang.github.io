@@ -65,7 +65,8 @@ body {
   body .small {
     font-size: 14px; }
   body a {
-    color: firebrick; }
+    color: firebrick;
+    cursor: pointer; }
   body #narrow {
     margin: 5% 5% 0 5%; }
     @media (min-width: 961px) {
@@ -152,5 +153,26 @@ table {
   font-size: 0.8em; }
 .lightbox .caption {
   font-size: 0.5em; }
+
+caption {
+  text-align: left; }
+  caption a {
+    color: black;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+       supported by Chrome and Opera */ }
+  caption a.active {
+    text-decoration: underline;
+    color: firebrick; }
 
 /*# sourceMappingURL=App.css.map */
