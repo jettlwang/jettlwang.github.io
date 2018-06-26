@@ -71,6 +71,7 @@ body {
     
     a {
         color: firebrick;
+        cursor: pointer;
     }
     
     #narrow {
@@ -83,8 +84,6 @@ body {
     
     .noun img { height: 0.8em };
     h1 > .noun img { height: 1.2em };
-    
-
 }
 
 
@@ -189,5 +188,26 @@ table{
     }
     & .caption{
         font-size: 0.5em;
+    }
+}
+
+caption{
+    text-align: left;
+    
+
+    a {
+        color: black;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    }
+    
+    a.active {
+        text-decoration: underline;
+        color: firebrick;
     }
 }
