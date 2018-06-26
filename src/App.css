@@ -155,7 +155,11 @@ table {
   font-size: 0.5em; }
 
 caption {
-  text-align: left; }
+  text-align: left;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white; }
   caption a {
     color: black;
     -webkit-touch-callout: none;
