@@ -119,6 +119,8 @@ table {
     border: 1px solid black;
     vertical-align: middle;
     padding: 20px; }
+    table td:nth-child(2) {
+      width: 20%; }
     table td:nth-child(3) {
       width: 60%; }
   table .workImg {
@@ -142,12 +144,11 @@ table {
       border-bottom: 1px solid; }
     table td {
       display: block;
-      text-align: center; }
+      text-align: center;
+      width: auto !important; }
       table td::before {
         content: attr(data-label);
-        float: left; }
-      table td:nth-child(3) {
-        width: auto; } }
+        float: left; } }
 
 .lightbox .title {
   font-size: 0.8em; }
