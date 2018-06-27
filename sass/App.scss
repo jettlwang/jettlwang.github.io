@@ -98,7 +98,7 @@ body {
 
 #jett img {
     animation-name: flip;
-    animation-duration: 300ms;
+    animation-duration: 200ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: steps(2);
@@ -186,8 +186,20 @@ table{
 
 
 .lightbox{
+    .ril-caption-content,.ril__captionContent,.ril-toolbar__item,.ril__toolbarItem{
+        line-height: 1 !important;
+        text-overflow: initial;
+        overflow-x: scroll;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
     & .title{
-        font-size: 0.8em;
+        font-size: 0.6em;
+        @media (min-width:$media){
+            font-size: 0.8em;
+        }
     }
     & .caption{
         font-size: 0.5em;
@@ -204,6 +216,8 @@ caption{
 
     a {
         color: black;
+        text-decoration: underline;
+
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -214,7 +228,6 @@ caption{
     }
     
     a.active {
-        text-decoration: underline;
         color: firebrick;
     }
 }

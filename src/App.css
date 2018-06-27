@@ -89,7 +89,7 @@ body {
     transform: rotateY(-180deg); } }
 #jett img {
   animation-name: flip;
-  animation-duration: 300ms;
+  animation-duration: 200ms;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: steps(2); }
@@ -150,8 +150,19 @@ table {
         content: attr(data-label);
         float: left; } }
 
+.lightbox .ril-caption-content, .lightbox .ril__captionContent, .lightbox .ril-toolbar__item, .lightbox .ril__toolbarItem {
+  line-height: 1 !important;
+  text-overflow: initial;
+  overflow-x: scroll; }
+.lightbox ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */ }
 .lightbox .title {
-  font-size: 0.8em; }
+  font-size: 0.6em; }
+  @media (min-width: 961px) {
+    .lightbox .title {
+      font-size: 0.8em; } }
 .lightbox .caption {
   font-size: 0.5em; }
 
@@ -163,6 +174,7 @@ caption {
   background-color: white; }
   caption a {
     color: black;
+    text-decoration: underline;
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -177,7 +189,6 @@ caption {
     /* Non-prefixed version, currently
        supported by Chrome and Opera */ }
   caption a.active {
-    text-decoration: underline;
     color: firebrick; }
 
 /*# sourceMappingURL=App.css.map */
