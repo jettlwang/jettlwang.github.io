@@ -5,11 +5,6 @@ import { Home } from './Home';
 import { Noofie } from './Noofie';
 
 
-import { Noun } from './Noun';
-import { WorkSet } from './WorkSet';
-import { Projects } from './Projects';
-import 'react-image-lightbox/style.css';
-
 class App extends Component {
     
     render(){

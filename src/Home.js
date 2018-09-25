@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { Noun } from './Noun';
-import { WorkSet } from './WorkSet';
-import { Projects } from './Projects';
+import { Noun } from './partials/Noun.js';
+import { WorkSet } from './partials/WorkSet';
+import { Projects } from './partials/Projects';
 import 'react-image-lightbox/style.css';
 
 export class Home extends Component {
