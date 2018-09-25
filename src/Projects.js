@@ -21,10 +21,12 @@ const projects = {
     "honeit" :
         {"title" : "HoneIt Consulting Project",
     "blurb" : <td>I did a two week consulting project with 2 fellow peers at <Noun name='ga'/> for recruting startup HoneIt. We conducted <b>user interviews & usability tests</b> on the existing product and created wireframes for <b>potential redesign</b> in <Noun name='sketch'/>. I also created a <b>usability report</b> from user feedback and <b>documentation</b> for our redesign in <Noun name='omni'/>. Many of our design suggestions have been adopted in HoneIt&rsquo;s current design.</td>,},
+/*
 
     "parallax" :
         {"title" : "Hello, World! Parallax Experiment",
     "blurb" : <td>A single-page website I first made two years ago to experiment with <b>parallax scrolling</b> that featured my (then) resume. Made with <Noun name='htmlcss'/> and <a href='https://github.com/Prinzhorn/skrollr'>Skrollr JS</a>. All visual assets are also drawn by me in <Noun name='sketch'/> and <Noun name='illustrator'/>. <a href='https://jettlwang.github.io/static/parallax/'>See it live(Best on desktop)!</a></td>,},
+*/
 
     "freelance" :
         {"title" : "Startup & Freelance Works",
@@ -50,7 +52,7 @@ const tags = {
     "#mobile" : [trs['huawei'],trs['noof'],trs['freelance']],
     "#frontend" : [trs['cssa'],trs['parallax']],
     "#UX" : [trs['huawei'],trs['noof'],trs['honeit']],
-    "#UI" : [trs['huawei'],trs['cssa'],trs['noof'],trs['parallax'],trs['freelance']],
+    "#UI" : [trs['cssa'],trs['noof'],trs['parallax'],trs['freelance']],
 }
 
 

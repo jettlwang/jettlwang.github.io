@@ -25,7 +25,7 @@ const imgs = {
     'cssa' : [
         {
              'src' : 'cssa0.jpg',
-             'title' : "CSSA Homepage Comparision",
+             'title' : "CSSA Homepage Evolution",
              'cap' : <Caption>A side-by-side comparision for the 3 versions of CSSA homepage from 2013, my redesign in 2016, and again in 2018.</Caption>
          },{
              'src' : 'cssa1.png',

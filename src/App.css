@@ -60,8 +60,8 @@ html {
 
 body {
   font-family: "Lusitana", serif;
-  font-size: 2em;
-  line-height: 1.5; }
+  font-size: 1.8em;
+  line-height: 1.8; }
   body .small {
     font-size: 14px; }
   body a {
@@ -80,7 +80,7 @@ body {
     height: 1.2em; }
 
 #logo {
-  height: 75px; }
+  height: 65px; }
 
 @keyframes flip {
   0% {
