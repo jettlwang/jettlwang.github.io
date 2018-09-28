@@ -65,6 +65,11 @@ body {
     font-size: 1.8em;
     line-height: 1.8;
     
+    @media screen and (max-width: $media) {
+        font-size: 1.2em;
+    }
+
+    
     .small{
         font-size: 14px;
     }
