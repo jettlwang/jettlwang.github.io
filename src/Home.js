@@ -29,7 +29,7 @@ export class Home extends Component {
 
 <p>In my free time I enjoy stargazing, picnics, writing clubs, Chinese culture and practicing Chan Buddhism.
 </p><p>
-In the past summer, I attended the Woodenfish Foundation <a href="https://www.woodenfish.org/hbmlp">Humanistic Buddhist Monastic Life Program</a> with the where 100 students from top schools around the world gather in a Buddhist monastery in rural China, for 3 weeks of <b>monastic life training</b> and a week-long <b>silent meditation retreat</b>. Then, I taught contemplative practices to youths 8-16 at the <a href="https://www.woodenfish.org/world-citizens-youth-camp">World CitiZen Youth Summer Camp</a>.<br/>
+In the past summer, I attended the Woodenfish Foundation <a href="https://www.woodenfish.org/hbmlp">Humanistic Buddhist Monastic Life Program</a> where 100 students from top schools around the world gather in a Buddhist monastery in rural China, for 3 weeks of <b>monastic life training</b> and a week-long <b>silent meditation retreat</b>. Then, I taught contemplative practices to youths 8-16 at the <a href="https://www.woodenfish.org/world-citizens-youth-camp">World CitiZen Youth Summer Camp</a>.<br/>
 I am now the Woodenfish Alumni Chair in NY and uphold <b>daily online meditation</b> and <b>offline meetings</b>.</p>               
 
 <a href="mailto:jettlwang@gmail.com">Let&rsquo;s get in touch.</a>
