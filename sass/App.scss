@@ -61,14 +61,15 @@ html {
 
 }
 body {
+    
     font-family: $font-stack;
     font-size: 1.8em;
     line-height: 1.8;
-    
-    @media screen and (max-width: $media) {
-        font-size: 1.2em;
-    }
 
+        @media screen and (max-width: $media) {
+            font-size: 1.2em;
+        }
+    
     
     .small{
         font-size: 14px;
@@ -134,7 +135,7 @@ b {
 
 table{
     border: 1px solid black;
-    font-size: 0.5em;
+    font-size: 14px !important;
 
     td{
         border: 1px solid black;

@@ -117,7 +117,7 @@ b {
 
 table {
   border: 1px solid black;
-  font-size: 0.5em; }
+  font-size: 14px !important; }
   table td {
     border: 1px solid black;
     vertical-align: middle;
