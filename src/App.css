@@ -65,7 +65,7 @@ body {
   body .small {
     font-size: 14px; }
   body a {
-    color: firebrick;
+    color: inherit;
     cursor: pointer; }
   body #narrow {
     margin: 5% 5% 0 5%; }

@@ -15,32 +15,27 @@ export class Home extends Component {
 <div><img id="logo" alt="" src="src/assets/jwhy.svg" /></div>
 <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
 <h2>I’m an Experience <b>Designer</b> & <b>Developer</b>.</h2>
-<p>I do <b>web & mobile design</b> and <b>front end development</b>. I have experience in freelance, start ups & global firms. I am a motivated <b>self-starter</b> & <b>fast learner</b> who thrives on <b>complexity</b> & <b>flexiblility</b>.</p>
-<p>Things I&rsquo;ve learned:</p>
-<ul>
-    <li> <Noun name="htmlcss" /> / <Noun name="bootstrap" /> / <Noun name="sass" /> / <Noun name="jquery" /> / <Noun name="react" /></li>
-    <li> <Noun name="sketch" /> / <Noun name="photoshop" /> / <Noun name="omni" /></li>
-    <li> <Noun name="origami" /> / <Noun name="flinto" /> / <Noun name="invision" /> / <Noun name="marvel" /> / <Noun name="pop" /></li>
-    <li> <Noun name="wix" /> / <Noun name="weebly" /> / <Noun name="webflow" /> / <Noun name="squarespace" /></li>
-</ul>
+<p>I’m a motivated <b>self starter</b> that always looks to apply my skill set as well as further expand it. I perform best in exciting environments where I’m allowed <b>flexibility</b> and <b>opportunity</b>.</p>
+
+<p>My past experience has been in <b>web/mobile design</b> and <b>front end development</b>.</p>
                
-<p>I have a degree in <b>Economics</b> at <Noun name="uiuc" /> and also took classes in <b>Computer Science</b> including Data Structure / UI Design & Development / Data Visualization.</p>
-<p>I received my <b>design education</b> through the 3-month <a href="https://generalassemb.ly/education/user-experience-design-immersive?where=san-francisco">UX Design Immersive</a> at <Noun name="ga" /> in San Francisco, CA.</p>
+<p>Here&rsquo;s my <a href="/resume.pdf">resume</a>.</p>
 
-<p>I&rsquo;ve interned as a <b>designer</b> at <br/><Noun name="huawei" /> in Shanghai, China,<br/>and as a <b>software engineer</b> at <br/><Noun name="emc" /> in Beijing, China / <Noun name="lenovo" /> in Beijing, China.<br/> I have also done <b>freelance</b> design work for startups, student organizations, and small companies.</p>
-
-<p>In my free time I enjoy stargazing, picnics, Chinese culture, meditation & spiritual matters, and writing raps.</p>               
-
-<p>Here are some examples of my design work:</p>
-
-
+<p>Here are examples of my design work:</p>
 <Projects />
+<br/>
 
-<p>And here&rsquo;s my <a href="/resume.pdf">resume</a>.</p>
 
 
-<hr></hr>
-<p className="small">Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and  quirks.</p>
+<p>In my free time I enjoy stargazing, picnics, writing clubs, Chinese culture and practicing Chan Buddhism.
+</p><p>
+In the past summer, I attended the Woodenfish Foundation <a href="https://www.woodenfish.org/hbmlp">Humanistic Buddhist Monastic Life Program</a> with the where 100 students from top schools around the world gather in a Buddhist monastery in rural China, for 3 weeks of <b>monastic life training</b> and a week-long <b>silent meditation retreat</b>. Then, I taught contemplative practices to youths 8-16 at the <a href="https://www.woodenfish.org/world-citizens-youth-camp">World CitiZen Youth Summer Camp</a>.<br/>
+I am now the Woodenfish Alumni Chair in NY and uphold <b>daily online meditation</b> and <b>offline meetings</b>.</p>               
+
+<a href="mailto:jettlwang@gmail.com">Let&rsquo;s get in touch.</a>
+               
+<hr />
+<p className="small">Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and mindfulness.</p>
 </div>
         </div>
         );}
