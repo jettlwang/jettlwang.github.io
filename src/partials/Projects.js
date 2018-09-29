@@ -36,7 +36,8 @@ const projects = {
 
     "freelance" :
         {"title" : "Startup & Freelance Works",
-    "blurb" : <span>I worked on various projects in <b>web</b> & <b>mobile</b> as well as <b>information</b> design.</span>,},
+    "blurb" : <span>I worked on various projects in <b>web</b> & <b>mobile</b> as well as <b>information</b> design.</span>,
+        "role" :"web design / UI design / interaction design"},
 };
 
 export const Project = (props) => {
