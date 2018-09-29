@@ -10,10 +10,6 @@ export const Caption = (props) =>{
 const imgs = {
     'huawei' : [
         {
-            'src' : 'hwdiagram.png',
-            'title' : 'Huawei Thought Diagrams',
-            'cap' : <Caption>A collection of <b>thought diagrams</b> I used to help myself work through complex problems and present to my manager.</Caption>
-        },{
             'src' : 'huawei.gif',
             'title' : 'Huawei Touch Position Menu',
             'cap' : <Caption>A slide-up menu I made in <Noun name="origami"/> based on touch position.</Caption>
@@ -21,20 +17,25 @@ const imgs = {
             'src' : 'huawei2.gif',
             'title' : 'Huawei Text Selection Prototype',
             'cap' : <Caption>A text-selection interaction that I made also in <Noun name="origami"/>.</Caption>
+        },
+        {
+            'src' : 'hwdiagram.png',
+            'title' : 'Huawei Thought Diagrams',
+            'cap' : <Caption>A collection of <b>thought diagrams</b>, drafts and mockups I used to help myself work through complex strategic problems and present to my manager.</Caption>
         }],
     'cssa' : [
         {
              'src' : 'cssa0.jpg',
              'title' : "CSSA Homepage Evolution",
-             'cap' : <Caption>A side-by-side comparision for the 3 versions of CSSA homepage from 2013, my redesign in 2016, and again in 2018.</Caption>
+             'cap' : <Caption>A side-by-side comparision for the 3 versions of CSSA homepage from 2008-2013, my redesign in 2016, and again in 2018. I cut down a lot of information that was no longer regularly maintained like news articles(they were moved to WeChat).</Caption>
          },{
              'src' : 'cssa1.png',
              'title' : "CSSA Homepage",
-             'cap' : <Caption>The homepage for the CSSA website I designed in 2018.</Caption>
+             'cap' : <Caption>The homepage for the CSSA website I designed in 2018 reusing elements I created in 2016.</Caption>
          },{
              'src' : 'cssa2.png',
              'title' : "CSSA Single Even Page",
-             'cap' : <Caption>A single event page for the CSSA website I designed.</Caption>
+             'cap' : <Caption>A single event page for the CSSA website I designed. For easy maintainace, I created templates for all event pages and css classes for formatting.</Caption>
          },{
              'src' : 'cssa3.png',
              'title' : "CSSA About Page",
@@ -107,17 +108,25 @@ const imgs = {
     ],
     'freelance' : [
         {
-             'src' : 'free1.png',
-             'title' : "Mid-fi Wireframes",
-             'cap' : <Caption></Caption>
+             'src' : 'free6.png',
+             'title' : "Infographics I",
+             'cap' : <Caption>Infographic I designed for startup Yttor in 2017.</Caption>
+         },{
+             'src' : 'free7.png',
+             'title' : "Infographics II",
+             'cap' : <Caption>Infographic I designed for startup Yttor in 2017.</Caption>
          },{
              'src' : 'free2.png',
              'title' : "Andriod UI Design",
              'cap' : <Caption>A set of app UI design I did for startup Yttor in 2017.</Caption>
          },{
+             'src' : 'free1.png',
+             'title' : "Mid-fi Wireframes",
+             'cap' : <Caption></Caption>
+         },{
              'src' : 'free3.png',
              'title' : "Andriod UI Design",
-             'cap' : <Caption>A set of screen concepts I designed for an citizen-engagement app following the (then) <b>Material Design Guidelines</b> in 2016.</Caption>
+             'cap' : <Caption>A set of screen concepts I designed for an citizen engagement app following the (then) <b>Material Design Guidelines</b> in 2016.</Caption>
          },{
              'src' : 'free4.png',
              'title' : "iOS UI Design",
@@ -126,14 +135,6 @@ const imgs = {
              'src' : 'free5.png',
              'title' : "Web Design",
              'cap' : <Caption>The homepage of the website I made for Palo ALto VC Amino Capital in <Noun name="webflow"/> in 2016.</Caption>
-         },{
-             'src' : 'free6.png',
-             'title' : "Infographics I",
-             'cap' : <Caption></Caption>
-         },{
-             'src' : 'free7.png',
-             'title' : "Infographics II",
-             'cap' : <Caption></Caption>
          },
     ],
     'parallax' : [
@@ -161,9 +162,9 @@ export class WorkSet extends Component {
         imgs[set].forEach(function(e,i){
             rows.push(<Thumb set={set} index={i} key={"a"+i}/>)
         });
-        return (<span>
+        return (<td>
             {rows}
-        </span>);
+        </td>);
     }
 }
 
@@ -188,7 +189,7 @@ class Thumb extends Component {
         var photoIndex  = this.state.photoIndex;
         let length = imgs[set].length;
         
-        return (<span>
+        return (<span style={{"display":"inline-block"}}>
             <div className="workImg"><img onClick={this.toggleLightbox} src={imgs[set][index].src} alt={imgs[set][index].title}/></div>
  
             {this.state.isOpen && (

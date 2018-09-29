@@ -25,11 +25,10 @@ export class Home extends Component {
 <Projects />
 <br/>
 
-
-
 <p>In my free time I practice Chan Buddhism and am the <a href="http://woodenfish.org/">Woodenfish</a> Alumni Chair in NY.</p><p>I uphold <b>daily online meditation</b> and offline meetings.</p>
 
 <a href="mailto:jettlwang@gmail.com"><b>Let&rsquo;s get in touch.</b></a>
+               <br/>
                
 <hr />
 <p className="small">Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and mindfulness.</p>
