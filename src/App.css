@@ -127,23 +127,27 @@ table {
             }*/ }
     table td:nth-child(2) {
       width: 60%;
-      padding: 0;
+      padding: 20px 5px;
       vertical-align: top; }
   table .gallary {
     margin: 0 auto; }
-  table .workImg > img {
-    width: 150px;
-    height: auto;
-    align-self: center;
-    margin: 10px;
-    object-fit: cover; }
-  @media screen and (max-width: 961px) {
-    table .workImg {
-      width: 100%;
-      height: 80px; }
-      table .workImg > img {
+  table .workImg {
+    display: inline-flex;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px; }
+    table .workImg > img {
+      width: 150px;
+      height: auto;
+      align-self: center;
+      object-fit: cover; }
+    @media screen and (max-width: 961px) {
+      table .workImg {
         width: 100%;
-        height: 80px; } }
+        height: 80px; }
+        table .workImg > img {
+          width: 100%;
+          height: 80px; } }
   @media screen and (max-width: 961px) {
     table tr {
       display: block;

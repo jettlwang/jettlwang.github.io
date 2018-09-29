@@ -148,7 +148,7 @@ table{
 
         &:nth-child(2){
             width: 60%;
-            padding: 0;
+            padding: 20px 5px;
             vertical-align: top;
         }
 /*        &:nth-child(3){
@@ -161,12 +161,13 @@ table{
         margin: 0 auto;
     }
     .workImg {
-//        display: inline-flex;
+        display: inline-flex;
 //        width: $workImgW;
 //        height: $workImgH;
             
-//        border: 1px solid black;
-//        margin: 2px;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
 //        overflow: hidden;
     
         
@@ -174,7 +175,7 @@ table{
             width: 150px;
             height: auto;
             align-self: center;
-            margin: 10px;
+//            margin: 5px;
             
 //            height: auto; 
 //            width: auto; 
