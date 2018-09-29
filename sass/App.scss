@@ -149,6 +149,7 @@ table{
         &:nth-child(2){
             width: 60%;
             padding: 0;
+            vertical-align: top;
         }
 /*        &:nth-child(3){
             width: 60%;
@@ -156,21 +157,29 @@ table{
     }
 
 
+    .gallary {
+        margin: 0 auto;
+    }
     .workImg {
-//        display: inline-block;
-        width: $workImgW;
-        height: $workImgH;
+//        display: inline-flex;
+//        width: $workImgW;
+//        height: $workImgH;
             
 //        border: 1px solid black;
 //        margin: 2px;
-        overflow: hidden;
+//        overflow: hidden;
     
         
         &>img{
-            height: $workImgH;
-            width: $workImgW;
-            max-width: initial !important;
-            max-height: initial !important;
+            width: 150px;
+            height: auto;
+            align-self: center;
+            margin: 10px;
+            
+//            height: auto; 
+//            width: auto; 
+//            max-width: 150px; 
+//            max-height: 200px;
             object-fit: cover;
         }
         

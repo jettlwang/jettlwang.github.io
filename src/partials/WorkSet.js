@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
+import Masonry from 'react-masonry-component';
+
 import { Noun } from './Noun';
 //import {imgs} from './data'
 
@@ -163,7 +165,12 @@ export class WorkSet extends Component {
             rows.push(<Thumb set={set} index={i} key={"a"+i}/>)
         });
         return (<td>
+             <Masonry
+                className={'gallary'}
+                options={{'fitWidth':'true'}}
+                >
             {rows}
+            </Masonry>
         </td>);
     }
 }
@@ -189,7 +196,7 @@ class Thumb extends Component {
         var photoIndex  = this.state.photoIndex;
         let length = imgs[set].length;
         
-        return (<span style={{"display":"inline-block"}}>
+        return (<span>
             <div className="workImg"><img onClick={this.toggleLightbox} src={imgs[set][index].src} alt={imgs[set][index].title}/></div>
  
             {this.state.isOpen && (
