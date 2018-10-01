@@ -9,10 +9,9 @@ export class Home extends Component {
     
     render(){
         return(<div> 
-<a href="mailto:jettlwang@gmail.com" id="float">e m a i l m e</a>
+
 
 <div id="narrow">     
-<div><img id="logo" alt="" src="src/assets/jwhy.svg" /></div>
 <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
 <h2>I’m an Experience <b>Designer</b> & <b>Developer</b>.</h2>
 <p>I’m a <b>self starter</b> that performs best in exciting environments where I’m allowed <b>flexibility</b> and <b>opportunity</b>.</p>
@@ -28,10 +27,7 @@ export class Home extends Component {
 <p>In my free time I practice Chan Buddhism and am the <a href="http://woodenfish.org/">Woodenfish</a> Alumni Chair in NY.</p><p>I uphold <b>daily online meditation</b> and offline meetings.</p>
 
 <a href="mailto:jettlwang@gmail.com"><b>Let&rsquo;s get in touch.</b></a>
-               <br/>
-               
-<hr />
-<p className="small">Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and mindfulness.</p>
+
 </div>
         </div>
         );}

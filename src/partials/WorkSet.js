@@ -3,7 +3,6 @@ import Lightbox from 'react-image-lightbox';
 import Masonry from 'react-masonry-component';
 
 import { Noun } from './Noun';
-//import {imgs} from './data'
 
 export const Caption = (props) =>{
 //    props = { set : "null"};
@@ -68,7 +67,7 @@ const imgs = {
              'title' : "Noofie UI",
              'cap' : <Caption>Some shots of the UI designs.</Caption>
          },{
-             'src' : 'noof9.png',
+             'src' : 'noof9.jpg',
              'title' : "Noofie UI Compoments",
              'cap' : <Caption>A sheet of UI Components used to guide the design in <Noun name="sketch"/>.</Caption>
          },{

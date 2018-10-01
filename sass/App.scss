@@ -70,10 +70,13 @@ body {
     font-size: 1.8em;
     line-height: 1.8;
 
-        @media screen and (max-width: $media-mobile) {
-            font-size: 1.2em;
-        }
+    @media screen and (max-width: $media-mobile) {
+        font-size: 1.2em;
+    }
     
+    ul{
+        list-style-type: square;
+    }
     
     .small{
         font-size: 14px;
@@ -82,6 +85,7 @@ body {
     a {
         color: inherit;
         cursor: pointer;
+        text-decoration: underline;
     }
     
     #narrow {
@@ -92,10 +96,61 @@ body {
         } 
     }
     
+    .text-center{
+//        margin-left: 0 !important;
+//        margin-right: 0 !important;
+        text-align: center;
+    }
+    
     .noun img { height: 0.8em };
     h1 > .noun img { height: 1.2em };
+
 }
 
+article {
+    > p,h1,h3,ul,.img{
+        margin: 5% 5% 0 5%;
+        @media (min-width:$media) { margin-right: 20%; }
+    }
+
+    >p,ul {font-size: 0.8em; margin-top: 1.6em; }
+    
+    .small{ @extend .text-center }
+
+
+    
+    .img{
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 20%;
+        >img { width: 100%;}
+    } 
+    
+    .img-group>.img{margin-top: 0;margin-bottom: 0;}
+    
+    .img-full{
+        width: 100%;
+        margin-right: inherit !important;
+    }
+    
+    @media (max-width:$media) {
+        .img{padding-right: 0;}
+    }
+    
+    .img-lg{ width: 75%; }
+    .img-md{ width: 50%; }
+    .img-sm{ width: 30%; }
+    
+    
+    @media (max-width:$media) {
+        .img-lg,.img-md{ width: 85%; }
+        .img-sm{ width: 50%; }
+    }
+    
+    @media (max-width:$media-mobile) {
+        .img-lg,.img-md,.img-sm { width: 90%; }
+    }
+}
 
 #logo{
     height: 65px;
@@ -116,13 +171,14 @@ body {
 }
 
 #float{
+    transform-origin: 100% 0%;
     transform: rotateZ(90deg);
     position: fixed;
-    right: -60px;
+    right: 0;
     top: 190px;
     background-color: white;
     padding: 5px 15px;
-    z-index: 1;
+    z-index: 2;
     
     background-color: firebrick;
     color: white;
@@ -160,40 +216,22 @@ table{
     .gallary {
         margin: 0 auto;
     }
+    
     .workImg {
         display: inline-flex;
-//        width: $workImgW;
-//        height: $workImgH;
             
         border: 1px solid black;
         margin: 5px;
         padding: 5px;
-//        overflow: hidden;
     
         
         &>img{
             width: 150px;
             height: auto;
             align-self: center;
-//            margin: 5px;
-            
-//            height: auto; 
-//            width: auto; 
-//            max-width: 150px; 
-//            max-height: 200px;
             object-fit: cover;
         }
-        
-        @media screen and (max-width: $media) {
-            width: $workImgWm;
-            height: $workImgHm;
-            
-            &>img{
-               width: $workImgWm;
-                height: $workImgHm; 
-            }
-        }
-        
+      
     }
     
     @media screen and (max-width: $media) {
@@ -238,17 +276,18 @@ table{
     }
 }
 
+//table stick caption
 caption{
     text-align: left;
     position: -webkit-sticky;
     position: sticky;
     top:0;
+    z-index: 1;
     background-color: white;
     
 
     a {
         color: black;
-        text-decoration: underline;
 
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

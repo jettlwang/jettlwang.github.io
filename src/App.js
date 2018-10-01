@@ -3,12 +3,17 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import { Home } from './Home';
 import { Noofie } from './Noofie';
+import { Noun } from './partials/Noun.js';
 
 
 class App extends Component {
     
     render(){
-        return(
+        return(<div>
+            <a href="mailto:jettlwang@gmail.com" id="float">e m a i l m e</a>
+            <div id="narrow"><a href="/">
+                <img id="logo" alt="" src="src/assets/jwhy.svg" /></a></div>
+
         
           <Router>
             <div>
@@ -19,8 +24,9 @@ class App extends Component {
             </div>
           </Router>
         
-        
-        );}
+<br/>
+        <div className="small" id="narrow"><hr />Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and mindfulness.</div>
+        </div>);}
     
 }
 
