@@ -44,9 +44,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
-ol, ul {
-  list-style: none; }
-
 blockquote, q {
   quotes: none; }
 
@@ -54,6 +51,9 @@ blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none; }
+
+body {
+  margin: 0; }
 
 html {
   cursor: url("brush.png"), auto; }
@@ -66,7 +66,8 @@ body {
     body {
       font-size: 1.2em; } }
   body ul {
-    list-style-type: square; }
+    list-style-type: square;
+    list-style-position: inside; }
   body .small {
     font-size: 14px; }
   body a {
@@ -89,6 +90,9 @@ body {
 
 article > p, article h1, article h3, article ul, article .img {
   margin: 5% 5% 0 5%; }
+  article > p .img-full, article h1 .img-full, article h3 .img-full, article ul .img-full, article .img .img-full {
+    margin-left: 0;
+    padding-right: 0; }
   @media (min-width: 961px) {
     article > p, article h1, article h3, article ul, article .img {
       margin-right: 20%; } }

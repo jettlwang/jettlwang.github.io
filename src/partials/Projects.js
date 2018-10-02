@@ -14,13 +14,14 @@ const projects = {
         {"title" : "Noofie App",
     "blurb" : <span><b><a href="/noofie"><h3>CASE STUDY</h3></a></b>
          Noofie App is a solution to young professional networking. Starting at <Noun name='ga'/> and continuing after, I completed a full design cycle of an app as a personal project in 2 month, from <b>ideas</b> and <b>research</b> to multiple <b>iterations</b> of <b>wireframes</b> and <b>tested protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <Noun name='pop'/> and <Noun name='marvel' />. For UI, I used <Noun name='sketch'/> templates. I even <b>coded</b> the main interface on iOS with Swift.</span>,
-        "role" : "research / systems design / interaction design / prototyping / UI design / web design / presentation"
+        "role" : "research & synthesis / systems design / interaction design / prototyping / UI design / web design / presentation"
         },
 
     "honeit" :
         {"title" : "HoneIt Consulting Project",
-    "blurb" : <span>I did a two week <b>usability</b> consulting project with 2 fellow peers at <Noun name='ga'/> for recruting startup HoneIt. We conducted <b>user interviews & usability audit</b> on the existing product and created wireframes for <b>redesign</b> in <Noun name='sketch'/>. I also created a detailed <b>usability report</b> from user feedback and <b>documentation</b> for our redesign in <Noun name='omni'/>. I wanted to maintain a <b>sustainable</b> impact of our research even after our collaboration ended, so I included <b>generalizable design principles</b> and <b>key strategic decisions</b> in the documentation. Since then, the founders have implemented many of our redesigns and still use our research today.</span>,
-        "role" : "research / presentation"
+    "blurb" : <span><b><a href="/honeit"><h3>CASE STUDY</h3></a></b>
+         I did a two week <b>usability</b> consulting project with 2 fellow peers at <Noun name='ga'/> for recruting startup HoneIt. We conducted <b>user interviews & usability audit</b> on the existing product and created wireframes for <b>redesign</b> in <Noun name='sketch'/>. I also created a detailed <b>usability report</b> from user feedback and <b>documentation</b> for our redesign in <Noun name='omni'/>. I wanted to maintain a <b>sustainable</b> impact of our research even after our collaboration ended, so I included <b>generalizable design principles</b> and <b>key strategic decisions</b> in the documentation. Since then, the founders have implemented many of our redesigns and still use our research today.</span>,
+        "role" : "research & synthesis / presentation"
         },
 
     "cssa" :

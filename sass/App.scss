@@ -46,9 +46,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-ol, ul {
-	list-style: none;
-}
+
 blockquote, q {
 	quotes: none;
 }
@@ -57,7 +55,7 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-
+body {margin : 0;}
 
 //=====reset end=====
 html {
@@ -76,6 +74,7 @@ body {
     
     ul{
         list-style-type: square;
+        list-style-position: inside
     }
     
     .small{
@@ -110,6 +109,7 @@ body {
 article {
     > p,h1,h3,ul,.img{
         margin: 5% 5% 0 5%;
+        .img-full{margin-left: 0;padding-right:0;}
         @media (min-width:$media) { margin-right: 20%; }
     }
 

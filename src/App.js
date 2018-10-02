@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import { Home } from './Home';
 import { Noofie } from './Noofie';
+import { Honeit } from './Honeit';
 import { Noun } from './partials/Noun.js';
 
 
@@ -19,6 +20,7 @@ class App extends Component {
             <div>
               <Route exact path="/" component={Home} />
               <Route path="/noofie" component={Noofie} />
+               <Route path="/honeit" component={Honeit} />
               <Route path='/resume' component={() => window.location = '/resume.pdf'}/>
 
             </div>
