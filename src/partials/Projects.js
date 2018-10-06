@@ -57,6 +57,7 @@ for(var e in projects){
  
 const tags = {
     "ALL" : Object.values(trs),
+    "CASE STUDY" : [trs['noof'],trs['honeit']],
     "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance']],
     "#mobile" : [trs['huawei'],trs['noof'],trs['freelance']],
     "#frontend" : [trs['cssa'],trs['parallax']],
