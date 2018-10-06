@@ -11,7 +11,7 @@ class App extends Component {
     
     render(){
         return(<div>
-            <a href="mailto:jettlwang@gmail.com" id="float">e m a i l m e</a>
+            <a href="mailto:jettlwang@gmail.com" id="float">email me</a>
             <div id="narrow"><a href="/">
                 <img id="logo" alt="" src="src/assets/jwhy.svg" /></a></div>
 

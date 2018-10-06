@@ -55,9 +55,6 @@ q:before, q:after {
 body {
   margin: 0; }
 
-html {
-  cursor: url("brush.png"), auto; }
-
 body {
   font-family: "Lusitana", serif;
   font-size: 1.8em;
@@ -146,6 +143,7 @@ article .img-sm {
 
 #float {
   transform-origin: 100% 0%;
+  letter-spacing: 10px;
   transform: rotateZ(90deg);
   position: fixed;
   right: 0;

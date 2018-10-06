@@ -58,10 +58,7 @@ q:before, q:after {
 body {margin : 0;}
 
 //=====reset end=====
-html {
-    cursor: url("brush.png"), auto;
 
-}
 body {
     
     font-family: $font-stack;
@@ -85,6 +82,7 @@ body {
         color: inherit;
         cursor: pointer;
         text-decoration: underline;
+        
     }
     
     #narrow {
@@ -172,6 +170,7 @@ article {
 
 #float{
     transform-origin: 100% 0%;
+    letter-spacing: 10px;
     transform: rotateZ(90deg);
     position: fixed;
     right: 0;
