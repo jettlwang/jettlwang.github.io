@@ -35,7 +35,9 @@ export class Honeit extends Component {
 <li><b>Record</b>: conduct the interview on the platform through HontIT’s note taking structure</li>
 <li><b>Share</b>: reviewing and sharing results with others post-interview</li>
 </ul>
-               
+
+<p>My teammate also worked on developing prototype personas as HoneIT’s primary and secondary audience. </p>              
+
 <p>We wanted to run tests on the entire journey through our own phone interviews. We designed the following interview questions:
     </p>
 
@@ -66,7 +68,7 @@ export class Honeit extends Component {
     </p>
 <p>As a team, we discussed together how to best incorporate user feedback into features, to <b>maximize improvements</b> in experience with <b>minimal changes</b> required from our clients end.
     </p>
-<p>Here’s a comparison of the main interview recording screen with our redesign that we finalized in <Noun name="sketch" />.
+<p>Here’s a comparison of the main interview recording screen with our redesign that my teammate finalized in <Noun name="sketch" />.
     </p>
 <Img size="full" src="src/assets/honeit/redesign.jpg" />
 
@@ -86,12 +88,13 @@ export class Honeit extends Component {
 
 <p>Topic 1 suggests a clearer way to show the recording functionality (reflected in our redesign). Topic 2 explains that users expected more flexibility, and how each interaction under it could reflect this need.
     </p>
-<p>In our final presentation, we mainly focused on walking through our redesign so that they could directly see the impact of our research first, and ease into the details of the documentation later.
-    </p>
+<p>In our final presentation, we mainly focused on walking through our redesign so that they could directly see the impact of our research first, and ease into the details of the documentation later.The deck is designed my my teammates.</p>
+
+
+<h3>Looking Back & Forward</h3>
 
 <p>Our client expressed agreement with many of the user insights we've found.
     </p>
-<h3>Looking Back & Forward</h3>
 
 <p>There were many other tasks we would have like to do, including validation of our redesign, and more suggestions for the rest of the product.
     </p>
