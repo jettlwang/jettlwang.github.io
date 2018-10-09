@@ -8,7 +8,7 @@ import { Img, TopLink } from './partials/ArticleUtil'
 export class Noofie extends Component {
     
     render(){
-        return(<article>
+        return(<article className="fullpage">
             <h1>Noofie App</h1>
             
             <h3 id="overview">Overview</h3>
@@ -109,7 +109,9 @@ research / systems design / interaction design / prototyping / UI design / web d
 
         <Img size="lg" src="src/assets/noofie/improvement.jpg" />
 
-<h3 id="lookfeel">Look &amp; Feel</h3>
+<h3>Look &amp; Feel</h3>
+        
+    <Img size="lg" src="src/assets/noofie/ui.png" />
 
 <p>Overall, I wanted the branding to be <b>professional and trustworthy</b>, but also <b>fun and energetic</b> for the younger audience. The brand was named from the companion dog breed - Newfoundlands, and our product should be just like the dog - reliable at working, but also good companion.</p>
 

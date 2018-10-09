@@ -161,64 +161,11 @@ export class WorkSet extends Component {
         let set = this.props.set;
         var rows = [];
         imgs[set].forEach(function(e,i){
-            rows.push(<Thumb set={set} index={i} key={"a"+i}/>)
+            rows.push(<div key={"a"+i}><img src={imgs[set][i]['src']} alt={imgs[set][i]['title']}/></div>)
         });
+            
         return (<td>
-             <Masonry
-                className={'gallary'}
-                options={{'fitWidth':'true'}}
-                >
             {rows}
-            </Masonry>
         </td>);
-    }
 }
-
-class Thumb extends Component {
-    constructor(props) {
-        super(props);
-        this.toggleLightbox = this.toggleLightbox.bind(this);
-        
-        this.state = {
-            isOpen: false,
-            photoIndex:this.props.index
-        };
-      }
-    
-    toggleLightbox(){
-        this.setState({ isOpen : !this.state.isOpen });
-        this.setState({photoIndex:this.props.index});
-    }
-    
-    render(){
-        var {set,index} = this.props;
-        var photoIndex  = this.state.photoIndex;
-        let length = imgs[set].length;
-        
-        return (<span>
-            <div className="workImg"><img onClick={this.toggleLightbox} src={imgs[set][index].src} alt={imgs[set][index].title}/></div>
- 
-            {this.state.isOpen && (
-              <Lightbox
-                wrapperClassName="lightbox"
-                mainSrc={imgs[set][photoIndex].src}
-                nextSrc={imgs[set][(photoIndex + 1) % length].src}
-                prevSrc={imgs[set][(photoIndex + length - 1) % length].src}
-                imageTitle={imgs[set][photoIndex].title}
-                imageCaption={imgs[set][photoIndex].cap}
-                onCloseRequest={this.toggleLightbox}
-                onMovePrevRequest={() =>
-                  this.setState({
-                    photoIndex: (photoIndex + length - 1) % length,
-                  })
-                }
-                onMoveNextRequest={() =>
-                  this.setState({
-                    photoIndex: (photoIndex + 1) % length,
-                  })
-                }
-              />
-            )}
-        </span>);
-    }
 }

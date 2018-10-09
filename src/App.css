@@ -76,7 +76,7 @@ body {
     @media (min-width: 961px) {
       body #narrow {
         margin-left: 50px; }
-        body #narrow p, body #narrow ul {
+        body #narrow > p, body #narrow > ul {
           margin-right: 20%; } }
   body .text-center, body article .small, article body .small {
     text-align: center; }
@@ -84,47 +84,6 @@ body {
     height: 0.8em; }
   body h1 > .noun img {
     height: 1.2em; }
-
-article > p, article h1, article h3, article ul, article .img {
-  margin: 5% 5% 0 5%; }
-  article > p .img-full, article h1 .img-full, article h3 .img-full, article ul .img-full, article .img .img-full {
-    margin-left: 0;
-    padding-right: 0; }
-  @media (min-width: 961px) {
-    article > p, article h1, article h3, article ul, article .img {
-      margin-right: 20%; } }
-article > p, article ul {
-  font-size: 0.8em;
-  margin-top: 1.6em; }
-article .img {
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 20%; }
-  article .img > img {
-    width: 100%; }
-article .img-group > .img {
-  margin-top: 0;
-  margin-bottom: 0; }
-article .img-full {
-  width: 100%;
-  margin-right: inherit !important; }
-@media (max-width: 961px) {
-  article .img {
-    padding-right: 0; } }
-article .img-lg {
-  width: 75%; }
-article .img-md {
-  width: 50%; }
-article .img-sm {
-  width: 30%; }
-@media (max-width: 961px) {
-  article .img-lg, article .img-md {
-    width: 85%; }
-  article .img-sm {
-    width: 50%; } }
-@media (max-width: 425px) {
-  article .img-lg, article .img-md, article .img-sm {
-    width: 90%; } }
 
 #logo {
   height: 65px; }
@@ -166,27 +125,14 @@ table {
   font-size: 14px !important; }
   table td {
     border: 1px solid black;
-    vertical-align: middle;
-    padding: 20px;
-    /*        &:nth-child(3){
-                width: 60%;
-            }*/ }
-    table td:nth-child(2) {
-      width: 60%;
-      padding: 20px 5px;
-      vertical-align: top; }
-  table .gallary {
-    margin: 0 auto; }
-  table .workImg {
-    display: inline-flex;
-    border: 1px solid black;
-    margin: 5px;
-    padding: 5px; }
-    table .workImg > img {
-      width: 150px;
-      height: auto;
-      align-self: center;
-      object-fit: cover; }
+    vertical-align: middle; }
+    table td:nth-child(1) {
+      width: 40%;
+      padding: 20px; }
+    table td .td2nd {
+      vertical-align: top;
+      padding: 2px 20px;
+      overflow-y: scroll; }
   @media screen and (max-width: 961px) {
     table tr {
       display: block;
@@ -200,6 +146,53 @@ table {
       table td::before {
         content: attr(data-label);
         float: left; } }
+
+article.fullpage > p, article.fullpage h1, article.fullpage h3, article.fullpage ul {
+  margin: 5% 5% 0 5%; }
+  article.fullpage > p .img-full, article.fullpage h1 .img-full, article.fullpage h3 .img-full, article.fullpage ul .img-full {
+    margin-left: 0;
+    padding-right: 0; }
+  @media (min-width: 961px) {
+    article.fullpage > p, article.fullpage h1, article.fullpage h3, article.fullpage ul {
+      margin-right: 20%; } }
+article.fullpage > p, article.fullpage ul {
+  font-size: 0.7em;
+  margin-top: 1.6em; }
+article.fullpage .img {
+  padding-right: 20%; }
+article.scroll {
+  max-height: 55vh;
+  text-align: left; }
+article .img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+  article .img > img {
+    width: 100%; }
+article .img-group > .img {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+article .img-full {
+  width: 100%;
+  margin-right: inherit !important; }
+@media (max-width: 961px) {
+  article .img {
+    padding-right: 0; } }
+article .img-lg {
+  width: 75%; }
+article .img-md {
+  width: 50%; }
+article .img-sm {
+  width: 30%; }
+@media (max-width: 961px) {
+  article .img-lg, article .img-md {
+    width: 85%; }
+  article .img-sm {
+    width: 50%; } }
+@media (max-width: 425px) {
+  article .img-lg, article .img-md, article .img-sm {
+    width: 90%; } }
 
 .lightbox .ril-caption-content, .lightbox .ril__captionContent, .lightbox .ril-toolbar__item, .lightbox .ril__toolbarItem {
   line-height: 1 !important;
