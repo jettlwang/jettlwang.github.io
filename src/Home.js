@@ -14,7 +14,7 @@ export class Home extends Component {
 <div id="narrow">     
 <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
 <h2>I’m an Experience <b>Designer</b> & <b>Developer</b>.</h2>
-<p>I’m a <b>self starter</b> that performs best in exciting environments where I’m allowed <b>flexibility</b> and <b>independence</b>.</p>
+<p>I’m a <b>self starter</b> that performs best in exciting environments where I’m allowed <b>flexibility</b> and <b>opportunity</b>.</p>
 
 <p>My past experience has been in <b>web/mobile design</b> and <b>front end development</b>.</p>
                
