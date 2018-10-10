@@ -14,7 +14,7 @@ export class Img extends Component {
         this.toggleLightbox = this.toggleLightbox.bind(this);
         
         props = {
-            size : "",
+            size : "lg",
             src : "",
         };
 
