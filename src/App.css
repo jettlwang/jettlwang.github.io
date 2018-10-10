@@ -127,12 +127,24 @@ table {
     border: 1px solid black;
     vertical-align: middle; }
     table td:nth-child(1) {
-      width: 40%;
+      width: 60%;
       padding: 20px; }
-    table td .td2nd {
-      vertical-align: top;
-      padding: 2px 20px;
-      overflow-y: scroll; }
+    table td:nth-child(2) {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: relative;
+      border-spacing: 5px;
+      cursor: pointer; }
+      table td:nth-child(2):hover:after, table td:nth-child(2):focus:after {
+        content: "READ MORE";
+        background: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        border: 1px solid black; }
   @media screen and (max-width: 961px) {
     table tr {
       display: block;
@@ -145,7 +157,9 @@ table {
       width: auto !important; }
       table td::before {
         content: attr(data-label);
-        float: left; } }
+        float: left; }
+      table td:nth-child(2) {
+        height: 45vh; } }
 
 article.fullpage > p, article.fullpage h1, article.fullpage h3, article.fullpage ul {
   margin: 5% 5% 0 5%; }

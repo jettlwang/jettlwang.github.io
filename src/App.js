@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import { Home } from './Home';
-import { Noofie } from './Noofie';
-import { Honeit } from './Honeit';
+import { Noofie,Honeit } from './Articles';
 import { Noun } from './partials/Noun.js';
 
 
@@ -12,7 +11,8 @@ class App extends Component {
     render(){
         return(<div>
             <a href="mailto:jettlwang@gmail.com" id="float">email me</a>
-            <div id="narrow"><a href="/">
+            
+               <div id="narrow"><a href="/">
                 <img id="logo" alt="" src="src/assets/jwhy.svg" /></a></div>
 
         
