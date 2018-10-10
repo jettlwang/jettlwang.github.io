@@ -126,17 +126,18 @@ table {
   table td {
     border: 1px solid black;
     vertical-align: middle; }
-    table td:nth-child(1) {
+    table td.blurb {
       width: 60%;
       padding: 20px; }
     table td:nth-child(2) {
+      width: 40%;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
       position: relative;
       border-spacing: 5px;
       cursor: pointer; }
-      table td:nth-child(2):hover:after, table td:nth-child(2):focus:after {
+      table td:nth-child(2):hover:after, table td:nth-child(2).active:after {
         content: "READ MORE";
         background: white;
         position: absolute;
@@ -145,9 +146,19 @@ table {
         transform: translate(-50%, -50%);
         padding: 10px 20px;
         border: 1px solid black; }
+  table .piece > td {
+    overflow: scroll;
+    text-align: left;
+    padding: 2px 40px; }
+  table .piece article {
+    height: 0px;
+    opacity: 0; }
+  table .piece.active article {
+    height: 80vh;
+    opacity: 1;
+    transition: all 500ms; }
   @media screen and (max-width: 961px) {
     table tr {
-      display: block;
       margin-bottom: 2px;
       border-top: 1px solid;
       border-bottom: 1px solid; }
@@ -174,9 +185,6 @@ article.fullpage > p, article.fullpage ul {
   margin-top: 1.6em; }
 article.fullpage .img {
   padding-right: 20%; }
-article.scroll {
-  max-height: 85vh;
-  text-align: left; }
 article .img {
   margin-left: auto;
   margin-right: auto;

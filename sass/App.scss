@@ -151,18 +151,20 @@ b {
 table{
     border: 1px solid black;
     font-size: 14px !important;
+    
+
 
     td{
         border: 1px solid black;
         vertical-align: middle;
         
-        &:nth-child(1){
+        &.blurb{
             width: 60%;
             padding: 20px;
         }
 
-        
         &:nth-child(2){
+            width: 40%;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -170,7 +172,7 @@ table{
             border-spacing: 5px;
             cursor: pointer;
             
-            &:hover:after,&:focus:after {
+            &:hover:after,&.active:after {
                 content: "READ MORE";
                 background: white;
                 position: absolute;
@@ -181,10 +183,29 @@ table{
             }
         }
     }
+    
+    .piece>td{
+        overflow: scroll;
+        text-align: left;
+        padding: 2px 40px;
+    }
+    
+    .piece article{
+        height: 0px;
+        opacity: 0;
+    }
+    
+    .piece.active article{
+        height: 80vh;
+        opacity: 1;
+        
+        transition: all 500ms;
+//        transition-delay: 1s;
+    }
 
     @media screen and (max-width: $media) {
         tr {
-            display: block;
+//            display: block;
             margin-bottom: 2px;
             border-top: 1px solid;
             border-bottom: 1px solid;
@@ -221,10 +242,7 @@ article {
         }
     }
     
-    &.scroll{
-        max-height: 85vh;
-        text-align: left;
-    }
+
     
     .small{ @extend .text-center }
 
