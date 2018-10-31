@@ -7,7 +7,7 @@ import { Img, TopLink } from './partials/ArticleUtil'
 export class Honeit extends Component {
     
     render(){
-        return(<article>
+        return(<article className="fullpage">
             <h1>HoneIT UX Consulting</h1>
             
             <h3 id="overview">Overview</h3>
