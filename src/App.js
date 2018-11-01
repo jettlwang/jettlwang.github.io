@@ -15,7 +15,7 @@ class App extends Component {
                <a href="/"><img id="logo" alt="" src="src/assets/jwhy.svg" /></a>
                
                 <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
-                <h2>I'm a <b>mission driven</b> product designer and developer.</h2>
+                <h2>I'm a <b>mission driven</b> Product Designer and Developer.</h2>
                 <p> My background is in <b>human computer interaction</b> and <b>behavioral economics</b>. I design interfaces and have programming abilities necessary to make my designs come to life.</p>
 
 
