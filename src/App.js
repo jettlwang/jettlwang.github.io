@@ -15,10 +15,10 @@ class App extends Component {
                <a href="/"><img id="logo" alt="" src="src/assets/jwhy.svg" /></a>
                
                 <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
-                <h2>I’m an Experience <b>Designer</b> & <b>Developer</b>.</h2>
-                <p>I’m a <b>self starter</b> that performs best in exciting environments where I’m allowed <b>flexibility</b> and <b>opportunity</b>.</p>
+                <h2>I'm a <b>mission driven</b> product designer and developer.</h2>
+                <p> My background is in <b>human computer interaction</b> and <b>behavioral economics</b>. I design interfaces and have programming abilities necessary to make my designs come to life.</p>
 
-                <p>My past experience has been in <b>web/mobile design</b> and <b>front end development</b>.</p>
+
 
                 <p>Here&rsquo;s my <b><a href="/resume.pdf">resume</a></b>.</p>
 
