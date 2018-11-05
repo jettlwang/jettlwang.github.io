@@ -150,7 +150,7 @@ b {
 
 table{
     border: 1px solid black;
-    font-size: 14px !important;
+    font-size: 15px !important;
     
 
 
@@ -187,7 +187,10 @@ table{
     .piece>td{
         overflow: scroll;
         text-align: left;
-        padding: 2px 40px;
+        padding: 2px 20%;
+        @media (max-width:$media) {padding: 2px 80px;}
+        @media (max-width:$media) {padding: 2px 40px;}
+        
     }
     
     .piece article{

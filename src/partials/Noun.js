@@ -9,25 +9,20 @@ const nounImg = {
     "react" : ["ReactJS","react.png"],
     "sketch" : ["Sketch","sketch.png"],
     "photoshop" : ["Photoshop","photoshop.png"],
-    "illustrator" : ["Illustrator","illustrator.png"],
-    "indesign" : ["Indesign","indesign.png"],
     "origami" : ["Origami Studio","origami.png"],
     "flinto" : ["Flinto","flinto.jpg"],
     "invision" : ["Invision","invision.jpg"],
     "marvel" : ["Marvel","marvelapp.png"],
     "pop" : ["POP","pop.png"],
     "omni" : ["Omnigraffle","omni.png"],
-    "wix" : ["Wix","wix.png"],
     "weebly" : ["Weebly","weebly.png"],
     "webflow" : ["Webflow","webflow.jpg"],
-    "squarespace" : ["Squarespace","squarespace.svg"],
-    "firebase" : ["FirebaseDB","firebase.png"],
-    "wp" : ["Wordpress","wp.png"],
     "uiuc" : ["University of Illinois at Urbana-Champaign","uiuc.png"],
     "ga" : ["General Assembly","ga.png"],
     "huawei" : ["Huawei Mobile Technologies","huawei.png"],
     "emc" : ["Dell EMC R&D","emc.png"],
-    "lenovo" : ["Lenovo R&D","lenovo.png"]
+    "lenovo" : ["Lenovo R&D","lenovo.png"],
+    "luna" : ["Luna","luna.png"],
 }
 
 export class Noun extends Component{
