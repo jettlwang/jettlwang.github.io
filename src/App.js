@@ -20,7 +20,7 @@ class App extends Component {
 
 
                 <p>I&rsquo;m currently with <a href="https://meetluna.com">
-                    <Noun name="luna"/></a> curing communal lonliness.</p>
+                    <Noun name="luna"/></a>, curing communal lonliness, while exploring topics on <a href="http://freakonomics.com/podcast/richard-thaler/">nudge</a>, <a href="https://www.gamified.uk/wp-content/uploads/2017/04/Periodic-Table-of-Gamification-Elements-720x340.png">gamification</a>, <a href="https://read.compassofdesign.com/what-is-design-strategy-497453c9d83a">design strategy</a>.</p>
                 <p>Here&rsquo;s my <b><a href="/resume.pdf">resume</a></b>.</p>
 
                 <p>Here are examples of my design work:</p>
