@@ -65,40 +65,39 @@ body {
   body ul {
     list-style-type: square;
     list-style-position: inside; }
-  body .small {
+  body small {
     font-size: 14px; }
   body a {
     color: inherit;
     cursor: pointer;
     text-decoration: underline; }
-  body #narrow {
-    margin: 5% 5% 0 5%; }
-    @media (min-width: 961px) {
-      body #narrow {
-        margin-left: 50px; }
-        body #narrow > p, body #narrow > ul {
-          margin-right: 20%; } }
   body .text-center, body article .small, article body .small {
     text-align: center; }
   body .noun img {
     height: 0.8em; }
   body h1 > .noun img {
     height: 1.2em; }
-
-#logo {
-  height: 65px; }
-
+  body #logo {
+    height: 65px; }
 @keyframes flip {
   0% {
     transform: rotateY(180deg); }
   100% {
     transform: rotateY(-180deg); } }
-#jett img {
-  animation-name: flip;
-  animation-duration: 200ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: steps(2); }
+  body #jett img {
+    animation-name: flip;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: steps(2); }
+  body b {
+    color: firebrick; }
+    body b::selection {
+      background-color: firebrick !important;
+      color: white; }
+
+#content {
+  margin: 5% 5% 0 5%; }
 
 #float {
   transform-origin: 100% 0%;
@@ -113,12 +112,6 @@ body {
   background-color: firebrick;
   color: white;
   text-decoration: none; }
-
-b {
-  color: firebrick; }
-  b::selection {
-    background-color: firebrick !important;
-    color: white; }
 
 table {
   border: 1px solid black;

@@ -15,7 +15,6 @@ const nounImg = {
     "marvel" : ["Marvel","marvelapp.png"],
     "pop" : ["POP","pop.png"],
     "omni" : ["Omnigraffle","omni.png"],
-    "weebly" : ["Weebly","weebly.png"],
     "webflow" : ["Webflow","webflow.jpg"],
     "uiuc" : ["University of Illinois at Urbana-Champaign","uiuc.png"],
     "ga" : ["General Assembly","ga.png"],

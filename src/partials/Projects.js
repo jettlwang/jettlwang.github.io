@@ -242,7 +242,7 @@ research / systems design / interaction design / prototyping / UI design / web d
         
          <Img size="sm" src="src/assets/noofie/swipe.gif" />
 
-<p>To spread the hype, I created a quick website on <Noun name="wix"/>. I mostly used default stock graphics, while keeping in mind the “fun &amp; professional” feel. The site introduces the app’s purpose, how it works, why it’s different, and features multiple call to actions that lead to the beta sign up.</p>
+<p>To spread the hype, I created a quick website on Wix. I mostly used default stock graphics, while keeping in mind the “fun &amp; professional” feel. The site introduces the app’s purpose, how it works, why it’s different, and features multiple call to actions that lead to the beta sign up.</p>
     
           <Img size="sm" src="src/assets/noofie/web.png" />
 
