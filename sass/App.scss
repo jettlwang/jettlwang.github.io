@@ -144,6 +144,7 @@ body {
     height: 100vh;
 
     overflow: scroll;
+  -webkit-overflow-scrolling: touch;
     border-left: 1px solid black;
     position: fixed;
     right: 0; top: 0;
