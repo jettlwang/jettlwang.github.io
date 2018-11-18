@@ -2,10 +2,6 @@
 $font-stack: 'Lusitana', serif;
 $media: 961px;
 $media-mobile: 425px;
-$workImgH: 300px;
-$workImgW: 80px;
-$workImgHm: 80px;
-$workImgWm: 100%;
 
 // ===== reset =====
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -85,9 +81,18 @@ body {
 
     .text-center{ text-align: center; }
     
-    .noun img { height: 0.8em };
+    .nounImg{
+        > img {height: 0.8em;}
+        
+        &:after{
+            content: "";
+            width: 0.2em;
+            display: inline-block;
+        }
+    }
+    
     h1 > .noun img { height: 1.2em };
-    #logo{ height: 65px; }
+//    #logo{ height: 65px; }
 
     @keyframes flip {
         0% {transform: rotateY(180deg);}
@@ -123,90 +128,76 @@ body {
 #view {
     width: 50vw;
     height: 100vh;
-//    background-color: white;
+
     overflow: scroll;
     border-left: 1px solid black;
     position: fixed;
     right: 0;
     top: 0;
-}
     
-
-
-#float{
-    transform-origin: 100% 0%;
-    letter-spacing: 10px;
-    transform: rotateZ(90deg);
-    position: fixed;
-    right: 0;
-    top: 50vh;
-    background-color: white;
-    padding: 5px 15px;
-    z-index: 2;
+    #emptyViewBox{
+        position: absolute;
+        left: 50%; top:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
     
-    background-color: firebrick;
-    color: white;
-    text-decoration: none;
+    #logo{
+        width: 80px;
+        margin-bottom: 30px;
+        img{width: 100%}
+    }
+    .socialIco{
+        margin: auto;
+        width: 35px;
+        margin-top: 10px;
+        img{width: 100%;}
+    }
+    
+    
+    #closeFloat{
+        background-color: black;
+        color: white;
+        position: fixed;
+        bottom: 5%; right: 3%;
+        width: 60px; height: 60px;
+
+        &:after{
+            content:"封";
+            font-size: 40px;
+            position: absolute;
+            left: 50%; top:50%;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+        }
+        }
 }
 
 
 
 .table{
-    border: 1px solid black;
     font-size: 15px !important;
     
 
-
-    .td{
-        border: 1px solid black;
+    .tr{
+        cursor: pointer;
+        border: 1px double black;
+        margin-top: 5px;
         vertical-align: middle;
-        
-        &.blurb{
-            width: 60%;
-            padding: 20px;
-        }
+        padding: 0 20px;
+        position: relative;
 
-        &:nth-child(2){
-            width: 40%;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            position: relative;
-            border-spacing: 5px;
-            cursor: pointer;
-            
-            &:hover:after,&.active:after {
-                content: "READ MORE";
-                background: white;
-                position: absolute;
-                left: 50%; top:50%;
-                transform: translate(-50%,-50%);
-                padding: 10px 20px;
-                border: 1px solid black;
-            }
+        &.active:after,&:hover:after,&:focus:after,{
+            content: "封 印 解 除";
+            white-space: nowrap;
+            font-size: 5em;
+            position: absolute;
+            left: 50%; top:50%;
+            transform: translate(-50%,-50%);
         }
     }
-    
-    .piece>td{
-        overflow: scroll;
-        text-align: left;
-        padding: 2px 20%;
-        @media (max-width:$media) {padding: 2px 80px;}
-        @media (max-width:$media) {padding: 2px 40px;}
-        
-    }
-    
-    .piece article{
-        height: 0px;
-        opacity: 0;
-    }
-    
-    .piece.active article{
-        height: 80vh;
-        opacity: 1;
-        
-        transition: all 500ms;
-    }
+
+
 
     @media screen and (max-width: $media) {
         .tr {
@@ -232,21 +223,27 @@ body {
 }
 
 article {
-    &.fullpage{
-        > p,h1,h3,ul{
-            margin: 5% 5% 0 5%;
-            .img-full{margin-left: 0;padding-right:0;}
-            @media (min-width:$media) { margin-right: 20%; }
-        }
+    padding: 5%;
 
-        >p,ul {font-size: 0.7em; margin-top: 1.6em; }
-        
-        .img{
-            padding-right: 20%;
-        }
+    &:before{
+        content: "上 上 上";
+        color: white;
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        top: 0; left: 0;
     }
     
-
+    &:after{
+        content: "下 下 下";
+        color: white;
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
     
     .small{ @extend .text-center }
 
@@ -258,31 +255,16 @@ article {
         margin-top: 5%; margin-bottom: 5%;
         >img { width: 100%;}
     } 
-    
     .img-group>.img{margin-top: 0 !important; margin-bottom: 0 !important;}
     
     .img-full{
         width: 100%;
         margin-right: inherit !important;
     }
-    
-    @media (max-width:$media) {
-        .img{padding-right: 0;}
-    }
-    
     .img-lg{ width: 75%; }
     .img-md{ width: 50%; }
     .img-sm{ width: 30%; }
-    
-    
-    @media (max-width:$media) {
-        .img-lg,.img-md{ width: 85%; }
-        .img-sm{ width: 50%; }
-    }
-    
-    @media (max-width:$media-mobile) {
-        .img-lg,.img-md,.img-sm { width: 90%; }
-    }
+
 }
 
 .lightbox{
@@ -314,6 +296,7 @@ article {
     top:0;
     z-index: 1;
     background-color: white;
+    border-bottom: 1px solid black;
     
 
     a {
