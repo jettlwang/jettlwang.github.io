@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Noun } from './partials/Noun.js';
 
-import { Projects } from './partials/Projects';
+import { Projects, ArticleView } from './partials/Projects';
 import 'react-image-lightbox/style.css';
 
 class App extends Component {
@@ -25,15 +25,6 @@ class App extends Component {
 
                 <p>Here are examples of my design work:</p>
                 <Projects />
-{/*                          <Router>
-            <div>
-              <Route exact path="/" component={Home} />
-              <Route path="/noofie" component={Noofie} />
-               <Route path="/honeit" component={Honeit} />
-              <Route path='/resume' component={() => window.location = '/resume.pdf'}/>
-
-            </div>
-          </Router>*/}
                 <br/>
 <p>I'm also currently expolring topics on <a href="http://freakonomics.com/podcast/richard-thaler/">nudge</a>, <a href="https://www.gamified.uk/wp-content/uploads/2017/04/Periodic-Table-of-Gamification-Elements-720x340.png">gamification</a>, and <a href="https://read.compassofdesign.com/what-is-design-strategy-497453c9d83a">design strategy</a>.</p>
                 <p>In my free time I practice Chan Buddhism and am the <a href="http://woodenfish.org/">Woodenfish</a> Alumni Chair in NY.</p><p>I uphold <b>daily online meditation</b> and offline meetings.</p>
@@ -43,11 +34,13 @@ class App extends Component {
             
                
 
-        
         <br/>
         <hr />
+        
         <small>Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and mindfulness.</small>
-    </div></div>
+    </div>
+       
+       </div>
         );}
     
 }

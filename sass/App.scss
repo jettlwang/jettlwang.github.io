@@ -116,7 +116,19 @@ body {
 
 //partition
 #content {
-    margin: 5% 5% 0 5%;
+    width: 50vw;
+    box-sizing: border-box;
+    padding: 2% 2% 0 2%;
+}
+#view {
+    width: 50vw;
+    height: 100vh;
+//    background-color: white;
+    overflow: scroll;
+    border-left: 1px solid black;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
     
 
@@ -139,13 +151,13 @@ body {
 
 
 
-table{
+.table{
     border: 1px solid black;
     font-size: 15px !important;
     
 
 
-    td{
+    .td{
         border: 1px solid black;
         vertical-align: middle;
         
@@ -197,12 +209,12 @@ table{
     }
 
     @media screen and (max-width: $media) {
-        tr {
+        .tr {
             margin-bottom: 2px;
             border-top: 1px solid;
             border-bottom: 1px solid;
         }
-        td {
+        .td {
             display: block;
             text-align: center;
             width: auto !important;
@@ -295,7 +307,7 @@ article {
 }
 
 //table stick caption menu
-caption{
+.caption{
     text-align: left;
     position: -webkit-sticky;
     position: sticky;

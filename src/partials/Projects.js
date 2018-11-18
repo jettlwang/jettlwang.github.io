@@ -341,70 +341,80 @@ research / systems design / interaction design / prototyping / UI design / web d
         },
 };
 
+export const ArticleView = (props) => {
+    return <div>{projects[props.id].piece}</div>;
+}
+
 //how each row is defined
 class Project extends Component {
     constructor(props){
         super(props);
-        this.togglePiece = this.togglePiece.bind(this);
-        this.state = {
-            showPiece : false,
-            showPieceTimeOut : false,
-        }
+        this.setPiece = this.setPiece.bind(this);
+
         this.props = { id : "", key : "" }
     }
     
-    togglePiece(){
-        if (this.state.showPiece == false ) {
-            setTimeout(()=>this.setState({showPieceTimeOut : true}),1);
-        }else{
-            this.setState({showPieceTimeOut : false});
-        }
-        this.setState({showPiece : !(this.state.showPiece)});
+    setPiece(){
+        this.setState({ piece : this.props.id });
     }
     
     render(){
         var proj = projects[this.props.id];
-        return (
-            <tbody style={{display : this.props.display}}>
-        <tr >
-            <td className="blurb"><div><h2>{proj.title}</h2>{proj.blurb}<p>ROLE / {proj.role}</p></div></td>
-            <td className={"thumb " + (this.state.showPiece && "active")}  style={{backgroundImage: "url(" + proj.thumb + ")"}} onClick = {()=> this.togglePiece()} ></td>
-        </tr>
-        {this.state.showPiece && <tr className={"piece " + (this.state.showPieceTimeOut && "active")}>
-            <td colSpan="2">{proj.piece}</td></tr>}
-        </tbody>);
+        return (<div>
+            <div className="tbody" style={{display : this.props.display}}>
+        <div className="tr" >
+            <div className="td blurb" onClick={()=>this.props.onClick(this.props.id)}><h2>{proj.title}</h2>{proj.blurb}<p>ROLE / {proj.role}</p></div>
+        </div>
+
+            </div>
+        
+
+       </div>
+        );
     }
 }
             
             
-var trs = {};  //pair of projects key:<tr/>
-for(var e in projects){
-    trs[e]=<Project id={e} key={e}/>;
-};
- 
-const tags = {
-    "ALL" : Object.values(trs),
-//    "CASE STUDY" : [trs[''],trs['honeit']],
-    "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance'],trs['tmayl']],
-    "#mobile" : [trs['huawei'],trs[''],trs['freelance'],trs['tmayl']],
-    "#frontend" : [trs['cssa'],trs['parallax'],trs['tmayl']],
-    "#UX" : [trs['huawei'],trs[''],trs['honeit']],
-    "#UI" : [trs['cssa'],trs[''],trs['parallax'],trs['freelance']],
-}
+
 
 //tag controller
 export class Projects extends Component {
     constructor(props){
         super(props);
         this.selectTag = this.selectTag.bind(this);
-        this.state = { tag : 'ALL' }
+        this.setView = this.setView.bind(this);
+        this.state = {
+            tag : 'ALL',
+            piece : "huawei",
+            }
     }
     
     selectTag(newstate){
         this.setState(newstate);
     }
     
+    setView(id){
+        alert(id);
+        this.setState({piece:id});
+    }
+    
     render(){
+        
+        var trs = {};  //pair of projects key:<tr/>
+        for(var e in projects){
+            trs[e]=<Project id={e} key={e} onClick={this.setView}/>;
+        };
+
+        const tags = {
+            "ALL" : Object.values(trs),
+        //    "CASE STUDY" : [trs[''],trs['honeit']],
+            "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance'],trs['tmayl']],
+            "#mobile" : [trs['huawei'],trs[''],trs['freelance'],trs['tmayl']],
+            "#frontend" : [trs['cssa'],trs['parallax'],trs['tmayl']],
+            "#UX" : [trs['huawei'],trs[''],trs['honeit']],
+            "#UI" : [trs['cssa'],trs[''],trs['parallax'],trs['freelance']],
+        }
+
         var taglist = [];
         for(var e in tags){
             if( e != "ALL") {taglist.push(" "+"/ ");}
@@ -412,11 +422,17 @@ export class Projects extends Component {
             taglist.push(<TagController onClick={()=>this.selectTag(newstate)} key={e} name={e} init={e == "ALL"}/>);
          }
         
-        return(<table>
-            <caption>{taglist}</caption>
+        return(<div className="table">
+            <div className="caption">{taglist}</div>
             
-                {tags[this.state.tag]}
-        </table>);
+            {tags[this.state.tag]}
+            
+           <div id="view">
+               <ArticleView id={this.state.piece} />
+           </div>
+               
+                
+        </div>);
     }
 }
 
