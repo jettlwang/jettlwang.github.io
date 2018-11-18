@@ -175,7 +175,8 @@ body {
     position: fixed;
     right: 0;
     top: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    overflow: hidden; }
     .hotspot:after {
       content: "解解解";
       color: white;
@@ -200,7 +201,8 @@ body {
     margin-top: 5px;
     vertical-align: middle;
     padding: 0 20px;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .table .tr.active:after {
       content: "解 解 解";
       white-space: nowrap;

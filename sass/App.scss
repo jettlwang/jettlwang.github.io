@@ -207,6 +207,7 @@ body {
         height: 100vh; width: 15vw;
         position: fixed; right: 0; top: 0;
         cursor: pointer;
+        overflow: hidden;
         
         &:after{
             content: "解解解";
@@ -243,6 +244,7 @@ body {
         vertical-align: middle;
         padding: 0 20px;
         position: relative;
+        overflow: hidden;
 
         &.active:after,{
             content: "解 解 解";
