@@ -203,11 +203,29 @@ body {
 
 @media screen and (max-width: $media) {
     .hotspot{
+        z-index: 20;
         height: 100vh; width: 15vw;
         position: fixed; right: 0; top: 0;
+        cursor: pointer;
+        
+        &:after{
+            content: "解解解";
+            color: white;
+            width: 15vw;
+            font-size: 4em;
+            position: absolute;
+            left: 50%; top:50%;
+            transform: translate(-50%,-50%);
+        }
         
         &.isRight{
             left: 0; right: auto;
+            
+            &:after{
+                background-color: inherit;
+                content: "封封封";
+                color: black;
+            }
         }
     }
 }
