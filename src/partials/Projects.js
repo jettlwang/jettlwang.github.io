@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
 
 
-import { Img, TopLink } from './ArticleUtil'
+import { Img } from './ArticleUtil'
 import { Noun } from './Noun';
 
 
@@ -16,7 +16,7 @@ export const projects = {
         "role" : "research & synthesis / presentation",
          "thumb" : 'src/assets/honeit/deck.jpg',
          "piece" :
-<article><br/>
+<article>
             
             <h3 id="overview">Overview</h3>
     <p>HoneIt was a 3-week consulting project I did with 2 other designers at General Assembly. Our client HoneIt, an interview technology startup, has a shipped interview assistant products predominantly targeting recruiters. We ran <b>usability tests</b> on their product through <b>user interviews</b> and delivered detailed <b>usability audits</b> and <b>design suggestions</b>.
@@ -111,7 +111,7 @@ export const projects = {
 <p>2 years later, I spoke to the founders again, and they were happy about our designs. Many of our suggestions have since been published live on HontIT’s website.
     </p>
         
-        <br/></article>,
+        </article>,
         },
     
     "noofie" :
@@ -120,7 +120,7 @@ export const projects = {
          Noofie App is a solution to young professional networking. Starting at <Noun name='ga'/> and continuing after, I completed a full design cycle of an app as a personal project in 2 month, from <b>ideas</b> and <b>research</b> to multiple <b>iterations</b> of <b>wireframes</b> and <b>tested protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <Noun name='pop'/> and <Noun name='marvel' />. For UI, I used <Noun name='sketch'/> templates. I even <b>coded</b> the main interface on iOS with Swift.</span>,
         "role" : "research & synthesis / systems design / interaction design / prototyping / UI design / web design / presentation",
          "thumb" : 'src/assets/noofie/cover.jpg',
-    "piece" : <article><br/>
+    "piece" : <article>
             
             <h3 id="overview">Overview</h3>
 
@@ -257,7 +257,7 @@ research / systems design / interaction design / prototyping / UI design / web d
 <p>Since this app encompassed both an online and offline experience, the most important thing I would’ve done next was to <b>prototype the full experience</b> including the offline interactions, and to see its effectiveness in achieving my design goal. I also would like to <b>validate</b> more assumptions I had to make throughout the process, including my 3 issues themselves.</p>
 
 <p>Nevertheless, I learned a lot about design going through the full process from idea to prototype, as well as creating the “side-products,” like a pitch deck and website, and how a design fits in the business landscape.</p>
-         <br/></article>,
+         </article>,
         
         },
     
@@ -341,70 +341,78 @@ research / systems design / interaction design / prototyping / UI design / web d
         },
 };
 
+export const ArticleView = (props) => {
+//    let content = (props.id) ? projects[props.id].piece : "";
+    return <div>
+       {projects[props.id].piece}
+       <div id="closeFloat" onClick={props.closeView}></div>
+    </div>;
+}
+
 //how each row is defined
 class Project extends Component {
     constructor(props){
         super(props);
-        this.togglePiece = this.togglePiece.bind(this);
-        this.state = {
-            showPiece : false,
-            showPieceTimeOut : false,
-        }
-        this.props = { id : "", key : "" }
+
+        this.props = { id : "", key : "", isActive : false }
     }
     
-    togglePiece(){
-        if (this.state.showPiece == false ) {
-            setTimeout(()=>this.setState({showPieceTimeOut : true}),1);
-        }else{
-            this.setState({showPieceTimeOut : false});
-        }
-        this.setState({showPiece : !(this.state.showPiece)});
-    }
     
     render(){
         var proj = projects[this.props.id];
-        return (
-            <tbody style={{display : this.props.display}}>
-        <tr >
-            <td className="blurb"><div><h2>{proj.title}</h2>{proj.blurb}<p>ROLE / {proj.role}</p></div></td>
-            <td className={"thumb " + (this.state.showPiece && "active")}  style={{backgroundImage: "url(" + proj.thumb + ")"}} onClick = {()=> this.togglePiece()} ></td>
-        </tr>
-        {this.state.showPiece && <tr className={"piece " + (this.state.showPieceTimeOut && "active")}>
-            <td colSpan="2">{proj.piece}</td></tr>}
-        </tbody>);
+        return (<div>
+            <div className={"tr " + (this.props.isActive && "active") }
+               onClick={()=>this.props.onClick(this.props.id)}>
+                <h2>{proj.title}</h2>{proj.blurb}<p>ROLE / {proj.role}</p>
+            </div>
+       </div>
+        );
     }
 }
             
             
-var trs = {};  //pair of projects key:<tr/>
-for(var e in projects){
-    trs[e]=<Project id={e} key={e}/>;
-};
- 
-const tags = {
-    "ALL" : Object.values(trs),
-//    "CASE STUDY" : [trs[''],trs['honeit']],
-    "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance'],trs['tmayl']],
-    "#mobile" : [trs['huawei'],trs[''],trs['freelance'],trs['tmayl']],
-    "#frontend" : [trs['cssa'],trs['parallax'],trs['tmayl']],
-    "#UX" : [trs['huawei'],trs[''],trs['honeit']],
-    "#UI" : [trs['cssa'],trs[''],trs['parallax'],trs['freelance']],
-}
+
 
 //tag controller
 export class Projects extends Component {
     constructor(props){
         super(props);
         this.selectTag = this.selectTag.bind(this);
-        this.state = { tag : 'ALL' }
+        this.setView = this.setView.bind(this);
+        this.state = {
+            tag : 'ALL',
+            piece : "noofie",
+            isEmpty : true,
+            }
     }
     
     selectTag(newstate){
         this.setState(newstate);
     }
     
+    setView(id){
+        id == this.state.piece ? this.setState({isEmpty:true}) : this.setState({ piece:id });
+        this.state.isEmpty ? this.setState({isEmpty:false}) : '';
+        console.log(id);
+    }
+    
     render(){
+        
+        var trs = {};  //pair of projects key:<tr/>
+        for(var e in projects){
+            trs[e]=<Project id={e} key={e} onClick={this.setView} isActive={!this.state.isEmpty && this.state.piece == e}/>;
+        };
+
+        const tags = {
+            "ALL" : Object.values(trs),
+        //    "CASE STUDY" : [trs[''],trs['honeit']],
+            "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance'],trs['tmayl']],
+            "#mobile" : [trs['huawei'],trs[''],trs['freelance'],trs['tmayl']],
+            "#frontend" : [trs['cssa'],trs['parallax'],trs['tmayl']],
+            "#UX" : [trs['huawei'],trs[''],trs['honeit']],
+            "#UI" : [trs['cssa'],trs[''],trs['parallax'],trs['freelance']],
+        }
+
         var taglist = [];
         for(var e in tags){
             if( e != "ALL") {taglist.push(" "+"/ ");}
@@ -412,11 +420,28 @@ export class Projects extends Component {
             taglist.push(<TagController onClick={()=>this.selectTag(newstate)} key={e} name={e} init={e == "ALL"}/>);
          }
         
-        return(<table>
-            <caption>{taglist}</caption>
+        return(<div className="table">
+            <div className="caption">{taglist}</div>
             
-                {tags[this.state.tag]}
-        </table>);
+            {tags[this.state.tag]}
+            
+           <div id="view" style={this.state.isEmpty? {backgroundColor:"black",color:"white"} : {backgroundColor:"white",color:"black"}} className={this.props.isRight && "isRight"}>
+                { this.state.isEmpty? 
+                <div id="emptyViewBox">
+                <div><img id="logo" alt="" src="src/assets/jwhy.svg" /></div>
+                   <div className="socialIco"><a href="mailto:jettlwang@gmail.com">
+                       <img src="/src/assets/social/email.png" /></a></div>
+                    <div className="socialIco"><a href="https://twitter.com/hahajett">
+                        <img src="/src/assets/social/twitter.png" /></a></div>
+                    <div className="socialIco"><a href="https://www.linkedin.com/in/jettlwang/">
+                        <img src="/src/assets/social/ln.png" /></a></div>
+                </div>
+                :
+                <ArticleView id={this.state.piece} closeView={()=>this.setState({isEmpty:true})}/> }
+           </div>
+               
+                
+        </div>);
     }
 }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lusitana");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -56,6 +57,10 @@ body {
   margin: 0; }
 
 body {
+  background-image: url(assets/om.png);
+  background-color: #9a1612;
+  background-repeat: repeat;
+  background-position-x: center;
   font-family: "Lusitana", serif;
   font-size: 1.8em;
   line-height: 1.8; }
@@ -66,19 +71,22 @@ body {
     list-style-type: square;
     list-style-position: inside; }
   body small {
-    font-size: 14px; }
+    font-size: 14px;
+    display: inline-block; }
   body a {
     color: inherit;
     cursor: pointer;
     text-decoration: underline; }
   body .text-center, body article .small, article body .small {
     text-align: center; }
-  body .noun img {
+  body .nounImg > img {
     height: 0.8em; }
+  body .nounImg:after {
+    content: "";
+    width: 0.2em;
+    display: inline-block; }
   body h1 > .noun img {
     height: 1.2em; }
-  body #logo {
-    height: 65px; }
 @keyframes flip {
   0% {
     transform: rotateY(180deg); }
@@ -97,123 +105,132 @@ body {
       color: white; }
 
 #content {
-  margin: 5% 5% 0 5%; }
+  width: 50vw;
+  box-sizing: border-box;
+  padding: 2% 2% 0 2%; }
+  @media screen and (max-width: 961px) {
+    #content {
+      width: 85vw;
+      padding: 5%; } }
+  #content.isRight {
+    position: relative;
+    left: -75vw; }
 
-#float {
-  transform-origin: 100% 0%;
-  letter-spacing: 10px;
-  transform: rotateZ(90deg);
+#view {
+  width: 50vw;
+  height: 100vh;
+  overflow: scroll;
+  border-left: 1px solid black;
   position: fixed;
   right: 0;
-  top: 50vh;
-  background-color: white;
-  padding: 5px 15px;
-  z-index: 2;
-  background-color: firebrick;
-  color: white;
-  text-decoration: none; }
-
-table {
-  border: 1px solid black;
-  font-size: 15px !important; }
-  table td {
-    border: 1px solid black;
-    vertical-align: middle; }
-    table td.blurb {
-      width: 60%;
-      padding: 20px; }
-    table td:nth-child(2) {
-      width: 40%;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      position: relative;
-      border-spacing: 5px;
-      cursor: pointer; }
-      table td:nth-child(2):hover:after, table td:nth-child(2).active:after {
-        content: "READ MORE";
-        background: white;
+  top: 0; }
+  #view #emptyViewBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  #view #logo {
+    width: 60px;
+    margin-bottom: 30px; }
+    #view #logo img {
+      width: 100%; }
+  #view .socialIco {
+    margin: auto;
+    width: 35px;
+    margin-top: 10px; }
+    #view .socialIco img {
+      width: 100%; }
+  @media screen and (min-width: 961px) {
+    #view #closeFloat {
+      background-color: black;
+      color: white;
+      position: fixed;
+      bottom: 5%;
+      right: 3%;
+      width: 60px;
+      height: 60px; }
+      #view #closeFloat:after {
+        content: "封";
+        font-size: 40px;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        padding: 10px 20px;
-        border: 1px solid black; }
-  table .piece > td {
-    overflow: scroll;
-    text-align: left;
-    padding: 2px 20%; }
-    @media (max-width: 961px) {
-      table .piece > td {
-        padding: 2px 80px; } }
-    @media (max-width: 961px) {
-      table .piece > td {
-        padding: 2px 40px; } }
-  table .piece article {
-    height: 0px;
-    opacity: 0; }
-  table .piece.active article {
-    height: 80vh;
-    opacity: 1;
-    transition: all 500ms; }
+        cursor: pointer; } }
   @media screen and (max-width: 961px) {
-    table tr {
-      margin-bottom: 2px;
-      border-top: 1px solid;
-      border-bottom: 1px solid; }
-    table td {
-      display: block;
-      text-align: center;
-      width: auto !important; }
-      table td::before {
-        content: attr(data-label);
-        float: left; }
-      table td:nth-child(2) {
-        height: 45vh; } }
+    #view {
+      width: 85vw;
+      left: 85vw; } }
+  #view.isRight {
+    left: 15vw; }
 
-article.fullpage > p, article.fullpage h1, article.fullpage h3, article.fullpage ul {
-  margin: 5% 5% 0 5%; }
-  article.fullpage > p .img-full, article.fullpage h1 .img-full, article.fullpage h3 .img-full, article.fullpage ul .img-full {
-    margin-left: 0;
-    padding-right: 0; }
-  @media (min-width: 961px) {
-    article.fullpage > p, article.fullpage h1, article.fullpage h3, article.fullpage ul {
-      margin-right: 20%; } }
-article.fullpage > p, article.fullpage ul {
-  font-size: 0.7em;
-  margin-top: 1.6em; }
-article.fullpage .img {
-  padding-right: 20%; }
-article .img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  margin-bottom: 5%; }
-  article .img > img {
-    width: 100%; }
-article .img-group > .img {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-article .img-full {
-  width: 100%;
-  margin-right: inherit !important; }
-@media (max-width: 961px) {
+@media screen and (max-width: 961px) {
+  .hotspot {
+    height: 100vh;
+    width: 15vw;
+    position: fixed;
+    right: 0;
+    top: 0; }
+    .hotspot.isRight {
+      left: 0;
+      right: auto; } }
+.table {
+  font-size: 15px !important; }
+  .table .tr {
+    cursor: pointer;
+    border: 1px double black;
+    margin-top: 5px;
+    vertical-align: middle;
+    padding: 0 20px;
+    position: relative; }
+    .table .tr.active:after {
+      content: "解 解 解";
+      white-space: nowrap;
+      font-size: 5em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+
+article {
+  padding: 5% 5% 0; }
+  article:before {
+    content: "上 上 上";
+    color: white;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  article:after {
+    content: "下 下 下";
+    color: white;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    left: 0; }
   article .img {
-    padding-right: 0; } }
-article .img-lg {
-  width: 75%; }
-article .img-md {
-  width: 50%; }
-article .img-sm {
-  width: 30%; }
-@media (max-width: 961px) {
-  article .img-lg, article .img-md {
-    width: 85%; }
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%; }
+    article .img > img {
+      width: 100%; }
+  article .img-group > .img {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important; }
+  article .img-full {
+    width: 100%;
+    margin-right: inherit !important; }
+  article .img-lg {
+    width: 75%; }
+  article .img-md {
+    width: 50%; }
   article .img-sm {
-    width: 50%; } }
-@media (max-width: 425px) {
-  article .img-lg, article .img-md, article .img-sm {
-    width: 90%; } }
+    width: 30%; }
 
 .lightbox .ril-caption-content, .lightbox .ril__captionContent, .lightbox .ril-toolbar__item, .lightbox .ril__toolbarItem {
   line-height: 1 !important;
@@ -231,14 +248,15 @@ article .img-sm {
 .lightbox .caption {
   font-size: 0.5em; }
 
-caption {
+.caption {
   text-align: left;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: white; }
-  caption a {
+  background-color: white;
+  border-bottom: 1px solid black; }
+  .caption a {
     color: black;
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -253,7 +271,7 @@ caption {
     user-select: none;
     /* Non-prefixed version, currently
        supported by Chrome and Opera */ }
-  caption a.active {
+  .caption a.active {
     color: firebrick; }
 
 /*# sourceMappingURL=App.css.map */

@@ -2,10 +2,7 @@
 $font-stack: 'Lusitana', serif;
 $media: 961px;
 $media-mobile: 425px;
-$workImgH: 300px;
-$workImgW: 80px;
-$workImgHm: 80px;
-$workImgWm: 100%;
+$jettred: #9a1612;
 
 // ===== reset =====
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -60,6 +57,10 @@ body {margin : 0;}
 //=====reset end=====
 
 body {
+    background-image: url(assets/om.png);
+    background-color: $jettred;
+    background-repeat: repeat;
+    background-position-x: center;
     
     font-family: $font-stack;
     font-size: 1.8em;
@@ -74,7 +75,7 @@ body {
         list-style-position: inside
     }
     
-    small{ font-size: 14px; }
+    small{ font-size: 14px; display: inline-block; }
     
     a {
         color: inherit;
@@ -85,9 +86,18 @@ body {
 
     .text-center{ text-align: center; }
     
-    .noun img { height: 0.8em };
+    .nounImg{
+        > img {height: 0.8em;}
+        
+        &:after{
+            content: "";
+            width: 0.2em;
+            display: inline-block;
+        }
+    }
+    
     h1 > .noun img { height: 1.2em };
-    #logo{ height: 65px; }
+//    #logo{ height: 65px; }
 
     @keyframes flip {
         0% {transform: rotateY(180deg);}
@@ -116,125 +126,137 @@ body {
 
 //partition
 #content {
-    margin: 5% 5% 0 5%;
-}
+    width: 50vw;
+    box-sizing: border-box;
+    padding: 2% 2% 0 2%;
     
+    @media screen and (max-width: $media) {
+        width: 85vw;
+        padding: 5%;
+    }
+    &.isRight{
+        position: relative;
+        left: -75vw;
+    }
+}
+#view {
+    width: 50vw;
+    height: 100vh;
 
-
-#float{
-    transform-origin: 100% 0%;
-    letter-spacing: 10px;
-    transform: rotateZ(90deg);
+    overflow: scroll;
+    border-left: 1px solid black;
     position: fixed;
-    right: 0;
-    top: 50vh;
-    background-color: white;
-    padding: 5px 15px;
-    z-index: 2;
+    right: 0; top: 0;
     
-    background-color: firebrick;
-    color: white;
-    text-decoration: none;
-}
-
-
-
-table{
-    border: 1px solid black;
-    font-size: 15px !important;
+    #emptyViewBox{
+        position: absolute;
+        left: 50%; top:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
     
+    #logo{
+        width: 60px;
+        margin-bottom: 30px;
+        img{width: 100%}
+    }
+    .socialIco{
+        margin: auto;
+        width: 35px;
+        margin-top: 10px;
+        img{width: 100%;}
+    }
+    
+    @media screen and (min-width: $media) {
+        #closeFloat{
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 5%; right: 3%;
+            width: 60px; height: 60px;
 
 
-    td{
-        border: 1px solid black;
-        vertical-align: middle;
-        
-        &.blurb{
-            width: 60%;
-            padding: 20px;
-        }
-
-        &:nth-child(2){
-            width: 40%;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            position: relative;
-            border-spacing: 5px;
-            cursor: pointer;
-            
-            &:hover:after,&.active:after {
-                content: "READ MORE";
-                background: white;
+            &:after{
+                content:"封";
+                font-size: 40px;
                 position: absolute;
                 left: 50%; top:50%;
                 transform: translate(-50%,-50%);
-                padding: 10px 20px;
-                border: 1px solid black;
+                cursor: pointer;
             }
         }
     }
     
-    .piece>td{
-        overflow: scroll;
-        text-align: left;
-        padding: 2px 20%;
-        @media (max-width:$media) {padding: 2px 80px;}
-        @media (max-width:$media) {padding: 2px 40px;}
-        
-    }
     
-    .piece article{
-        height: 0px;
-        opacity: 0;
-    }
-    
-    .piece.active article{
-        height: 80vh;
-        opacity: 1;
-        
-        transition: all 500ms;
-    }
 
+    
     @media screen and (max-width: $media) {
-        tr {
-            margin-bottom: 2px;
-            border-top: 1px solid;
-            border-bottom: 1px solid;
+        width: 85vw;
+        left: 85vw;
+    }
+    &.isRight{
+        left: 15vw;
+    }
+}
+
+@media screen and (max-width: $media) {
+    .hotspot{
+        height: 100vh; width: 15vw;
+        position: fixed; right: 0; top: 0;
+        
+        &.isRight{
+            left: 0; right: auto;
         }
-        td {
-            display: block;
-            text-align: center;
-            width: auto !important;
-            
-            &::before {
-                content: attr(data-label);
-                float: left;
-            }
-            
-            &:nth-child(2){
-                height: 45vh;
-            }
+    }
+}
+
+
+
+.table{
+    font-size: 15px !important;
+    
+
+    .tr{
+        cursor: pointer;
+        border: 1px double black;
+        margin-top: 5px;
+        vertical-align: middle;
+        padding: 0 20px;
+        position: relative;
+
+        &.active:after,{
+            content: "解 解 解";
+            white-space: nowrap;
+            font-size: 5em;
+            position: absolute;
+            left: 50%; top:50%;
+            transform: translate(-50%,-50%);
         }
     }
 }
 
 article {
-    &.fullpage{
-        > p,h1,h3,ul{
-            margin: 5% 5% 0 5%;
-            .img-full{margin-left: 0;padding-right:0;}
-            @media (min-width:$media) { margin-right: 20%; }
-        }
+    padding: 5% 5% 0;
 
-        >p,ul {font-size: 0.7em; margin-top: 1.6em; }
-        
-        .img{
-            padding-right: 20%;
-        }
+    &:before{
+        content: "上 上 上";
+        color: white;
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        top: 0; left: 0;
     }
     
-
+    &:after{
+        content: "下 下 下";
+        color: white;
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
     
     .small{ @extend .text-center }
 
@@ -246,31 +268,16 @@ article {
         margin-top: 5%; margin-bottom: 5%;
         >img { width: 100%;}
     } 
-    
     .img-group>.img{margin-top: 0 !important; margin-bottom: 0 !important;}
     
     .img-full{
         width: 100%;
         margin-right: inherit !important;
     }
-    
-    @media (max-width:$media) {
-        .img{padding-right: 0;}
-    }
-    
     .img-lg{ width: 75%; }
     .img-md{ width: 50%; }
     .img-sm{ width: 30%; }
-    
-    
-    @media (max-width:$media) {
-        .img-lg,.img-md{ width: 85%; }
-        .img-sm{ width: 50%; }
-    }
-    
-    @media (max-width:$media-mobile) {
-        .img-lg,.img-md,.img-sm { width: 90%; }
-    }
+
 }
 
 .lightbox{
@@ -295,13 +302,14 @@ article {
 }
 
 //table stick caption menu
-caption{
+.caption{
     text-align: left;
     position: -webkit-sticky;
     position: sticky;
     top:0;
     z-index: 1;
     background-color: white;
+    border-bottom: 1px solid black;
     
 
     a {
