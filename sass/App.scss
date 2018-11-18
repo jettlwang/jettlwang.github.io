@@ -128,11 +128,12 @@ body {
 #content {
     width: 50vw;
     box-sizing: border-box;
-    padding: 2% 2% 0 2%;
+    padding: 25vh 2% 0 2%;
     
     @media screen and (max-width: $media) {
         width: 85vw;
         padding: 5%;
+        padding-top: 25vh;
     }
     &.isRight{
         position: relative;
@@ -144,7 +145,7 @@ body {
     height: 100vh;
 
     overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     border-left: 1px solid black;
     position: fixed;
     right: 0; top: 0;

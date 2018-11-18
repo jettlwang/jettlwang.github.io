@@ -107,11 +107,12 @@ body {
 #content {
   width: 50vw;
   box-sizing: border-box;
-  padding: 2% 2% 0 2%; }
+  padding: 25vh 2% 0 2%; }
   @media screen and (max-width: 961px) {
     #content {
       width: 85vw;
-      padding: 5%; } }
+      padding: 5%;
+      padding-top: 25vh; } }
   #content.isRight {
     position: relative;
     left: -75vw; }
