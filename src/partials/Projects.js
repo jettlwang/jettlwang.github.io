@@ -391,7 +391,7 @@ export class Projects extends Component {
     }
     
     setView(id){
-        this.setState({ piece:id });
+        id == this.state.piece ? this.setState({isEmpty:true}) : this.setState({ piece:id });
         this.state.isEmpty ? this.setState({isEmpty:false}) : '';
         console.log(id);
     }
@@ -425,7 +425,7 @@ export class Projects extends Component {
             
             {tags[this.state.tag]}
             
-           <div id="view" style={this.state.isEmpty? {backgroundColor:"black",color:"white"} : {backgroundColor:"white",color:"black"}}>
+           <div id="view" style={this.state.isEmpty? {backgroundColor:"black",color:"white"} : {backgroundColor:"white",color:"black"}} className={this.props.isRight && "isRight"}>
                 { this.state.isEmpty? 
                 <div id="emptyViewBox">
                 <div><img id="logo" alt="" src="src/assets/jwhy.svg" /></div>

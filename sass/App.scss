@@ -2,6 +2,7 @@
 $font-stack: 'Lusitana', serif;
 $media: 961px;
 $media-mobile: 425px;
+$jettred: #9a1612;
 
 // ===== reset =====
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -56,6 +57,10 @@ body {margin : 0;}
 //=====reset end=====
 
 body {
+    background-image: url(assets/om.png);
+    background-color: $jettred;
+    background-repeat: repeat;
+    background-position-x: center;
     
     font-family: $font-stack;
     font-size: 1.8em;
@@ -70,7 +75,7 @@ body {
         list-style-position: inside
     }
     
-    small{ font-size: 14px; }
+    small{ font-size: 14px; display: inline-block; }
     
     a {
         color: inherit;
@@ -124,6 +129,15 @@ body {
     width: 50vw;
     box-sizing: border-box;
     padding: 2% 2% 0 2%;
+    
+    @media screen and (max-width: $media) {
+        width: 85vw;
+        padding: 5%;
+    }
+    &.isRight{
+        position: relative;
+        left: -75vw;
+    }
 }
 #view {
     width: 50vw;
@@ -132,8 +146,7 @@ body {
     overflow: scroll;
     border-left: 1px solid black;
     position: fixed;
-    right: 0;
-    top: 0;
+    right: 0; top: 0;
     
     #emptyViewBox{
         position: absolute;
@@ -143,7 +156,7 @@ body {
     }
     
     #logo{
-        width: 80px;
+        width: 60px;
         margin-bottom: 30px;
         img{width: 100%}
     }
@@ -154,23 +167,47 @@ body {
         img{width: 100%;}
     }
     
-    
-    #closeFloat{
-        background-color: black;
-        color: white;
-        position: fixed;
-        bottom: 5%; right: 3%;
-        width: 60px; height: 60px;
+    @media screen and (min-width: $media) {
+        #closeFloat{
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: 5%; right: 3%;
+            width: 60px; height: 60px;
 
-        &:after{
-            content:"封";
-            font-size: 40px;
-            position: absolute;
-            left: 50%; top:50%;
-            transform: translate(-50%,-50%);
-            cursor: pointer;
+
+            &:after{
+                content:"封";
+                font-size: 40px;
+                position: absolute;
+                left: 50%; top:50%;
+                transform: translate(-50%,-50%);
+                cursor: pointer;
+            }
         }
+    }
+    
+    
+
+    
+    @media screen and (max-width: $media) {
+        width: 85vw;
+        left: 85vw;
+    }
+    &.isRight{
+        left: 15vw;
+    }
+}
+
+@media screen and (max-width: $media) {
+    .hotspot{
+        height: 100vh; width: 15vw;
+        position: fixed; right: 0; top: 0;
+        
+        &.isRight{
+            left: 0; right: auto;
         }
+    }
 }
 
 
@@ -187,8 +224,8 @@ body {
         padding: 0 20px;
         position: relative;
 
-        &.active:after,&:hover:after,&:focus:after,{
-            content: "封 印 解 除";
+        &.active:after,{
+            content: "解 解 解";
             white-space: nowrap;
             font-size: 5em;
             position: absolute;
@@ -196,34 +233,10 @@ body {
             transform: translate(-50%,-50%);
         }
     }
-
-
-
-    @media screen and (max-width: $media) {
-        .tr {
-            margin-bottom: 2px;
-            border-top: 1px solid;
-            border-bottom: 1px solid;
-        }
-        .td {
-            display: block;
-            text-align: center;
-            width: auto !important;
-            
-            &::before {
-                content: attr(data-label);
-                float: left;
-            }
-            
-            &:nth-child(2){
-                height: 45vh;
-            }
-        }
-    }
 }
 
 article {
-    padding: 5%;
+    padding: 5% 5% 0;
 
     &:before{
         content: "上 上 上";

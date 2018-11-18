@@ -6,10 +6,24 @@ import { Projects, ArticleView } from './partials/Projects';
 import 'react-image-lightbox/style.css';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.toggleRight = this.toggleRight.bind(this);
+        this.state = {
+            isRight : false,
+        }
+    }
+
+
+    toggleRight() {
+        this.setState({isRight:!this.state.isRight});
+        console.log(this.state.isRight);
+    }
+
     render(){
         return(<div>
             
-           <div id="content">
+           <div id="content" className={this.state.isRight && "isRight"}>
                
                 <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
                 <h2>I&rsquo;m a <b>mission driven</b> Product Designer and Developer.</h2>
@@ -22,7 +36,7 @@ class App extends Component {
 
                 <p>Here are examples of my design work:</p>
                
-                <Projects />
+                <Projects isRight={this.state.isRight}/>
                
                
                 <br/>
@@ -35,7 +49,9 @@ class App extends Component {
         <hr />
         
         <small>Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and mindfulness.</small>
-    </div>
+        </div>
+        
+        <div className={"hotspot " + (this.state.isRight && "isRight") } onClick={()=>this.toggleRight()}></div>
        
        </div>
         );}

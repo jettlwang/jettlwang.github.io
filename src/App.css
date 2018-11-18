@@ -57,6 +57,10 @@ body {
   margin: 0; }
 
 body {
+  background-image: url(assets/om.png);
+  background-color: #9a1612;
+  background-repeat: repeat;
+  background-position-x: center;
   font-family: "Lusitana", serif;
   font-size: 1.8em;
   line-height: 1.8; }
@@ -67,7 +71,8 @@ body {
     list-style-type: square;
     list-style-position: inside; }
   body small {
-    font-size: 14px; }
+    font-size: 14px;
+    display: inline-block; }
   body a {
     color: inherit;
     cursor: pointer;
@@ -103,6 +108,13 @@ body {
   width: 50vw;
   box-sizing: border-box;
   padding: 2% 2% 0 2%; }
+  @media screen and (max-width: 961px) {
+    #content {
+      width: 85vw;
+      padding: 5%; } }
+  #content.isRight {
+    position: relative;
+    left: -75vw; }
 
 #view {
   width: 50vw;
@@ -119,7 +131,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
   #view #logo {
-    width: 80px;
+    width: 60px;
     margin-bottom: 30px; }
     #view #logo img {
       width: 100%; }
@@ -129,23 +141,40 @@ body {
     margin-top: 10px; }
     #view .socialIco img {
       width: 100%; }
-  #view #closeFloat {
-    background-color: black;
-    color: white;
-    position: fixed;
-    bottom: 5%;
-    right: 3%;
-    width: 60px;
-    height: 60px; }
-    #view #closeFloat:after {
-      content: "封";
-      font-size: 40px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      cursor: pointer; }
+  @media screen and (min-width: 961px) {
+    #view #closeFloat {
+      background-color: black;
+      color: white;
+      position: fixed;
+      bottom: 5%;
+      right: 3%;
+      width: 60px;
+      height: 60px; }
+      #view #closeFloat:after {
+        content: "封";
+        font-size: 40px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer; } }
+  @media screen and (max-width: 961px) {
+    #view {
+      width: 85vw;
+      left: 85vw; } }
+  #view.isRight {
+    left: 15vw; }
 
+@media screen and (max-width: 961px) {
+  .hotspot {
+    height: 100vh;
+    width: 15vw;
+    position: fixed;
+    right: 0;
+    top: 0; }
+    .hotspot.isRight {
+      left: 0;
+      right: auto; } }
 .table {
   font-size: 15px !important; }
   .table .tr {
@@ -155,31 +184,17 @@ body {
     vertical-align: middle;
     padding: 0 20px;
     position: relative; }
-    .table .tr.active:after, .table .tr:hover:after, .table .tr:focus:after {
-      content: "封 印 解 除";
+    .table .tr.active:after {
+      content: "解 解 解";
       white-space: nowrap;
       font-size: 5em;
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%); }
-  @media screen and (max-width: 961px) {
-    .table .tr {
-      margin-bottom: 2px;
-      border-top: 1px solid;
-      border-bottom: 1px solid; }
-    .table .td {
-      display: block;
-      text-align: center;
-      width: auto !important; }
-      .table .td::before {
-        content: attr(data-label);
-        float: left; }
-      .table .td:nth-child(2) {
-        height: 45vh; } }
 
 article {
-  padding: 5%; }
+  padding: 5% 5% 0; }
   article:before {
     content: "上 上 上";
     color: white;
