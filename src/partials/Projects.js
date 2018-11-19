@@ -280,6 +280,7 @@ research / systems design / interaction design / prototyping / UI design / web d
          <br/>
     </article>,
         },
+/*
     "cssa" :
         {"title" : "CSSA 2018 Website",
         "blurb" : <span>When I joined the Tech Team of the <Noun name='uiuc'/> Chinese Student & Scholar Association in 2016, I quickly assumed the position of <b>webmaster</b> and worked on a <b>redesign</b> of the website. After becoming the <b>Tech Officer</b> in 2018, I <b>updated</b> my old design again I also led <b>workshops</b> explaining my work so future teammates could easily maintain and further develop the site. (See my <a href='https://uiuccssa.github.io/uiuc-cssa-web-2018/'>initial launch</a> vs <a href="http://uiuccssa.org/2018/#home">what it looks like now</a>)</span>,
@@ -298,7 +299,9 @@ research / systems design / interaction design / prototyping / UI design / web d
     <p>New members have since been building on my original site.(See my <a href='https://uiuccssa.github.io/uiuc-cssa-web-2018/'>initial launch</a> vs <a href="http://uiuccssa.org/2018/#home">what it looks like now</a>)</p><br/>
     </article>,
         },
-/*
+*/
+
+    /*
 
     "parallax" :
         {"title" : "Hello, World! Parallax Experiment",
