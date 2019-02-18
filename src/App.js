@@ -24,9 +24,9 @@ class Home extends Component {
     render(){
         return(<div style={{"max-width":"945px","margin":"auto"}}>
           <img id="logo" src="src/assets/jwhy.svg" />
-           <h1>Hi, I'm Jett.</h1>
-           <h2>I'm a product designer.</h2>
-           <p>I'm currently the design lead at <a href="https://meetluna.com">Luna</a>.</p>
+           <h1>Hi, I&#39;m Jett.</h1>
+           <h2>I&#39;m a product designer.</h2>
+           <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.</p>
            <p>My background is in front end development and behavioural economics.</p>
             <p><a href="src/assets/resume.pdf">Resume</a> / <a href="https://linkedin.com/in/jettlwang">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com">Get in Touch</a></p>
             <br />
