@@ -25,7 +25,7 @@ class App extends Component {
             
            <div id="content" className={this.state.isRight && "isRight"}>
                
-                <h1><span>Hello</span>, I’m <span id="jett"><Noun name="jett"/></span>.</h1>
+                <h1><span>Hello</span>, I&#39;m <span id="jett"><Noun name="jett"/></span>.</h1>
                 <h2>I&rsquo;m a <b>mission driven</b> Product Designer and Developer.</h2>
                 <p> My background is in <b>human computer interaction</b> and <b>behavioral economics</b>. I design interfaces and have programming abilities necessary to make my designs come to life.</p>
 
@@ -40,7 +40,7 @@ class App extends Component {
                
                
                 <br/>
-<p>I'm also currently expolring topics on <a href="http://freakonomics.com/podcast/richard-thaler/">nudge</a>, <a href="https://www.gamified.uk/wp-content/uploads/2017/04/Periodic-Table-of-Gamification-Elements-720x340.png">gamification</a>, and <a href="https://read.compassofdesign.com/what-is-design-strategy-497453c9d83a">design strategy</a>.</p>
+<p>I&#39;m also currently expolring topics on <a href="http://freakonomics.com/podcast/richard-thaler/">nudge</a>, <a href="https://www.gamified.uk/wp-content/uploads/2017/04/Periodic-Table-of-Gamification-Elements-720x340.png">gamification</a>, and <a href="https://read.compassofdesign.com/what-is-design-strategy-497453c9d83a">design strategy</a>.</p>
                 <p>In my free time I practice Chan Buddhism and am the <a href="http://woodenfish.org/">Woodenfish</a> Alumni Chair in NY.</p><p>I uphold <b>daily online meditation</b> and offline meetings.</p>
             
                
