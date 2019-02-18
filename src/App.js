@@ -1,60 +1,85 @@
 import React, { Component } from 'react';
+import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 
-import { Noun } from './partials/Noun.js';
+import { Luna , Noofie , Huawei , Freelance } from './partials/Projects';
 
-import { Projects, ArticleView } from './partials/Projects';
-import 'react-image-lightbox/style.css';
 
 class App extends Component {
-    constructor(props){
-        super(props);
-        this.toggleRight = this.toggleRight.bind(this);
-        this.state = {
-            isRight : false,
-        }
-    }
-
-
-    toggleRight() {
-        this.setState({isRight:!this.state.isRight});
-        console.log(this.state.isRight);
-    }
-
     render(){
-        return(<div>
-            
-           <div id="content" className={this.state.isRight && "isRight"}>
-               
-                <h1><span>Hello</span>, I&#39;m <span id="jett"><Noun name="jett"/></span>.</h1>
-                <h2>I&rsquo;m a <b>mission driven</b> Product Designer and Developer.</h2>
-                <p> My background is in <b>human computer interaction</b> and <b>behavioral economics</b>. I design interfaces and have programming abilities necessary to make my designs come to life.</p>
+        return(
+            <BrowserRouter>
+            <Switch>
+                <Route exact path='/' component={Home} />
+            <Route exact path='/huawei' component={Huawei}/>
+                <Route exact path='/noofie' component={Noofie}/>
+                <Route exact path='/luna' component={Luna}/>
+                <Route exact path='/freelance' component={Freelance}/>
+            </Switch>
+            </BrowserRouter>
+        );
+    }
+}
 
+class Home extends Component {
+    render(){
+        return(<div style={{"max-width":"945px","margin":"auto"}}>
+          <img id="logo" src="src/assets/jwhy.svg" />
+           <h1>Hi, I'm Jett.</h1>
+           <h2>I'm a product designer.</h2>
+           <p>I'm currently the design lead at <a href="https://meetluna.com">Luna</a>.</p>
+           <p>My background is in front end development and behavioural economics.</p>
+            <p><a href="src/assets/resume.pdf">Resume</a> / <a href="https://linkedin.com/in/jettlwang">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com">Get in Touch</a></p>
+            <br />
+           <p>Here are my projects:</p>
+           <table>
+              <tbody>
+               <tr>
+                  <td><img src="src/assets/noofie/cover.jpg" /></td>
+                  <td>
+                      <h4>Luna</h4>
+                      <p>I touch everything involving product and design.</p>
+                      <p>strategy / market research / product development / UX / UI / visual / branding / project management</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td><img src="src/assets/work/huawei.gif" /></td>
+                  <td>
+                      <h4>Huawei Shanghai Internship</h4>
+                      <p>I worked on the Mobile OS innovation team and helped explore new concepts for EMUI 7.0 & 8.0. I also made hi-fi prototypes and conducted a variety of user interviws.</p>
+                      <p>strategy / UX / user research / prototyping </p>
+                  </td>
+                </tr>
+               <tr>
+                  <td><img src="src/assets/noofie/cover.jpg" /></td>
+                  <td>
+                      <h4>Noofie App</h4>
+                      <p>An app I worked on from concept to UI. I even did a little bit of code.</p>
+                      <p>strategy / market research / UX / UI / code </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td><img src="src/assets/work/free6.png" /></td>
+                  <td>
+                      <h4>Other Designs</h4>
+                      <p>A small collection of visual designs I did.</p>
+                      <p>strategy / market research / UX / UI / code </p>
+                  </td>
+               </tr>
+               </tbody>
+           </table>
+               <br />
+            <p>Here are other things my attention goes to:</p>
+            <ul>
+                <li>Developing a list of deep converastional questions at <a href="https://tellmeaboutyourlife.com/">tellmeaboutyourlife.com</a></li>
+                <li><a href="https://www.nonviolentcommunication.com/pdf_files/4part_nvc_process.pdf">Nonviolent Communication</a></li>
+                <li>Design ethics & <a href="http://humanetech.com/designers/">humane technology</a></li>
+                <li><a href="http://freakonomics.com/podcast/richard-thaler/">Nudge</a></li>
+               <li><a href="https://www.goodreads.com/user/show/45864430-jett-wang">Important Social Media</a></li>
+            </ul>
+               <hr />
+               <small>Ironically, this website is built in ReactJS.</small>
 
-                <p>I&rsquo;m currently with <a href="https://meetluna.com">
-                    <Noun name="luna"/></a> curing communal lonliness.</p>
-                <p>Here&rsquo;s my <b><a href="/resume.pdf">resume</a></b>.</p>
-
-                <p>Here are examples of my design work:</p>
-               
-                <Projects isRight={this.state.isRight}/>
-               
-               
-                <br/>
-<p>I&#39;m also currently expolring topics on <a href="http://freakonomics.com/podcast/richard-thaler/">nudge</a>, <a href="https://www.gamified.uk/wp-content/uploads/2017/04/Periodic-Table-of-Gamification-Elements-720x340.png">gamification</a>, and <a href="https://read.compassofdesign.com/what-is-design-strategy-497453c9d83a">design strategy</a>.</p>
-                <p>In my free time I practice Chan Buddhism and am the <a href="http://woodenfish.org/">Woodenfish</a> Alumni Chair in NY.</p><p>I uphold <b>daily online meditation</b> and offline meetings.</p>
-            
-               
-
-        <br/>
-        <hr />
-        
-        <small>Copyright <Noun name="jett"/> @ 2018. Made with <Noun name="sass"/>, <Noun name="react"/> and mindfulness.</small>
-        </div>
-        
-        <div className={"hotspot " + (this.state.isRight && "isRight") } onClick={()=>this.toggleRight()}></div>
-       
-       </div>
-        );}
+        </div>);}
     
 }
 
