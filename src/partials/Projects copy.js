@@ -3,6 +3,7 @@ import Lightbox from 'react-image-lightbox';
 
 
 import { Img } from './ArticleUtil'
+import { Noun } from './Noun';
 
 
 export const projects = {
@@ -11,7 +12,7 @@ export const projects = {
     "honeit" :
         {"title" : "HoneIt Consulting Project",
     "blurb" : <span>
-         I did a two week <b>usability</b> consulting project with 2 fellow peers at <span name='ga'/> for recruting startup HoneIt. We conducted <b>user interviews & usability audit</b> on the existing product and created wireframes for <b>redesign</b> in <span name='sketch'/>. I also created a detailed <b>usability report</b> from user feedback and <b>documentation</b> for our redesign in <span name='omni'/>. Since then, the founders have implemented many of our redesigns and still use our research today.</span>,
+         I did a two week <b>usability</b> consulting project with 2 fellow peers at <Noun name='ga'/> for recruting startup HoneIt. We conducted <b>user interviews & usability audit</b> on the existing product and created wireframes for <b>redesign</b> in <Noun name='sketch'/>. I also created a detailed <b>usability report</b> from user feedback and <b>documentation</b> for our redesign in <Noun name='omni'/>. Since then, the founders have implemented many of our redesigns and still use our research today.</span>,
         "role" : "research & synthesis / presentation",
          "thumb" : 'src/assets/honeit/deck.jpg',
          "piece" :
@@ -75,7 +76,7 @@ export const projects = {
     </p>
 <p>As a team, we discussed together how to best incorporate user feedback into features, to <b>maximize improvements</b> in experience with <b>minimal changes</b> required from our clients end.
     </p>
-<p>Here’s a comparison of the main interview recording screen with our redesign that my teammate finalized in <span name="sketch" />.
+<p>Here’s a comparison of the main interview recording screen with our redesign that my teammate finalized in <Noun name="sketch" />.
     </p>
 <Img size="full" src="src/assets/honeit/redesign.jpg" />
 
@@ -116,7 +117,7 @@ export const projects = {
     "noofie" :
         {"title" : "Noofie App",
     "blurb" : <span>
-         Noofie App is a solution to young professional networking. Starting at <span name='ga'/> and continuing after, I completed a full design cycle of an app as a personal project in 2 month, from <b>ideas</b> and <b>research</b> to multiple <b>iterations</b> of <b>wireframes</b> and <b>tested protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <span name='pop'/> and <span name='marvel' />. For UI, I used <span name='sketch'/> templates. I even <b>coded</b> the main interface on iOS with Swift.</span>,
+         Noofie App is a solution to young professional networking. Starting at <Noun name='ga'/> and continuing after, I completed a full design cycle of an app as a personal project in 2 month, from <b>ideas</b> and <b>research</b> to multiple <b>iterations</b> of <b>wireframes</b> and <b>tested protytopes</b>, along with a <b>website</b> & <b>pitch deck</b>. For prototpying, I used <Noun name='pop'/> and <Noun name='marvel' />. For UI, I used <Noun name='sketch'/> templates. I even <b>coded</b> the main interface on iOS with Swift.</span>,
         "role" : "research & synthesis / systems design / interaction design / prototyping / UI design / web design / presentation",
          "thumb" : 'src/assets/noofie/cover.jpg',
     "piece" : <article>
@@ -205,7 +206,7 @@ research / systems design / interaction design / prototyping / UI design / web d
 
 <p>From the flow map, I constructed the structure of the app. Then, I designed the wireframe based on familiar interaction patterns. I chose to follow the iOS guidelines for simplicity. Apps I drew inspirations from included dating apps (for connecting), messaging apps (for communication), and calendar apps (for scheduling).</p>
 
-<p>I went through <b>5 usability tests</b> as I iterated my <b>wireframes</b> and <b>prototypes</b> from paper to digital, using <span name='pop'/>, <span name='sketch'/> and <span name='marvel'/>.</p>
+<p>I went through <b>5 usability tests</b> as I iterated my <b>wireframes</b> and <b>prototypes</b> from paper to digital, using <Noun name='pop'/>, <Noun name='sketch'/> and <Noun name='marvel'/>.</p>
 
          <Img size="md" src="src/assets/noofie/wires.png" />
         <p className="small">Latest prototype <a href="https://marvelapp.com/9ic8e2e/screen/48309394">here</a></p>
@@ -262,11 +263,11 @@ research / systems design / interaction design / prototyping / UI design / web d
     
     "huawei" :
         {"title" : "Huawei Shanghai Internship",
-        "blurb" : <span>I took part in <b>brainstorming sessions </b>pertaining high-level systems design for Huawei’s AI assistant. I also worked on <b>mobile prototyping</b> with <span name='flinto'/> & <span name='origami' />. I was able to prototype <b>complex interations</b>. I also conducted a few field user research tasks to gather data & feedback, and was able to leverage technology to deliver results.</span>,
+        "blurb" : <span>I took part in <b>brainstorming sessions </b>pertaining high-level systems design for Huawei’s AI assistant. I also worked on <b>mobile prototyping</b> with <Noun name='flinto'/> & <Noun name='origami' />. I was able to prototype <b>complex interations</b>. I also conducted a few field user research tasks to gather data & feedback, and was able to leverage technology to deliver results.</span>,
          "role": "systems design / interaction design / prototyping",
          "thumb" : 'src/assets/work/huawei.gif',
          "piece" : <article className="scroll"><br/>
-         <p>When prototyping for complex interactions in <span name='origami' />, I was able to quickly and efficiently utilize logical modules to calculate triggers. Here are examples of interactions I made:</p>
+         <p>When prototyping for complex interactions in <Noun name='origami' />, I was able to quickly and efficiently utilize logical modules to calculate triggers. Here are examples of interactions I made:</p>
          <Img src='src/assets/work/huawei.gif' size='sm' />
          <Img src='src/assets/work/huawei2.gif' size='sm' />
          <p>And here's an example of logical expressions I used. This is the circle zooming animation calculation in the above example.</p>
@@ -279,7 +280,33 @@ research / systems design / interaction design / prototyping / UI design / web d
          <br/>
     </article>,
         },
+/*
+    "cssa" :
+        {"title" : "CSSA 2018 Website",
+        "blurb" : <span>When I joined the Tech Team of the <Noun name='uiuc'/> Chinese Student & Scholar Association in 2016, I quickly assumed the position of <b>webmaster</b> and worked on a <b>redesign</b> of the website. After becoming the <b>Tech Officer</b> in 2018, I <b>updated</b> my old design again I also led <b>workshops</b> explaining my work so future teammates could easily maintain and further develop the site. (See my <a href='https://uiuccssa.github.io/uiuc-cssa-web-2018/'>initial launch</a> vs <a href="http://uiuccssa.org/2018/#home">what it looks like now</a>)</span>,
+         "role" : "web design / web development / UI design",
+         "thumb" : 'src/assets/work/cssa0.jpg',
+         "piece" :<article className="scroll"><br/>
+         <p>When I joined in 2016, the website hasn't been updated since 2008 and retains very outdated looks and information. I took the responsibility of a <b>webmaster</b> and lead of team of 5 to completely re-make the site. I condensed the site by removing no longer updated sections and created a visual brand using Chinese visual elements, resulting in a modern, memorable look.</p>
+         <p>In 2018, with improved knowledge of coding and design, I realized both aspects of the site can be improved. So I and further condensed the <b>information structure</b> and improved <b>visual tidiness</b>, this time with future collaboration in mind.</p>
+    <Img src='src/assets/work/cssa0.jpg' />
+    <p>For the 2018 redesign, I used <Noun name='bootstrap'/>, <Noun name='sass'/>, and a simple front-end <Noun name='jquery'/> framework. I also provided a thorough <a href="https://github.com/uiuccssa/uiuc-cssa-web-2018">documentation</a> on github.</p>
+    <Img src='src/assets/work/cssa1.png' size="sm"/>
+    <Img src='src/assets/work/cssa2.png' size="sm"/>
+    <Img src='src/assets/work/cssa3.png' size="sm"/>
+    <p>Here's a comparsion of the information architecture of the site in 2016 and 2018.</p>
+    <Img size="sm" src='src/assets/work/cssaia.jpg' />
+    <p>New members have since been building on my original site.(See my <a href='https://uiuccssa.github.io/uiuc-cssa-web-2018/'>initial launch</a> vs <a href="http://uiuccssa.org/2018/#home">what it looks like now</a>)</p><br/>
+    </article>,
+        },
+*/
 
+    /*
+
+    "parallax" :
+        {"title" : "Hello, World! Parallax Experiment",
+    "blurb" : <span>A single-page website I first made two years ago to experiment with <b>parallax scrolling</b> that featured my (then) resume. Made with <Noun name='htmlcss'/> and <a href='https://github.com/Prinzhorn/skrollr'>Skrollr JS</a>. All visual assets are also drawn by me in <Noun name='sketch'/> and <Noun name='illustrator'/>. <a href='https://jettlwang.github.io/static/parallax/'>See it live(Best on desktop)!</a></span>,},
+*/
 
     "freelance" :
         {"title" : "Web, UI & Graphic Designs",
@@ -300,31 +327,13 @@ research / systems design / interaction design / prototyping / UI design / web d
     
     "tmayl" :
         {"title" : <a href='https://tellmeaboutyourlife.com'>TellMeAboutYourLife.com</a>,
-         "blurb" : <span>TellMeAboutYourLife.com is a casual conversation game that promotes "big talks" and a hackathon project. I came up with some questions with my friend, and designed the <b>structure</b> and <b>interface</b> as a <b>mobile-friendly website</b>. I styled the frontend with <span name="react"/> and <span name="sass"/>.</span>,
+         "blurb" : <span>TellMeAboutYourLife.com is a casual conversation game that promotes "big talks" and a hackathon project. I came up with some questions with my friend, and designed the <b>structure</b> and <b>interface</b> as a <b>mobile-friendly website</b>. I styled the frontend with <Noun name="react"/> and <Noun name="sass"/>.</span>,
          "role" : "web design / web development / UI design ",
          "thumb" :'src/assets/work/tmayl1.png',
        "piece" : <article className="scroll">
           <p>TMAYL is a game my friends and I often play offline with a set of cards. In this hackathon, we wanted to create the experience online.</p>
            <Img src='src/assets/work/tmayl1.png'/>
-           <p>Based on our offline experience, we decided to make TMAYL a mobile-friendly web app that has a minimalistic interface, and allows question submissions and ratings. I designed the interface in <span name="sketch"/> and styled the frontend with <span name="react"/> and <span name="sass"/>.</p>
-           <Img src='src/assets/work/tmayl2.png'/>
-           To make the interface <b>minimalistic</b>, I wanted to design question navigation without buttons. Since the question should be presistent on the screen until it's talked about offline, I couldn't use the scoring buttons as navigatioin in case they press it before that. So I decided to use a <b>full screen hot spot</b>. New users can <b>quickly learn</b> after a few clicks, and old users can quickly browse through the questions.
-           <Img src='src/assets/work/tmayl.gif' size="sm"/>
-           <p>Because time was limited, the live site's navigation is currently done with the scoring buttons and refreshing. Nevertheless, we since enjoyed playing this game with new friends everywhere.</p>
-           
-           
-       </article>,
-        },
-    
-    "luna" :
-        {"title" : <a href='https://tellmeaboutyourlife.com'>TellMeAboutYourLife.com</a>,
-         "blurb" : <span>TellMeAboutYourLife.com is a casual conversation game that promotes "big talks" and a hackathon project. I came up with some questions with my friend, and designed the <b>structure</b> and <b>interface</b> as a <b>mobile-friendly website</b>. I styled the frontend with <span name="react"/> and <span name="sass"/>.</span>,
-         "role" : "web design / web development / UI design ",
-         "thumb" :'src/assets/work/tmayl1.png',
-       "piece" : <article className="scroll">
-          <p>TMAYL is a game my friends and I often play offline with a set of cards. In this hackathon, we wanted to create the experience online.</p>
-           <Img src='src/assets/work/tmayl1.png'/>
-           <p>Based on our offline experience, we decided to make TMAYL a mobile-friendly web app that has a minimalistic interface, and allows question submissions and ratings. I designed the interface in <span name="sketch"/> and styled the frontend with <span name="react"/> and <span name="sass"/>.</p>
+           <p>Based on our offline experience, we decided to make TMAYL a mobile-friendly web app that has a minimalistic interface, and allows question submissions and ratings. I designed the interface in <Noun name="sketch"/> and styled the frontend with <Noun name="react"/> and <Noun name="sass"/>.</p>
            <Img src='src/assets/work/tmayl2.png'/>
            To make the interface <b>minimalistic</b>, I wanted to design question navigation without buttons. Since the question should be presistent on the screen until it's talked about offline, I couldn't use the scoring buttons as navigatioin in case they press it before that. So I decided to use a <b>full screen hot spot</b>. New users can <b>quickly learn</b> after a few clicks, and old users can quickly browse through the questions.
            <Img src='src/assets/work/tmayl.gif' size="sm"/>
@@ -335,36 +344,134 @@ research / systems design / interaction design / prototyping / UI design / web d
         },
 };
 
-/*
 export const ArticleView = (props) => {
-*/
-class ArticleView extends Component {
+//    let content = (props.id) ? projects[props.id].piece : "";
+    return <div>
+       {projects[props.id].piece}
+       <div id="closeFloat" onClick={props.closeView}></div>
+    </div>;
+}
+
+//how each row is defined
+class Project extends Component {
+    constructor(props){
+        super(props);
+
+        this.props = { id : "", key : "", isActive : false }
+    }
     
-    componentDidMount(){
-        document.title = projects[this.props.id].title + " / Jett Wang / Product Designer"
+    
+    render(){
+        var proj = projects[this.props.id];
+        return (<div>
+            <div className={"tr " + (this.props.isActive && "active") }
+               onClick={()=>this.props.onClick(this.props.id)}>
+                <h2>{proj.title}</h2>{proj.blurb}<p>ROLE / {proj.role}</p>
+            </div>
+       </div>
+        );
+    }
+}
+            
+            
+
+
+//tag controller
+export class Projects extends Component {
+    constructor(props){
+        super(props);
+        this.selectTag = this.selectTag.bind(this);
+        this.setView = this.setView.bind(this);
+        this.state = {
+            tag : 'ALL',
+            piece : "noofie",
+            isEmpty : true,
+            }
+    }
+    
+    selectTag(newstate){
+        this.setState(newstate);
+    }
+    
+    setView(id){
+        id == this.state.piece ? this.setState({isEmpty:true}) : this.setState({ piece:id });
+        this.state.isEmpty ? this.setState({isEmpty:false}) : '';
+        console.log(id);
     }
     
     render(){
-        return <div>
-            <p><a href="/">Back</a></p>
-              <h1>{projects[this.props.id].title}</h1>
-               {projects[this.props.id].piece}
-            <p><a href="/">Back</a></p>
-        </div>;
+        
+        var trs = {};  //pair of projects key:<tr/>
+        for(var e in projects){
+            trs[e]=<Project id={e} key={e} onClick={this.setView} isActive={!this.state.isEmpty && this.state.piece == e}/>;
+        };
+
+        const tags = {
+            "ALL" : Object.values(trs),
+        //    "CASE STUDY" : [trs[''],trs['honeit']],
+            "#web" : [trs['cssa'],trs['honeit'],trs['parallax'],trs['freelance'],trs['tmayl']],
+            "#mobile" : [trs['huawei'],trs[''],trs['freelance'],trs['tmayl']],
+            "#frontend" : [trs['cssa'],trs['parallax'],trs['tmayl']],
+            "#UX" : [trs['huawei'],trs[''],trs['honeit']],
+            "#UI" : [trs['cssa'],trs[''],trs['parallax'],trs['freelance']],
+        }
+
+        var taglist = [];
+        for(var e in tags){
+            if( e != "ALL") {taglist.push(" "+"/ ");}
+            let newstate = {tag : e};
+            taglist.push(<TagController onClick={()=>this.selectTag(newstate)} key={e} name={e} init={e == "ALL"}/>);
+         }
+        
+        return(<div className="table">
+            <div className="caption">{taglist}</div>
+            
+            {tags[this.state.tag]}
+            
+           <div id="view" style={this.state.isEmpty? {backgroundColor:"black",color:"white"} : {backgroundColor:"white",color:"black"}} className={this.props.isRight && "isRight"}>
+                { this.state.isEmpty? 
+                <div id="emptyViewBox">
+                <div><img id="logo" alt="" src="src/assets/jwhy.svg" /></div>
+                   <div className="socialIco"><a href="mailto:jettlwang@gmail.com">
+                       <img src="/src/assets/social/email.png" /></a></div>
+                    <div className="socialIco"><a href="https://twitter.com/hahajett">
+                        <img src="/src/assets/social/twitter.png" /></a></div>
+                    <div className="socialIco"><a href="https://www.linkedin.com/in/jettlwang/">
+                        <img src="/src/assets/social/ln.png" /></a></div>
+                </div>
+                :
+                <ArticleView id={this.state.piece} closeView={()=>this.setState({isEmpty:true})}/> }
+           </div>
+               
+                
+        </div>);
     }
 }
-export const Noofie = (props) => {
-    return <ArticleView id="noofie" /> ;
-}
-            
-export const Huawei = (props) => {
-    return <ArticleView id="huawei" /> ;
-}
 
-export const Luna = (props) => {
-    return <ArticleView id="luna" /> ;
-}
+class TagController extends Component{
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+        this.state = { isActive : this.props.init };
+    }
+    
+    handleClick(){
+        this.setState({ isActive : true });
+        this.props.onClick();
+    }
+    
+    componentDidUpdate(prevProps, prevState, snapshot){
+        if(prevState.isActive){this.setState({ isActive : false })};
+        
+    }
 
-export const Freelance = (props) => {
-    return <ArticleView id="freelance" /> ;
+    
+    render(){
+        return (
+            <a
+                onClick={this.handleClick}
+                className={''+ (this.state.isActive && "active")}
+            >{this.props.name+" "}</a>
+        );
+    }
 }
