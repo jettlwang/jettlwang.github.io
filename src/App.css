@@ -10,16 +10,15 @@ h3 {
   margin-top: 48px; }
 
 table {
-  font-size: 15px !important;
-  max-width: 800px; }
+  font-size: 15px !important; }
   table td {
     padding: 0 2%;
     vertical-align: top;
     display: block; }
     table td img {
-      max-height: 200px;
-      max-width: 300px;
-      margin-top: 48px; }
+      max-height: 350px;
+      max-width: 500px;
+      margin-bottom: 48px; }
 
 @media (max-width: 425px) {
   table {

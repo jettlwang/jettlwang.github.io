@@ -22,7 +22,7 @@ class App extends Component {
 
 class Home extends Component {
     render(){
-        return(<div style={{"max-width":"945px","margin":"auto"}}>
+        return(<div>
           <img id="logo" src="src/assets/jwhy.svg" />
            <h1>Hi, I&#39;m Jett.</h1>
            <h2>I&#39;m a product designer.</h2>
@@ -34,36 +34,36 @@ class Home extends Component {
            <table>
               <tbody>
                <tr>
-                  <td><img src="src/assets/noofie/cover.jpg" /></td>
                   <td>
                       <h4>Luna</h4>
                       <p>I touch everything involving product and design.</p>
                       <p>strategy / market research / product development / UX / UI / visual / branding / project management</p>
                   </td>
+                  <td><img src="src/assets/work/luna.png" /></td>
                </tr>
                <tr>
-                  <td><img src="src/assets/work/huawei.gif" /></td>
                   <td>
                       <h4>Huawei Shanghai Internship</h4>
                       <p>I worked on the Mobile OS innovation team and helped explore new concepts for EMUI 7.0 & 8.0. I also made hi-fi prototypes and conducted a variety of user interviws.</p>
                       <p>strategy / UX / user research / prototyping </p>
                   </td>
+                  <td><img src="src/assets/work/huawei.gif" /></td>
                 </tr>
                <tr>
-                  <td><img src="src/assets/noofie/cover.jpg" /></td>
                   <td>
                       <h4>Noofie App</h4>
                       <p>An app I worked on from concept to UI. I even did a little bit of code.</p>
                       <p>strategy / market research / UX / UI / code </p>
                   </td>
+                  <td><img src="src/assets/noofie/cover.jpg" /></td>
                </tr>
                <tr>
-                  <td><img src="src/assets/work/free6.png" /></td>
                   <td>
                       <h4>Other Designs</h4>
                       <p>A small collection of visual designs I did.</p>
                       <p>strategy / market research / UX / UI / code </p>
                   </td>
+                  <td><img src="src/assets/work/free6.png" /></td>
                </tr>
                </tbody>
            </table>
