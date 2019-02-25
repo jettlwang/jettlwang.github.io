@@ -348,6 +348,7 @@ class ArticleView extends Component {
         return <div>
             <p><a href="/">Back</a></p>
               <h1>{projects[this.props.id].title}</h1>
+        {projects[this.props.id].blurb}
                {projects[this.props.id].piece}
             <p><a href="/">Back</a></p>
         </div>;

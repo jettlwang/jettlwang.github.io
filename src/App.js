@@ -35,7 +35,7 @@ class Home extends Component {
               <tbody>
                <tr>
                   <td>
-                      <h4>Luna</h4>
+                      <h4>Luna (coming soon)</h4>
                       <p>I touch everything involving product and design.</p>
                       <p>strategy / market research / product development / UX / UI / visual / branding / project management</p>
                   </td>
@@ -43,7 +43,7 @@ class Home extends Component {
                </tr>
                <tr>
                   <td>
-                      <h4>Huawei Shanghai Internship</h4>
+                      <h4><a href="huawei">Huawei Shanghai Internship</a></h4>
                       <p>I worked on the Mobile OS innovation team and helped explore new concepts for EMUI 7.0 & 8.0. I also made hi-fi prototypes and conducted a variety of user interviws.</p>
                       <p>strategy / UX / user research / prototyping </p>
                   </td>
@@ -51,7 +51,7 @@ class Home extends Component {
                 </tr>
                <tr>
                   <td>
-                      <h4>Noofie App</h4>
+                      <h4><a href="noofie">Noofie App</a></h4>
                       <p>An app I worked on from concept to UI. I even did a little bit of code.</p>
                       <p>strategy / market research / UX / UI / code </p>
                   </td>
@@ -59,7 +59,7 @@ class Home extends Component {
                </tr>
                <tr>
                   <td>
-                      <h4>Other Designs</h4>
+                      <h4><a href="freelance">Other Designs</a></h4>
                       <p>A small collection of visual designs I did.</p>
                       <p>strategy / market research / UX / UI / code </p>
                   </td>
@@ -70,7 +70,7 @@ class Home extends Component {
                <br />
             <p>Here are other things my attention goes to:</p>
             <ul>
-                <li>Developing a list of deep converastional questions at <a href="https://tellmeaboutyourlife.com/">tellmeaboutyourlife.com</a></li>
+                <li>Maintaining <a href="https://tellmeaboutyourlife.com/">tellmeaboutyourlife.com</a></li>
                 <li><a href="https://www.nonviolentcommunication.com/pdf_files/4part_nvc_process.pdf">Nonviolent Communication</a></li>
                 <li>Design ethics & <a href="http://humanetech.com/designers/">humane technology</a></li>
                 <li><a href="http://freakonomics.com/podcast/richard-thaler/">Nudge</a></li>
