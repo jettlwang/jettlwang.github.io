@@ -3,6 +3,12 @@ import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 
 import { Luna , Noofie , Huawei , Freelance } from './partials/Projects';
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+
+
 
 class App extends Component {
     render(){
@@ -22,7 +28,7 @@ class App extends Component {
 
 class Home extends Component {
     render(){
-        return(<div>
+        return(<Container><Row><Col md={8}>
           <img id="logo" src="src/assets/jwhy.svg" />
            <h1>Hi, I&#39;m Jett.</h1>
            <h2>I&#39;m a product designer.</h2>
@@ -79,7 +85,7 @@ class Home extends Component {
                <hr />
                <small>Ironically, this website is built in ReactJS.</small>
 
-        </div>);}
+        </Col></Row></Container>);}
     
 }
 
