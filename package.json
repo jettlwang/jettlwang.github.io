@@ -5,7 +5,8 @@
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "sass": "node-sass --watch sass/ -o src/"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,7 @@
   "author": "Rafael Pedicini <code@rafrex.com>",
   "license": "MIT",
   "dependencies": {
+    "node-sass": "^4.11.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -35,6 +37,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "node-sass": "^4.11.0",
     "style-loader": "^0.21.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"

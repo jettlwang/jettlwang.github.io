@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lusitana");
 body {
   font-family: sans-serif;
-  padding: 5% 3% 0 3%; }
+  padding: 50% 3% 0 3%; }
 
 #logo {
   width: 88px; }
@@ -23,32 +23,34 @@ table {
 @media (max-width: 425px) {
   table {
     max-width: auto; }
-
   td {
     display: block; } }
-article {
-   }
-  article .img {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
-    margin-bottom: 5%; }
-    article .img > img {
-      width: 100%; }
-  article .img-group > .img {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important; }
-  article .img-full {
-    width: 100%;
-    margin-right: inherit !important; }
-  article .img-lg {
-    width: 75%; }
-  article .img-md {
-    max-width: 50%; }
-  article .img-sm {
-    max-width: 30%; }
-  @media (max-width: 961px) {
-    article .img-lg {
-      max-width: 100%; } }
 
-/*# sourceMappingURL=App.css.map */
+article .img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+  article .img > img {
+    width: 100%; }
+
+article .img-group > .img {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+article .img-full {
+  width: 100%;
+  margin-right: inherit !important; }
+
+article .img-lg {
+  width: 75%; }
+
+article .img-md {
+  max-width: 50%; }
+
+article .img-sm {
+  max-width: 30%; }
+
+@media (max-width: 961px) {
+  article .img-lg {
+    max-width: 100%; } }
