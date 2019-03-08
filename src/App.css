@@ -1,29 +1,86 @@
 @import url("https://fonts.googleapis.com/css?family=Lusitana");
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center; }
+
+.align-col-baseline {
+  align-items: baseline; }
+
 body {
   font-family: sans-serif; }
 
 #logo {
-  width: 88px; }
+  width: 66px; }
 
-h3 {
-  margin-top: 48px; }
+#ghost {
+  background-color: rgba(123, 120, 245, 0.3);
+  top: 50vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-table {
-  font-size: 15px !important; }
-  table td {
-    padding: 0 2%;
-    vertical-align: top;
-    display: block; }
-    table td img {
-      max-height: 350px;
-      max-width: 500px;
-      margin-bottom: 48px; }
+#menu-container {
+  position: relative;
+  top: 50vh; }
+  #menu-container #menu {
+    position: sticky;
+    top: 15vh;
+    transform: translateY(-50%); }
+    #menu-container #menu .active > a {
+      color: aquamarine; }
 
-@media (max-width: 425px) {
-  table {
-    max-width: auto; }
-  td {
-    display: block; } }
+#header {
+  background-color: transparent !important; }
+
+#header-after {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0vh;
+  background-attachment: fixed;
+  background-size: 350px;
+  background-repeat: no-repeat;
+  z-index: -1; }
+
+#header-after::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%); }
+
+.carousel {
+  display: flex;
+  flex-direction: column; }
+  .carousel .carousel-item {
+    height: 300px;
+    background-color: white; }
+    .carousel .carousel-item img {
+      max-height: 100%;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+  .carousel .carousel-indicators {
+    position: static;
+    order: 2;
+    margin-top: 1rem; }
+    .carousel .carousel-indicators li {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: gainsboro; }
+      .carousel .carousel-indicators li.active {
+        background-color: #000; }
 
 article .img {
   margin-left: auto;
