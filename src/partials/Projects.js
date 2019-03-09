@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import {Container , Row, Col }from 'react-bootstrap';
+import { Nav }from 'react-bootstrap';
+
 import Scrollspy from 'react-scrollspy'
+
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import { Img } from './ArticleUtil'
 
@@ -256,57 +261,60 @@ export const projects = {
 };
 
 
-export class Menu extends Component {
-    render(){
-        var props = this.props;
-        var lis = [];
-        for(var i in props.items ){
-            lis.push(<li key={i}><a href={props.href[i]}>{props.name[i]}</a></li>);
-        }
-
-        return <div id="menu">
-            <Scrollspy items={props.items} currentClassName="active" style={{"flexDirection": "column","display": "flex","flexWrap": "wrap","paddingLeft": 0,"marginBottom": 0,"listStyle": "none","alignItems": "flex-end"}}>
-               {lis}
-            </Scrollspy>
-        </div>
-    }
-}
-
 
 class ArticleView extends Component {
     constructor(props) {
         super(props);
 
-        this.items = ['home','top'];
-        this.href = ["/",'#top'];
-        this.name = [<img id="logo" src="src/assets/jwhy.svg" />, 'TOP'];
+        this.scrollToTop = this.scrollToTop.bind(this);
+
+        this.items = [];
+        this.name = [];
         this.artic = <Artic items={this.items} name={this.name} href={this.href}/>;
 
     }
 
     componentDidMount(){
         document.title = projects[this.props.id].title + " / Jett Wang / Product Designer"
-        this.name = this.name.splice(0);
-        this.href = this.href.splice(0);
-        this.items = this.items.splice(0);
+
+        this.forceUpdate();
+
+        Events.scrollEvent.register('begin', function () {  });
+        Events.scrollEvent.register('end', function () {    });
+     }
+
+    scrollToTop() {scroll.scrollToTop();}
+    scrollTo() {scroller.scrollTo('scroll-to-element', {duration: 800,delay: 0,smooth: 'easeInOutQuart'})}
+
+    scrollToWithContainer() {let goToContainer = new Promise((resolve, reject) => {Events.scrollEvent.register('end', () => {resolve();Events.scrollEvent.remove('end');});scroller.scrollTo('scroll-container', {duration: 800,delay: 0,smooth: 'easeInOutQuart'});});goToContainer.then(() =>scroller.scrollTo('scroll-container-second-element', {duration: 800,delay: 0,smooth: 'easeInOutQuart',containerId: 'scroll-container'}));}
+
+     componentWillUnmount() {
+          Events.scrollEvent.remove('begin');
+          Events.scrollEvent.remove('end');
      }
 
     render(){
-
         return <Container>
-
             <Row>
                <Col lg={{span:8,offset:2}}>
                    <h1>{projects[this.props.id].title}</h1>
                     {projects[this.props.id].blurb}
 
                     <span id="top" />
-                    {this.artic};
+                    {this.artic}
 
 
                 </Col>
                 <Col lg={2} id="menu-container">
-                    <Menu items={this.items} href={this.href} name={this.name}/>
+                    <div id="menu"><ul className="nav flex-column">
+                         <li className="nav-item"><a href="/"><img id="logo" src="src/assets/jwhy.svg" /></a></li>
+                         <li><Link className="nav-item" to="top" spy={false} smooth={true} duration={200} >top</Link></li>
+                         {this.items.map( (e,i) =>
+                              <li key={i}>
+                                   <Link className="nav-item" activeClass="active" to={this.items[i]} spy={true} smooth={true} duration={200} >{this.name[i]}</Link>
+                              </li>
+                         )}
+                    </ul></div>
                 </Col>
             </Row>
             </Container>;
@@ -314,20 +322,45 @@ class ArticleView extends Component {
 }
 
 export const Artic = (props) => {
-    return <ReactMarkdown
-             source={require('../assets/md/noofie.md')}
-             renderers={{
-               heading : ((e) => {
-                   var myname = e.children[0].props.value;
-                   var myid = myname.toLowerCase().replace(/\W/g, '-');
-                   props.items.push(myid);
-                   props.href.push("#"+myid);
-                   props.name.push(myname);
-                   return React.createElement('h' + e.level, {id: myid}, e.children);
-               })
-             }}
-             includeNodeIndex={true}
-        />;
+     var i = 1;
+    return <div>
+          {/*1. use Render to find code blocks, find headings inside & push to queue. This is a no show.*/}
+         <ReactMarkdown source={require('../assets/md/noofie.md')} className="d-none"
+          renderers={{
+               code : ((e) => {
+                        return <ReactMarkdown source={e.value}
+                                   renderers = {{
+                                        heading : ((e) => {
+                                            var myname = e.children[0].props.value;
+                                            var myid = myname.toLowerCase().replace(/\W/g, '-');
+                                            props.items.push(myid);
+                                            props.name.push(myname);
+                                            console.log(myname);
+                                            return "a";
+                                       }),
+                                   }}/>
+                              }),
+          }}
+         />
+
+          {/*2. use Render to find code blocks, and put id to code block*/}
+         <ReactMarkdown
+                  source={require('../assets/md/noofie.md')}
+                  renderers={{
+                    code : ((e) => {
+                         i++;
+                        return <div id={props.items[i]}>
+                        <ReactMarkdown source={e.value} />
+                        </div>;
+                    }),
+
+                  }}
+                  includeNodeIndex={true}
+             />;
+
+    </div>
+
+
 }
 
 

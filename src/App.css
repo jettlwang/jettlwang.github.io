@@ -30,7 +30,7 @@ body {
     position: sticky;
     top: 15vh;
     transform: translateY(-50%); }
-    #menu-container #menu .active > a {
+    #menu-container #menu .active {
       color: aquamarine; }
 
 #header {

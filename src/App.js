@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 
 
-import { Menu , projects, Luna , Noofie , Huawei , Freelance } from './partials/Projects';
+import { projects, Luna , Noofie , Huawei , Freelance } from './partials/Projects';
 
 import {Container , Row, Col }from 'react-bootstrap';
 import { Badge, Jumbotron, Carousel } from 'react-bootstrap';
@@ -77,7 +77,6 @@ class Home extends Component {
                         </Col>
 
                         <Col lg={2} id="menu-container">
-                            <Menu items={['header','huawei','others']} href={["#","#huawei","#others"]} name={[<img id="logo" src="src/assets/jwhy.svg" />,"yi","others"]}/>
                         </Col>
 
                     </Row>
