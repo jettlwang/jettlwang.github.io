@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Lightbox from 'react-image-lightbox';
+import ReactMarkdown from 'react-markdown';
 
 import {Container , Row, Col }from 'react-bootstrap';
 import Scrollspy from 'react-scrollspy'
@@ -274,39 +274,62 @@ export class Menu extends Component {
 
 
 class ArticleView extends Component {
+    constructor(props) {
+        super(props);
+
+        this.items = ['home','top'];
+        this.href = ["/",'#top'];
+        this.name = [<img id="logo" src="src/assets/jwhy.svg" />, 'TOP'];
+        this.artic = <Artic items={this.items} name={this.name} href={this.href}/>;
+
+    }
 
     componentDidMount(){
         document.title = projects[this.props.id].title + " / Jett Wang / Product Designer"
-    }
+        this.name = this.name.splice(0);
+        this.href = this.href.splice(0);
+        this.items = this.items.splice(0);
+     }
 
     render(){
-        var items = ['home'];
-        var href = ["/"];
-        var name = [<img id="logo" src="src/assets/jwhy.svg" />];
-
-        React.Children.map( projects[this.props.id].piece.props.children , child => {
-            if (child.type != "h3") return;
-            var title = child.props.children;
-            console.log(title);
-//            name.push(title);
-        })
-
-
 
         return <Container>
+
             <Row>
                <Col lg={{span:8,offset:2}}>
                    <h1>{projects[this.props.id].title}</h1>
                     {projects[this.props.id].blurb}
-                    {projects[this.props.id].piece}
+
+                    <span id="top" />
+                    {this.artic};
+
+
                 </Col>
-                <Col lg={2} id="menu-container" style={{"top":0}}>
-                    <Menu items={items} href={href} name={name}/>
+                <Col lg={2} id="menu-container">
+                    <Menu items={this.items} href={this.href} name={this.name}/>
                 </Col>
             </Row>
             </Container>;
     }
 }
+
+export const Artic = (props) => {
+    return <ReactMarkdown
+             source={require('../assets/md/noofie.md')}
+             renderers={{
+               heading : ((e) => {
+                   var myname = e.children[0].props.value;
+                   var myid = myname.toLowerCase().replace(/\W/g, '-');
+                   props.items.push(myid);
+                   props.href.push("#"+myid);
+                   props.name.push(myname);
+                   return React.createElement('h' + e.level, {id: myid}, e.children);
+               })
+             }}
+             includeNodeIndex={true}
+        />;
+}
+
 
 export const Noofie = (props) => {
     return <ArticleView id="noofie" /> ;
