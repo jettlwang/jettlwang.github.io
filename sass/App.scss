@@ -1,8 +1,62 @@
-@import url('https://fonts.googleapis.com/css?family=Lusitana');
-$media-md: 961px;
-$media-mobile: 425px;
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Rubik:500');
 $jettred: #9a1612;
+$jettred300: #d24c3a;
+$jettred800: #650000; 
+$jettaqua: #47FFE4;
+$black: rgba(0,0,0,.72);
+$grey1: rgba(0,0,0,.64);
+$grey2: rgba(0,0,0,.24);
 
+body {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: $black;
+    @media (min-width: 576px) { font-size: 1.1rem;}
+    line-height: 1.68;
+
+    a {
+        font-weight: 700;
+        color: $grey1;
+
+        &:hover{
+            text-decoration: none !important;
+            color: $black !important;
+            transition: 388ms;
+        }
+    }
+
+    h1,h2,h3,h4, .h1,.h2,.h3,.h4{
+        font-weight: 600;
+    }
+
+    b{
+        font-weight: inherit!important;
+        background-color: $jettaqua;
+    }
+
+    .small{
+        font-size: 0.8rem;
+        color: $grey1;
+    }
+
+    .caption {
+        font-size: 0.8rem;
+        color: $grey2;
+        font-family: 'Rubik', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        line-height: 1.2;
+
+        &>a {color: $grey2;}
+    }
+
+    blockquote, .blockquote{
+        @extend .caption;
+        color: $grey1;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
 
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -10,45 +64,78 @@ $jettred: #9a1612;
 
     display: flex;
     align-items: center;
+    align-content: center;
 }
 
 .align-col-baseline{
     align-items: baseline;
 }
 
+
+
 //-----
 
-body {
-    font-family: sans-serif;
-
-}
-
 #logo{
-    width: 66px;
+    width: 48px;
+    @media (min-width: 992px) { width: 66px; }
 }
 
-#ghost{
-    background-color: rgba(123,120,245,0.3);
-    top: 50vh;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%)
+
+
+#fadeover{
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    top: 0; left: 0;
 }
-#menu-container {
-    position: relative;
-    top: 50vh;
 
-    #menu{
-        position: sticky;
-        top: 15vh;
-        transform: translateY(-50%);
+.nav>li{
+    padding-bottom: 1rem!important;
 
-        .active {
-            color: aquamarine;
-        }
+    >a{
+        @extend .caption;
+    }
+}
+
+a.nav-item.active {
+    color: $black;
+}
+
+#menu-xs{
+    &.menu-container{
+        position: fixed;
+        background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+    }
+
+    a.nav-item {
+        display: none;
     }
 
 }
+
+#menu-lg{
+    .menu-container {
+        position: relative;
+        top: 50vh;
+    }
+    #menu{
+        position: sticky;
+        top: 15vh;
+        transform: translateY(-33px);
+
+        .nav{
+            .nav-item{
+                display: list-item;
+            }
+        }
+    }
+}
+
 
 #header{
     background-color: transparent !important;
@@ -64,21 +151,21 @@ body {
     background-size: 350px;
     background-repeat: no-repeat;
     z-index: -1;
+
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 10vh;
+        width: 100%;
+        background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    }
 }
 
-#header-after::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 10vh;
-    width: 100%;
-    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-}
 .carousel{
     display: flex;
     flex-direction: column;
-
 
     .carousel-item {
         height: 300px;
@@ -99,46 +186,18 @@ body {
         position: static;
         order: 2;
         margin-top: 1rem;
+        z-index: 0;
 
         li {
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
-            background-color: gainsboro;
+            background-color: $grey2;
 
             &.active{
-                background-color: #000;
+                background-color: $grey1;
             }
         }
     }
-
-
-}
-
-
-
-
-article {
-
-    .img{
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5%; margin-bottom: 5%;
-        >img { width: 100%;}
-    }
-    .img-group>.img{margin-top: 0 !important; margin-bottom: 0 !important;}
-
-    .img-full{
-        width: 100%;
-        margin-right: inherit !important;
-    }
-    .img-lg{ width: 75%;  }
-    .img-md{ max-width: 50%; }
-    .img-sm{ max-width: 30%; }
-
-    @media (max-width:$media-md){
-        .img-lg{ max-width: 100%; }
-    }
-
 }
 

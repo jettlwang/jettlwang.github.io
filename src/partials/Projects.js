@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import {Container , Row, Col }from 'react-bootstrap';
-import { Nav }from 'react-bootstrap';
+import { MenuXS, MenuLG } from './Menu'
 
-import Scrollspy from 'react-scrollspy'
+import {Container , Row, Col }from 'react-bootstrap';
 
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
@@ -285,7 +284,6 @@ class ArticleView extends Component {
 
     scrollToTop() {scroll.scrollToTop();}
     scrollTo() {scroller.scrollTo('scroll-to-element', {duration: 800,delay: 0,smooth: 'easeInOutQuart'})}
-
     scrollToWithContainer() {let goToContainer = new Promise((resolve, reject) => {Events.scrollEvent.register('end', () => {resolve();Events.scrollEvent.remove('end');});scroller.scrollTo('scroll-container', {duration: 800,delay: 0,smooth: 'easeInOutQuart'});});goToContainer.then(() =>scroller.scrollTo('scroll-container-second-element', {duration: 800,delay: 0,smooth: 'easeInOutQuart',containerId: 'scroll-container'}));}
 
      componentWillUnmount() {
@@ -295,34 +293,23 @@ class ArticleView extends Component {
 
     render(){
         return <Container>
+               <span id="top" />
             <Row>
                <Col lg={{span:8,offset:2}}>
                    <h1>{projects[this.props.id].title}</h1>
                     {projects[this.props.id].blurb}
-
-                    <span id="top" />
                     {this.artic}
-
-
                 </Col>
-                <Col lg={2} id="menu-container">
-                    <div id="menu"><ul className="nav flex-column">
-                         <li className="nav-item"><a href="/"><img id="logo" src="src/assets/jwhy.svg" /></a></li>
-                         <li><Link className="nav-item" to="top" spy={false} smooth={true} duration={200} >top</Link></li>
-                         {this.items.map( (e,i) =>
-                              <li key={i}>
-                                   <Link className="nav-item" activeClass="active" to={this.items[i]} spy={true} smooth={true} duration={200} >{this.name[i]}</Link>
-                              </li>
-                         )}
-                    </ul></div>
-                </Col>
+                <MenuLG items={this.items} name={this.name} />
             </Row>
+            <MenuXS items={this.items} name={this.name} />
             </Container>;
     }
 }
 
+
 export const Artic = (props) => {
-     var i = 1;
+     var i = 0;
     return <div>
           {/*1. use Render to find code blocks, find headings inside & push to queue. This is a no show.*/}
          <ReactMarkdown source={require('../assets/md/noofie.md')} className="d-none"
@@ -335,7 +322,6 @@ export const Artic = (props) => {
                                             var myid = myname.toLowerCase().replace(/\W/g, '-');
                                             props.items.push(myid);
                                             props.name.push(myname);
-                                            console.log(myname);
                                             return "a";
                                        }),
                                    }}/>
@@ -348,19 +334,17 @@ export const Artic = (props) => {
                   source={require('../assets/md/noofie.md')}
                   renderers={{
                     code : ((e) => {
+                         let temp = props.items[i];
                          i++;
-                        return <div id={props.items[i]}>
+                        return <div id={temp}>
                         <ReactMarkdown source={e.value} />
                         </div>;
                     }),
 
                   }}
                   includeNodeIndex={true}
-             />;
-
-    </div>
-
-
+             />
+    </div>;
 }
 
 

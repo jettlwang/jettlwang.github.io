@@ -1,37 +1,94 @@
-@import url("https://fonts.googleapis.com/css?family=Lusitana");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700|Rubik:500");
+body {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.72);
+  line-height: 1.68; }
+  @media (min-width: 576px) {
+    body {
+      font-size: 1.1rem; } }
+  body a {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.64); }
+    body a:hover {
+      text-decoration: none !important;
+      color: rgba(0, 0, 0, 0.72) !important;
+      transition: 388ms; }
+  body h1, body h2, body h3, body h4, body .h1, body .h2, body .h3, body .h4 {
+    font-weight: 600; }
+  body b {
+    font-weight: inherit !important;
+    background-color: #47FFE4; }
+  body .small {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.64); }
+  body .caption, body blockquote, body .blockquote, body .nav > li > a {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.24);
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.2; }
+    body .caption > a, body blockquote > a, body .blockquote > a, body .nav > li > a > a {
+      color: rgba(0, 0, 0, 0.24); }
+  body blockquote, body .blockquote {
+    color: rgba(0, 0, 0, 0.64);
+    font-size: inherit;
+    line-height: inherit; }
+
 .vertical-center {
   min-height: 100%;
   /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh;
   /* These two lines are counted as one :-)       */
   display: flex;
-  align-items: center; }
+  align-items: center;
+  align-content: center; }
 
 .align-col-baseline {
   align-items: baseline; }
 
-body {
-  font-family: sans-serif; }
-
 #logo {
-  width: 66px; }
+  width: 48px; }
+  @media (min-width: 992px) {
+    #logo {
+      width: 66px; } }
 
-#ghost {
-  background-color: rgba(123, 120, 245, 0.3);
-  top: 50vh;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+#fadeover {
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0; }
 
-#menu-container {
+.nav > li {
+  padding-bottom: 1rem !important; }
+
+a.nav-item.active {
+  color: rgba(0, 0, 0, 0.72); }
+
+#menu-xs.menu-container {
+  position: fixed;
+  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  z-index: 99; }
+
+#menu-xs a.nav-item {
+  display: none; }
+
+#menu-lg .menu-container {
   position: relative;
   top: 50vh; }
-  #menu-container #menu {
-    position: sticky;
-    top: 15vh;
-    transform: translateY(-50%); }
-    #menu-container #menu .active {
-      color: aquamarine; }
+
+#menu-lg #menu {
+  position: sticky;
+  top: 15vh;
+  transform: translateY(-33px); }
+  #menu-lg #menu .nav .nav-item {
+    display: list-item; }
 
 #header {
   background-color: transparent !important; }
@@ -45,15 +102,14 @@ body {
   background-size: 350px;
   background-repeat: no-repeat;
   z-index: -1; }
-
-#header-after::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 10vh;
-  width: 100%;
-  background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%); }
+  #header-after::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%); }
 
 .carousel {
   display: flex;
@@ -73,40 +129,12 @@ body {
   .carousel .carousel-indicators {
     position: static;
     order: 2;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    z-index: 0; }
     .carousel .carousel-indicators li {
-      width: 5px;
-      height: 5px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background-color: gainsboro; }
+      background-color: rgba(0, 0, 0, 0.24); }
       .carousel .carousel-indicators li.active {
-        background-color: #000; }
-
-article .img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-  margin-bottom: 5%; }
-  article .img > img {
-    width: 100%; }
-
-article .img-group > .img {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important; }
-
-article .img-full {
-  width: 100%;
-  margin-right: inherit !important; }
-
-article .img-lg {
-  width: 75%; }
-
-article .img-md {
-  max-width: 50%; }
-
-article .img-sm {
-  max-width: 30%; }
-
-@media (max-width: 961px) {
-  article .img-lg {
-    max-width: 100%; } }
+        background-color: rgba(0, 0, 0, 0.64); }
