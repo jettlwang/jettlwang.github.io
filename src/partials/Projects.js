@@ -295,7 +295,7 @@ class ArticleView extends Component {
         return <Container>
                <span id="top" />
             <Row>
-               <Col lg={{span:8,offset:2}}>
+               <Col lg={{span:8,offset:2}} className="py-5">
                    <h1>{projects[this.props.id].title}</h1>
                     {projects[this.props.id].blurb}
                     {this.artic}

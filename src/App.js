@@ -25,7 +25,7 @@ class App extends Component {
                 </BrowserRouter>
 
                 <Container>
-                    <Row><Col lg={{span:2,offset:10}} className="text-lg-right small pb-3">Hi Im footer</Col></Row>
+                    <Row><Col className="text-lg-right small pb-3">Jett Wang 2019 ©</Col></Row>
                 </Container>
             </div>);
     }
@@ -39,8 +39,8 @@ class Home extends Component {
 
         this.scrollToTop = this.scrollToTop.bind(this);
 
-        this.items = ["noofie"];
-        this.name = ["yi"];
+        this.items = ["noofie","noofie"];
+        this.name = ["壹","贰"];
     }
 
     componentDidMount(){
@@ -70,16 +70,16 @@ class Home extends Component {
                     <Row  id="top">
                         <Col lg={10}>
                             <Row className="vertical-center" id="header">
-                                <Col xs lg={{ span: 10, offset: 2 }} >
-                                    <h1>Hi, I&#39;m Jett.</h1>
-                                    <h2>I&#39;m a product designer.</h2>
-                                    <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.</p>
-                                    <p>My background is in front end development and behavioural economics.</p>
-                                    <p className="caption"><a href="src/assets/resume.pdf">Resume</a> / <a href="https://linkedin.com/in/jettlwang">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com">Get in Touch</a></p>
+                                <Col xs lg={{ span: 8, offset: 2 }} >
+                                    <h1>👋 I&#39;m Jett</h1>
+                                    <h2>I&#39;m a <b>product designer</b></h2>
+                                    <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.<br/>My background is in front end development and behavioural economics.</p>
+                                    <p className="caption small"><a href="src/assets/resume.pdf">Resume</a> / <a href="https://linkedin.com/in/jettlwang">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com">Get in Touch</a></p>
                                 </Col>
                             </Row>
 
-                            <PjPreview id="noofie" link />
+                            <PjPreview id="noofie" name="壹" link />
+                            <PjPreview id="noofie" name="贰" link />
 
                             <div id="others"><Row className="d-flex vertical-center justify-center">
                                 <Col xs md={{span:5,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
@@ -97,7 +97,7 @@ class Home extends Component {
                             </Row></div>
                         </Col>
 
-                        <MenuLG items={this.items} name={this.name} />
+                        <MenuLG items={this.items} name={this.name} style={{"top":"30vh"}}/>
                     </Row>
                     <MenuXS items={this.items} name={this.name} />
                 </Container>
@@ -110,10 +110,10 @@ class PjPreview extends Component {
         var pj = projects[this.props.id];
         return <div id={this.props.id}>
             <Row className="align-col-baseline">
-                <Col lg={2}  className="text-lg-right py-3"><h6>1</h6></Col>
+                <Col lg={2}  className="text-lg-right py-3"><h6>{this.props.name}</h6></Col>
                 <Col lg={10} className="py-3">
                     <h3>{pj.title}
-                        {this.props.link && <a href={this.props.id}><Badge>CASE STUDY</Badge></a>}</h3>
+                        {this.props.link && <a href={this.props.id}><Badge className="caption px-2">CASE STUDY</Badge></a>}</h3>
                 </Col>
             </Row>
             <Row  className="align-col-baseline">
@@ -131,7 +131,7 @@ class PjPreview extends Component {
                         <Col xs className="text-lg-right py-3 d-lg-none">
                             <div className="small">{(pj.role)}</div>
                         </Col>
-                        <Col lg={12} className="py-3">
+                        <Col lg={12}>
                             <Carousel interval={null}>
                                 {React.Children.map( pj.piece.props.children , (child, i) => {
                                     if (child.type.name != "Img") return

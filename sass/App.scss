@@ -14,6 +14,10 @@ body {
     @media (min-width: 576px) { font-size: 1.1rem;}
     line-height: 1.68;
 
+    p {
+        margin-top: 1.5rem;
+    }
+
     a {
         font-weight: 700;
         color: $grey1;
@@ -37,24 +41,21 @@ body {
     .small{
         font-size: 0.8rem;
         color: $grey1;
+        letter-spacing: 0.1px;
     }
 
     .caption {
-        font-size: 0.8rem;
         color: $grey2;
         font-family: 'Rubik', sans-serif;
         text-transform: uppercase;
         letter-spacing: 3px;
-        line-height: 1.2;
 
         &>a {color: $grey2;}
     }
 
     blockquote, .blockquote{
         @extend .caption;
-        color: $grey1;
         font-size: inherit;
-        line-height: inherit;
     }
 }
 
@@ -80,7 +81,11 @@ body {
     @media (min-width: 992px) { width: 66px; }
 }
 
-
+.fakehr:before{
+    content: "-";
+    vertical-align: super;
+    color: $grey2;
+}
 
 #fadeover{
     position: fixed;
@@ -99,7 +104,7 @@ body {
 }
 
 a.nav-item.active {
-    color: $black;
+    color: $grey1;
 }
 
 #menu-xs{
@@ -127,6 +132,7 @@ a.nav-item.active {
         position: sticky;
         top: 15vh;
         transform: translateY(-33px);
+        @extend .small;
 
         .nav{
             .nav-item{

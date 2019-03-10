@@ -7,6 +7,8 @@ body {
   @media (min-width: 576px) {
     body {
       font-size: 1.1rem; } }
+  body p {
+    margin-top: 1.5rem; }
   body a {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.64); }
@@ -19,22 +21,19 @@ body {
   body b {
     font-weight: inherit !important;
     background-color: #47FFE4; }
-  body .small {
+  body .small, body #menu-lg #menu, #menu-lg body #menu {
     font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.64); }
+    color: rgba(0, 0, 0, 0.64);
+    letter-spacing: 0.1px; }
   body .caption, body blockquote, body .blockquote, body .nav > li > a {
-    font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.24);
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    line-height: 1.2; }
+    letter-spacing: 3px; }
     body .caption > a, body blockquote > a, body .blockquote > a, body .nav > li > a > a {
       color: rgba(0, 0, 0, 0.24); }
   body blockquote, body .blockquote {
-    color: rgba(0, 0, 0, 0.64);
-    font-size: inherit;
-    line-height: inherit; }
+    font-size: inherit; }
 
 .vertical-center {
   min-height: 100%;
@@ -54,6 +53,11 @@ body {
     #logo {
       width: 66px; } }
 
+.fakehr:before {
+  content: "-";
+  vertical-align: super;
+  color: rgba(0, 0, 0, 0.24); }
+
 #fadeover {
   position: fixed;
   background-color: white;
@@ -66,7 +70,7 @@ body {
   padding-bottom: 1rem !important; }
 
 a.nav-item.active {
-  color: rgba(0, 0, 0, 0.72); }
+  color: rgba(0, 0, 0, 0.64); }
 
 #menu-xs.menu-container {
   position: fixed;
