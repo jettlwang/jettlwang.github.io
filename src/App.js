@@ -77,7 +77,7 @@ class Home extends Component {
                                 </Col>
                             </Row>
 
-                            <PjPreview id="noofie" name="壹" link />
+                            <PjPreview id="noofie" name="壹" />
 
                             <div id="others"><Row className="d-flex vertical-center justify-center">
                                 <Col xs md={{span:6,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
