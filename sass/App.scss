@@ -3,6 +3,8 @@ $jettred: #9a1612;
 $jettred300: #d24c3a;
 $jettred800: #650000; 
 $jettaqua: #47FFE4;
+
+$noofieyellow: #EDAE49;
 $black: rgba(0,0,0,.72);
 $grey1: rgba(0,0,0,.64);
 $grey2: rgba(0,0,0,.24);
@@ -11,18 +13,14 @@ body {
     font-family: 'Lora', serif;
     font-size: 1rem;
     color: $black;
-    @media (min-width: 576px) { font-size: 1.1rem;}
+    @media (min-width: 576px) { font-size: 1.2rem;}
     line-height: 1.68;
-
-    p {
-        margin-top: 1.5rem;
-    }
 
     a {
         font-weight: 700;
         color: $grey1;
 
-        &:hover{
+        &:hover, &:hover > span {
             text-decoration: none !important;
             color: $black !important;
             transition: 388ms;
@@ -31,11 +29,18 @@ body {
 
     h1,h2,h3,h4, .h1,.h2,.h3,.h4{
         font-weight: 600;
+        line-height: 1.3;
     }
 
-    b{
+    h4,.h4{margin-top: 2rem;}
+
+    strong{
         font-weight: inherit!important;
         background-color: $jettaqua;
+    }
+
+    #noofie strong{
+        background-color: $noofieyellow;
     }
 
     .small{
@@ -72,27 +77,19 @@ body {
     align-items: baseline;
 }
 
+.small-caps {
+  font-variant: all-small-caps;
+}
 
+.mt-6 {
+    margin-top: 10rem!important;
+}
 
 //-----
 
 #logo{
-    width: 48px;
-    @media (min-width: 992px) { width: 66px; }
-}
-
-.fakehr:before{
-    content: "-";
-    vertical-align: super;
-    color: $grey2;
-}
-
-#fadeover{
-    position: fixed;
-    background-color: white;
-    height: 100vh;
-    width: 100vw;
-    top: 0; left: 0;
+    width: 52px;
+    @media (min-width: 992px) { width: 64px; }
 }
 
 .nav>li{
@@ -114,13 +111,21 @@ a.nav-item.active {
         width: 100vw;
         bottom: 0;
         left: 0;
-        z-index: 99;
     }
 
     a.nav-item {
         display: none;
     }
 
+}
+#fadeover{
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    top: 0; left: 0;
+    z-index: 1;
+    li>a {color: $grey1 !important;}
 }
 
 #menu-lg{
@@ -174,7 +179,8 @@ a.nav-item.active {
     flex-direction: column;
 
     .carousel-item {
-        height: 300px;
+        width: 100%;
+        padding-bottom: 56.25%;
         background-color: white;
         img {
             max-height: 100%;
@@ -195,9 +201,10 @@ a.nav-item.active {
         z-index: 0;
 
         li {
-            width: 6px;
-            height: 6px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
+            border: 2px solid white;
             background-color: $grey2;
 
             &.active{

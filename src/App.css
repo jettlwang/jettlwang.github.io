@@ -6,21 +6,24 @@ body {
   line-height: 1.68; }
   @media (min-width: 576px) {
     body {
-      font-size: 1.1rem; } }
-  body p {
-    margin-top: 1.5rem; }
+      font-size: 1.2rem; } }
   body a {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.64); }
-    body a:hover {
+    body a:hover, body a:hover > span {
       text-decoration: none !important;
       color: rgba(0, 0, 0, 0.72) !important;
       transition: 388ms; }
   body h1, body h2, body h3, body h4, body .h1, body .h2, body .h3, body .h4 {
-    font-weight: 600; }
-  body b {
+    font-weight: 600;
+    line-height: 1.3; }
+  body h4, body .h4 {
+    margin-top: 2rem; }
+  body strong {
     font-weight: inherit !important;
     background-color: #47FFE4; }
+  body #noofie strong {
+    background-color: #EDAE49; }
   body .small, body #menu-lg #menu, #menu-lg body #menu {
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.64);
@@ -47,24 +50,17 @@ body {
 .align-col-baseline {
   align-items: baseline; }
 
+.small-caps {
+  font-variant: all-small-caps; }
+
+.mt-6 {
+  margin-top: 10rem !important; }
+
 #logo {
-  width: 48px; }
+  width: 52px; }
   @media (min-width: 992px) {
     #logo {
-      width: 66px; } }
-
-.fakehr:before {
-  content: "-";
-  vertical-align: super;
-  color: rgba(0, 0, 0, 0.24); }
-
-#fadeover {
-  position: fixed;
-  background-color: white;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0; }
+      width: 64px; } }
 
 .nav > li {
   padding-bottom: 1rem !important; }
@@ -77,11 +73,21 @@ a.nav-item.active {
   background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
   width: 100vw;
   bottom: 0;
-  left: 0;
-  z-index: 99; }
+  left: 0; }
 
 #menu-xs a.nav-item {
   display: none; }
+
+#fadeover {
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+  #fadeover li > a {
+    color: rgba(0, 0, 0, 0.64) !important; }
 
 #menu-lg .menu-container {
   position: relative;
@@ -119,7 +125,8 @@ a.nav-item.active {
   display: flex;
   flex-direction: column; }
   .carousel .carousel-item {
-    height: 300px;
+    width: 100%;
+    padding-bottom: 56.25%;
     background-color: white; }
     .carousel .carousel-item img {
       max-height: 100%;
@@ -136,9 +143,10 @@ a.nav-item.active {
     margin-top: 1rem;
     z-index: 0; }
     .carousel .carousel-indicators li {
-      width: 6px;
-      height: 6px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
+      border: 2px solid white;
       background-color: rgba(0, 0, 0, 0.24); }
       .carousel .carousel-indicators li.active {
         background-color: rgba(0, 0, 0, 0.64); }
