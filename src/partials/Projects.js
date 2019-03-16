@@ -22,7 +22,28 @@ export const proojs = {
     "Noofie is a professional social network for students and young professionals. It is a continuum of my final, individual project completed at General Assembly UX Design Immersive in 2016. I set out to examine **career anxieties** among college students. I conducted **expert interviews** and **comparative studies**, and arrived at networking and **mentorship** as my solution. I then created and iterated, with **user feedback**, from **wireframes** to final **UI design**. I even created a landing page and a pitch deck.",
     "role": "research & synthesis / systems design / interaction design / prototyping / UI design / web design / presentation",
     "imgCount" : 18
-  }
+  },
+  "huawei": {
+    "title": "Huwei Shanghai Internship",
+    "blurb":
+    "I worked under the international innovation team within Huawei\'s mobile OS(EMUI) team.\u2029 I took part in  **brainstorming** defining [EMUI 8.0](https:\/\/consumer.huawei.com\/en\/emui\/emui-8\/)\'s AI assistant module. I also worked on  **high fidelity prototyping**  with [Flinto](https:\/\/www.flinto.com) & [Origami Studio](https:\/\/origami.design\/). I also conducted **guerrilla user research** tasks and collected user data & feedback.",
+    "role": "strategy / UX / user research / prototyping",
+    "imgCount" : 0
+  },
+  "luna": {
+    "title": "Luminos by Luna",
+    "blurb":
+    "I joined [Luna](meetluna.com) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it\'s **Proof of Concept**, and shipped the Luminos **MVP**.",
+    "role": "strategy / UX / user research / prototyping",
+    "imgCount" : 0
+  },
+  "honeit": {
+    "title": "Honeit UX Consulting",
+    "blurb":
+    "HoneIt was a 3-week consulting project with 2 other designers. Our client [HoneIt](https:\/\/www.honeit.com\/), an interview technology startup, wanted to improve the usability of their already shipped product. Together, we ran **usability tests** and **user interviews**, and collected and **synthesized** user feedback. I compiled detailed **documentations** of usability audits results and redesigns for our deliverables.",
+    "role": "strategy / UX / user research / prototyping",
+    "imgCount" : 8
+  },
 }
 
 export class PjPreview extends Component {
@@ -34,12 +55,11 @@ export class PjPreview extends Component {
         for(var i =0; i < pj.imgCount; i++) {
           var url = "src/assets/"+this.props.id+"/"+(i+1).toString();
           var item = <Carousel.Item key={i}>
-               <ReactImageFallback className="img-fluid" src={url+".jpg"} fallbackImage={[url+".png",url+".gif"]} />
+               <ReactImageFallback className="img-fluid" src={url+".jpg"} fallbackImage={[url+".gif",url+".png"]} />
           </Carousel.Item>;
             casItems.push(item);
         }
-        console.log(pj.imgCount);
-        return <div id={this.props.id} className="mt-6">
+        return <div id={this.props.id} className="pt-6">
             <Row className="align-col-baseline">
                 <Col lg={2}  className="text-lg-right caption"><h6>{this.props.name}</h6></Col>
                 <Col lg={10} className="mt-2">
@@ -48,8 +68,9 @@ export class PjPreview extends Component {
                         {this.props.comesoon && <Badge className="caption px-2 small">coming soon</Badge>} </h3>
                 </Col>
             </Row>
-            <Row  className="align-col-baseline">
+            <Row  className="">
                 <Col lg={2} className="text-lg-right d-none d-lg-block">
+                    <strong><hr /></strong>
                     <ul className="nav flex-column justify-right small">
                     {pj.role.split(" / ").map( (e,i) =>
                             <li key={i}>{e}</li>
@@ -58,10 +79,10 @@ export class PjPreview extends Component {
                 </Col>
                 <Col lg={{span:10,order:2}}>
                     <Row>
-                        <Col xl={10} className="mb-2"><ReactMarkdown source={pj.blurb} /></Col>
-                        <Col xs className="d-lg-none small">{pj.role}</Col>
+                        <Col xl={10} className=""><ReactMarkdown source={pj.blurb} /></Col>
+                        <Col xs className="d-lg-none small mb-3">{pj.role}</Col>
                         <Col lg={12}>
-                            <Carousel interval={null} className="mt-4">
+                            <Carousel interval={null} className="">
                                    {casItems}
                             </Carousel>
                         </Col>
@@ -160,10 +181,6 @@ export const Artic = (props) => {
 
 export const Noofie = (props) => {
     return <ArticleView id="noofie" /> ;
-}
-
-export const Huawei = (props) => {
-    return <ArticleView id="huawei" /> ;
 }
 
 export const Luna = (props) => {

@@ -22,8 +22,20 @@ body {
   body strong {
     font-weight: inherit !important;
     background-color: #47FFE4; }
+    body strong > hr {
+      border-color: #47FFE4; }
   body #noofie strong {
     background-color: #EDAE49; }
+    body #noofie strong > hr {
+      border-color: #EDAE49; }
+  body #luna strong {
+    background-color: #AA88D3; }
+    body #luna strong > hr {
+      border-color: #AA88D3; }
+  body #honeit strong {
+    background-color: #6CBEEA; }
+    body #honeit strong > hr {
+      border-color: #6CBEEA; }
   body .small, body #menu-lg #menu, #menu-lg body #menu {
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.64);
@@ -53,8 +65,8 @@ body {
 .small-caps {
   font-variant: all-small-caps; }
 
-.mt-6 {
-  margin-top: 10rem !important; }
+.pt-6 {
+  padding-top: 10rem !important; }
 
 #logo {
   width: 52px; }

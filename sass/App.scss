@@ -5,9 +5,16 @@ $jettred800: #650000;
 $jettaqua: #47FFE4;
 
 $noofieyellow: #EDAE49;
+$lunanebula: #AA88D3;
+$honeitblue: #6CBEEA;
 $black: rgba(0,0,0,.72);
 $grey1: rgba(0,0,0,.64);
 $grey2: rgba(0,0,0,.24);
+
+@mixin setColor($property) {
+  background-color: $property;
+  &>hr { border-color:$property; }
+}
 
 body {
     font-family: 'Lora', serif;
@@ -36,12 +43,12 @@ body {
 
     strong{
         font-weight: inherit!important;
-        background-color: $jettaqua;
+        @include setColor($jettaqua);
     }
 
-    #noofie strong{
-        background-color: $noofieyellow;
-    }
+    #noofie strong{ @include setColor($noofieyellow); }
+    #luna strong{ @include setColor($lunanebula); }
+    #honeit strong{ @include setColor($honeitblue); }
 
     .small{
         font-size: 0.8rem;
@@ -81,8 +88,8 @@ body {
   font-variant: all-small-caps;
 }
 
-.mt-6 {
-    margin-top: 10rem!important;
+.pt-6 {
+    padding-top: 10rem!important;
 }
 
 //-----
@@ -99,7 +106,6 @@ body {
         @extend .caption;
     }
 }
-
 a.nav-item.active {
     color: $grey1;
 }
@@ -151,7 +157,6 @@ a.nav-item.active {
 #header{
     background-color: transparent !important;
 }
-
 #header-after{
     width: 100%;
     height: 100vh;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 
-import { PjPreview, Luna , Noofie , Huawei , Freelance } from './partials/Projects';
+import { PjPreview, Luna , Noofie , Freelance } from './partials/Projects';
 import { MenuXS, MenuLG } from './partials/Menu'
 
 import * as Scroll from 'react-scroll';
@@ -16,7 +16,6 @@ class App extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route exact path='/huawei' component={Huawei}/>
                         <Route exact path='/noofie' component={Noofie}/>
                         <Route exact path='/luna' component={Luna}/>
                         <Route exact path='/freelance' component={Freelance}/>
@@ -38,8 +37,8 @@ class Home extends Component {
 
         this.scrollToTop = this.scrollToTop.bind(this);
 
-        this.items = ["noofie","others"];
-        this.name = ["壹","others"];
+        this.items = ["luna","noofie","huawei","honeit","others"];
+        this.name = ["壹","贰","叁","肆","other"];
     }
 
     componentDidMount(){
@@ -71,13 +70,16 @@ class Home extends Component {
                             <Row className="vertical-center" id="header">
                                 <Col xs lg={{ span: 8, offset: 2 }} >
                                     <h1> 你好👋 I&#39;m Jett</h1>
-                                    <h2>I&#39;m a <b>product designer</b></h2>
+                                    <h2>I&#39;m a <strong>product designer</strong></h2>
                                     <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.<br/>My background is in front end development and behavioural economics.</p>
                                     <p className="caption small"><a href="src/assets/resume.pdf" className="text-nowrap">Resume</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
                                 </Col>
                             </Row>
 
-                            <PjPreview id="noofie" name="壹" />
+                            <PjPreview id="luna" name="壹" />
+                            <PjPreview id="noofie" name="贰" />
+                            <PjPreview id="huawei" name="叁" />
+                            <PjPreview id="honeit" name="肆" />
 
                             <div id="others"><Row className="d-flex vertical-center justify-center">
                                 <Col xs md={{span:6,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
@@ -96,7 +98,7 @@ class Home extends Component {
                             </Row></div>
                         </Col>
 
-                        <MenuLG items={this.items} name={this.name} style={{"top":"33vh"}}/>
+                        <MenuLG items={this.items} name={this.name} style={{"top":"38vh"}}/>
                     </Row>
                     <MenuXS items={this.items} name={this.name} />
                 </Container>
