@@ -5,11 +5,13 @@ $jettred800: #650000;
 $jettaqua: #47FFE4;
 
 $noofieyellow: #EDAE49;
-$lunanebula: #AA88D3;
+$lunanebula: #BA7DD8;
+$emuiaqua: #21F9D9;
 $honeitblue: #6CBEEA;
 $black: rgba(0,0,0,.72);
 $grey1: rgba(0,0,0,.64);
 $grey2: rgba(0,0,0,.24);
+$grey3: rgba(0,0,0,.15);
 
 @mixin setColor($property) {
   background-color: $property;
@@ -26,6 +28,7 @@ body {
     a {
         font-weight: 700;
         color: $grey1;
+        cursor: pointer !important;
 
         &:hover, &:hover > span {
             text-decoration: none !important;
@@ -47,6 +50,7 @@ body {
     }
 
     #noofie strong{ @include setColor($noofieyellow); }
+    #huawei strong{ @include setColor($emuiaqua); }
     #luna strong{ @include setColor($lunanebula); }
     #honeit strong{ @include setColor($honeitblue); }
 
@@ -90,6 +94,7 @@ body {
 
 .pt-6 {
     padding-top: 10rem!important;
+    padding-bottom: 3rem!important;
 }
 
 //-----
@@ -140,6 +145,8 @@ a.nav-item.active {
         top: 50vh;
     }
     #menu{
+        margin-top: 38vh;
+        position: -webkit-sticky;
         position: sticky;
         top: 15vh;
         transform: translateY(-33px);
@@ -199,18 +206,30 @@ a.nav-item.active {
         }
     }
 
+
+    .carousel-control-next, .carousel-control-prev{
+        width: 3rem;
+
+        .carousel-control-next-icon, .carousel-control-prev-icon{
+            background-color: $grey3;
+            height: 2rem;
+            width: 2rem;
+            background-size: 10px;
+            border-radius: 2px;
+        }
+    }
+
+
     .carousel-indicators{
-        position: static;
-        order: 2;
-        margin-top: 1rem;
-        z-index: 0;
+        bottom: -45px;
+        z-index: 1;
 
         li {
             width: 12px;
             height: 12px;
             border-radius: 50%;
             border: 2px solid white;
-            background-color: $grey2;
+            background-color: $grey3;
 
             &.active{
                 background-color: $grey1;

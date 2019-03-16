@@ -22,8 +22,8 @@ module.exports = {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
+          test: /\.css$/,
+          use: ["style-loader", "css-loader", "postcss-loader"]
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
@@ -40,6 +40,7 @@ module.exports = {
      new webpack.LoaderOptionsPlugin({
        debug: true,
      }),
+     require('autoprefixer')
   ],
 
 /*  plugins: process.argv.indexOf('-p') === -1 ? [] : [

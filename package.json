@@ -45,6 +45,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
     "raw-loader": "^1.0.0",
     "style-loader": "^0.21.0",
     "webpack": "^3.6.0",

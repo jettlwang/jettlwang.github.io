@@ -19,29 +19,33 @@ export const proojs = {
   "noofie": {
     "title": "Noofie App",
     "blurb":
-    "Noofie is a professional social network for students and young professionals. It is a continuum of my final, individual project completed at General Assembly UX Design Immersive in 2016. I set out to examine **career anxieties** among college students. I conducted **expert interviews** and **comparative studies**, and arrived at networking and **mentorship** as my solution. I then created and iterated, with **user feedback**, from **wireframes** to final **UI design**. I even created a landing page and a pitch deck.",
-    "role": "research & synthesis / systems design / interaction design / prototyping / UI design / web design / presentation",
+    "Noofie is a professional social network for students and young professionals. It is a continuum of my final, individual project completed at General Assembly in 2016. I set out to examine **career anxiety** among college students. I conducted **expert interviews** and **comparative studies**, and arrived at networking and **mentorship** as the solution. I then created and iterated, with **user feedback**, from **wireframes** to final **UI design**. I even created a landing page and a pitch deck.",
+    "role": 
+    "ideation / UX / UI / research / prototyping / branding / marketing",
     "imgCount" : 18
   },
   "huawei": {
     "title": "Huwei Shanghai Internship",
     "blurb":
     "I worked under the international innovation team within Huawei\'s mobile OS(EMUI) team.\u2029 I took part in  **brainstorming** defining [EMUI 8.0](https:\/\/consumer.huawei.com\/en\/emui\/emui-8\/)\'s AI assistant module. I also worked on  **high fidelity prototyping**  with [Flinto](https:\/\/www.flinto.com) & [Origami Studio](https:\/\/origami.design\/). I also conducted **guerrilla user research** tasks and collected user data & feedback.",
-    "role": "strategy / UX / user research / prototyping",
-    "imgCount" : 0
+    "role":
+    "ideation / UX / research / prototyping",
+    "imgCount" : 4
   },
   "luna": {
     "title": "Luminos by Luna",
     "blurb":
     "I joined [Luna](meetluna.com) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it\'s **Proof of Concept**, and shipped the Luminos **MVP**.",
-    "role": "strategy / UX / user research / prototyping",
-    "imgCount" : 0
+    "role":
+    "ideation / research / UX / UI / prototyping / branding / marketing",
+    "imgCount" : 2
   },
   "honeit": {
     "title": "Honeit UX Consulting",
     "blurb":
     "HoneIt was a 3-week consulting project with 2 other designers. Our client [HoneIt](https:\/\/www.honeit.com\/), an interview technology startup, wanted to improve the usability of their already shipped product. Together, we ran **usability tests** and **user interviews**, and collected and **synthesized** user feedback. I compiled detailed **documentations** of usability audits results and redesigns for our deliverables.",
-    "role": "strategy / UX / user research / prototyping",
+    "role":
+    "ideation / UX / research / presentation",
     "imgCount" : 8
   },
 }
@@ -71,7 +75,7 @@ export class PjPreview extends Component {
             <Row  className="">
                 <Col lg={2} className="text-lg-right d-none d-lg-block">
                     <strong><hr /></strong>
-                    <ul className="nav flex-column justify-right small">
+                    <ul className="nav flex-column justify-right small text-capitalize">
                     {pj.role.split(" / ").map( (e,i) =>
                             <li key={i}>{e}</li>
                        )}
@@ -80,9 +84,9 @@ export class PjPreview extends Component {
                 <Col lg={{span:10,order:2}}>
                     <Row>
                         <Col xl={10} className=""><ReactMarkdown source={pj.blurb} /></Col>
-                        <Col xs className="d-lg-none small mb-3">{pj.role}</Col>
+                        <Col xs className="d-lg-none small">{pj.role}</Col>
                         <Col lg={12}>
-                            <Carousel interval={null} className="">
+                            <Carousel interval={null} className="mt-3">
                                    {casItems}
                             </Carousel>
                         </Col>

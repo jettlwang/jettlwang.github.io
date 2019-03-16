@@ -16,9 +16,9 @@ class App extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route exact path='/noofie' component={Noofie}/>
+{/*                        <Route exact path='/noofie' component={Noofie}/>
                         <Route exact path='/luna' component={Luna}/>
-                        <Route exact path='/freelance' component={Freelance}/>
+                        <Route exact path='/freelance' component={Freelance}/>*/}
                     </Switch>
                 </BrowserRouter>
 
@@ -37,7 +37,7 @@ class Home extends Component {
 
         this.scrollToTop = this.scrollToTop.bind(this);
 
-        this.items = ["luna","noofie","huawei","honeit","others"];
+        this.items = ["luna","noofie","honeit","huawei","others"];
         this.name = ["壹","贰","叁","肆","other"];
     }
 
@@ -76,10 +76,10 @@ class Home extends Component {
                                 </Col>
                             </Row>
 
-                            <PjPreview id="luna" name="壹" />
+                            <PjPreview id="luna" name="壹" comesoon/>
                             <PjPreview id="noofie" name="贰" />
-                            <PjPreview id="huawei" name="叁" />
-                            <PjPreview id="honeit" name="肆" />
+                            <PjPreview id="honeit" name="叁" />
+                            <PjPreview id="huawei" name="肆" />
 
                             <div id="others"><Row className="d-flex vertical-center justify-center">
                                 <Col xs md={{span:6,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
@@ -98,7 +98,7 @@ class Home extends Component {
                             </Row></div>
                         </Col>
 
-                        <MenuLG items={this.items} name={this.name} style={{"top":"38vh"}}/>
+                        <MenuLG items={this.items} name={this.name} />
                     </Row>
                     <MenuXS items={this.items} name={this.name} />
                 </Container>

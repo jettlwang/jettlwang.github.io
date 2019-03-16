@@ -9,7 +9,8 @@ body {
       font-size: 1.2rem; } }
   body a {
     font-weight: 700;
-    color: rgba(0, 0, 0, 0.64); }
+    color: rgba(0, 0, 0, 0.64);
+    cursor: pointer !important; }
     body a:hover, body a:hover > span {
       text-decoration: none !important;
       color: rgba(0, 0, 0, 0.72) !important;
@@ -28,10 +29,14 @@ body {
     background-color: #EDAE49; }
     body #noofie strong > hr {
       border-color: #EDAE49; }
+  body #huawei strong {
+    background-color: #21F9D9; }
+    body #huawei strong > hr {
+      border-color: #21F9D9; }
   body #luna strong {
-    background-color: #AA88D3; }
+    background-color: #BA7DD8; }
     body #luna strong > hr {
-      border-color: #AA88D3; }
+      border-color: #BA7DD8; }
   body #honeit strong {
     background-color: #6CBEEA; }
     body #honeit strong > hr {
@@ -66,7 +71,8 @@ body {
   font-variant: all-small-caps; }
 
 .pt-6 {
-  padding-top: 10rem !important; }
+  padding-top: 10rem !important;
+  padding-bottom: 3rem !important; }
 
 #logo {
   width: 52px; }
@@ -106,6 +112,8 @@ a.nav-item.active {
   top: 50vh; }
 
 #menu-lg #menu {
+  margin-top: 38vh;
+  position: -webkit-sticky;
   position: sticky;
   top: 15vh;
   transform: translateY(-33px); }
@@ -149,16 +157,22 @@ a.nav-item.active {
       left: 0;
       right: 0;
       margin: auto; }
+  .carousel .carousel-control-next, .carousel .carousel-control-prev {
+    width: 3rem; }
+    .carousel .carousel-control-next .carousel-control-next-icon, .carousel .carousel-control-next .carousel-control-prev-icon, .carousel .carousel-control-prev .carousel-control-next-icon, .carousel .carousel-control-prev .carousel-control-prev-icon {
+      background-color: rgba(0, 0, 0, 0.15);
+      height: 2rem;
+      width: 2rem;
+      background-size: 10px;
+      border-radius: 2px; }
   .carousel .carousel-indicators {
-    position: static;
-    order: 2;
-    margin-top: 1rem;
-    z-index: 0; }
+    bottom: -45px;
+    z-index: 1; }
     .carousel .carousel-indicators li {
       width: 12px;
       height: 12px;
       border-radius: 50%;
       border: 2px solid white;
-      background-color: rgba(0, 0, 0, 0.24); }
+      background-color: rgba(0, 0, 0, 0.15); }
       .carousel .carousel-indicators li.active {
         background-color: rgba(0, 0, 0, 0.64); }
