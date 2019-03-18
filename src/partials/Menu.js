@@ -9,7 +9,7 @@ export const MenuLG = (props) => {
      return <Col lg={2} id="menu-lg" className="menu-container d-none d-lg-block" style={props.style}>
          <div id="menu"><ul className="nav flex-column text-right">
 {/*              <li className="nav-item"><a href="/"><img id="logo" src="src/assets/jwhy.svg" /></a></li>*/}
-            <li><Link to="top" href='' spy={false} smooth={true} duration={500} ><img id="logo" src="src/assets/jwhy.svg" /></Link></li>
+            <li class="mb-3"><Link to="top" href='' spy={false} smooth={true} duration={500} ><img id="logo" src="src/assets/jwhy.svg" /></Link></li>
              {props.items.map( (e,i) =>
                    <li key={i}>
                         <Link className="nav-item" href='' activeClass="active" to={props.items[i]} spy={true} smooth={true} duration={500} >{props.name[i]}</Link>
