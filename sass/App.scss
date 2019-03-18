@@ -223,6 +223,7 @@ a.nav-item.active {
     .carousel-indicators{
         bottom: -45px;
         z-index: 1;
+        flex-wrap: wrap;
 
         li {
             width: 12px;

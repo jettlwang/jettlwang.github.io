@@ -18,7 +18,7 @@ class App extends Component {
                     </Switch>
                 </BrowserRouter>
 
-                <Container>
+                <Container className="px-4 px-lg-0">
                     <Row><Col className="text-lg-right small pb-3">Jett Wang 2019 ©</Col></Row>
                 </Container>
             </div>);
@@ -60,7 +60,7 @@ class Home extends Component {
                     }}>
                 </div>
 
-                <Container>
+                <Container className="px-4 px-lg-0">
                     <Row  id="top">
                         <Col lg={10}>
                             <Row className="vertical-center" id="header">
