@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
-
-import ReactMarkdown from 'react-markdown';
-import ReactImageFallback from "react-image-fallback";
-
-
-import { MenuXS, MenuLG } from './Menu'
-
-import {Container , Row, Col }from 'react-bootstrap';
-import { Badge, Carousel, Image } from 'react-bootstrap';
-
-
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
-import { Img } from './ArticleUtil'
+import ReactMarkdown from 'react-markdown';
+import ReactImageFallback from "react-image-fallback";
+import {Container , Row, Col }from 'react-bootstrap';
+import { Badge, Carousel, Image } from 'react-bootstrap';
+import { MenuXS, MenuLG } from './Menu'
 
 export const proojs = {
   "noofie": {
@@ -35,15 +27,15 @@ export const proojs = {
   "luna": {
     "title": "Luminos by Luna",
     "blurb":
-    "I joined [Luna](meetluna.com) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it\'s **Proof of Concept**, and shipped the Luminos **MVP**.",
+    "I joined [Luna](meetluna.com) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it\'s **[Proof of Concept](http:\/\/luminos.io)**, and shipped the Luminos **MVP**.",
     "role":
     "ideation / research / UX / UI / prototyping / branding / marketing",
-    "imgCount" : 2
+    "imgCount" : 3
   },
   "honeit": {
     "title": "Honeit UX Consulting",
     "blurb":
-    "HoneIt was a 3-week consulting project with 2 other designers. Our client [HoneIt](https:\/\/www.honeit.com\/), an interview technology startup, wanted to improve the usability of their already shipped product. Together, we ran **usability tests** and **user interviews**, and collected and **synthesized** user feedback. I compiled detailed **documentations** of usability audits results and redesigns for our deliverables.",
+    "HoneIt was a 3-week consulting project with 2 other designers. Our client [HoneIt](https:\/\/www.honeit.com\/), an interview technology startup, wanted to improve the usability of their already shipped product. Together, we ran **usability tests** and **user interviews**, and collected and **synthesized** user feedback. I compiled our deliverables: detailed **documentation** of our usability audit and redesigns.",
     "role":
     "ideation / UX / research / presentation",
     "imgCount" : 8
@@ -108,7 +100,6 @@ class ArticleView extends Component {
         this.items = [];
         this.name = [];
         this.artic = <Artic items={this.items} name={this.name}/>;
-
     }
 
     componentDidMount(){
@@ -131,7 +122,7 @@ class ArticleView extends Component {
 
     render(){
         return <Container>
-               <span id="top" />
+            <span id="top" />
             <Row>
                <Col lg={{span:8,offset:2}} className="py-5" id={this.props.id}>
                    <h1>{this.pj.title}</h1>
@@ -189,8 +180,4 @@ export const Noofie = (props) => {
 
 export const Luna = (props) => {
     return <ArticleView id="luna" /> ;
-}
-
-export const Freelance = (props) => {
-    return <ArticleView id="freelance" /> ;
 }

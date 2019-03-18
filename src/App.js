@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
-
-import { PjPreview, Luna , Noofie , Freelance } from './partials/Projects';
-import { MenuXS, MenuLG } from './partials/Menu'
-
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
-
 import {Container , Row, Col }from 'react-bootstrap';
+import { PjPreview, Luna , Noofie } from './partials/Projects';
+import { MenuXS, MenuLG } from './partials/Menu'
 
 class App extends Component {
     render(){
@@ -38,7 +34,7 @@ class Home extends Component {
         this.scrollToTop = this.scrollToTop.bind(this);
 
         this.items = ["luna","noofie","honeit","huawei","others"];
-        this.name = ["壹","贰","叁","肆","other"];
+        this.name = ["Luna | 壹","Noofie | 贰","honeit | 叁","huawei | 肆","other"];
     }
 
     componentDidMount(){
