@@ -5,7 +5,8 @@
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "sass": "node-sass --watch sass/ -o src/"
   },
   "repository": {
     "type": "git",
@@ -14,13 +15,21 @@
   "author": "Rafael Pedicini <code@rafrex.com>",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "fs": "0.0.1-security",
+    "node-sass": "^4.11.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
+    "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.0.0",
+    "react-image-fallback": "^8.0.0",
     "react-image-lightbox": "^5.0.0",
     "react-interactive": "^0.8.1",
+    "react-markdown": "^4.0.6",
     "react-modal-image": "^2.1.4",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "react-scroll": "^1.7.11",
+    "react-scrollspy": "^3.3.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -35,6 +44,9 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^1.0.0",
     "style-loader": "^0.21.0",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"

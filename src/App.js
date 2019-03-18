@@ -1,86 +1,107 @@
 import React, { Component } from 'react';
 import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
-
-import { Luna , Noofie , Huawei , Freelance } from './partials/Projects';
-
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {Container , Row, Col }from 'react-bootstrap';
+import { PjPreview, Luna , Noofie } from './partials/Projects';
+import { MenuXS, MenuLG } from './partials/Menu'
 
 class App extends Component {
     render(){
-        return(
-            <BrowserRouter>
-            <Switch>
-                <Route exact path='/' component={Home} />
-            <Route exact path='/huawei' component={Huawei}/>
-                <Route exact path='/noofie' component={Noofie}/>
-                <Route exact path='/luna' component={Luna}/>
-                <Route exact path='/freelance' component={Freelance}/>
-            </Switch>
-            </BrowserRouter>
-        );
+        return(<div>
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+{/*                        <Route exact path='/noofie' component={Noofie}/>
+                        <Route exact path='/luna' component={Luna}/>
+                        <Route exact path='/freelance' component={Freelance}/>*/}
+                    </Switch>
+                </BrowserRouter>
+
+                <Container>
+                    <Row><Col className="text-lg-right small pb-3">Jett Wang 2019 ©</Col></Row>
+                </Container>
+            </div>);
     }
 }
 
 class Home extends Component {
-    render(){
-        return(<div>
-          <img id="logo" src="src/assets/jwhy.svg" />
-           <h1>Hi, I&#39;m Jett.</h1>
-           <h2>I&#39;m a product designer.</h2>
-           <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.</p>
-           <p>My background is in front end development and behavioural economics.</p>
-            <p><a href="src/assets/resume.pdf">Resume</a> / <a href="https://linkedin.com/in/jettlwang">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com">Get in Touch</a></p>
-            <br />
-           <p>Here are my projects:</p>
-           <table>
-              <tbody>
-               <tr>
-                  <td>
-                      <h4>Luna (coming soon)</h4>
-                      <p>I touch everything involving product and design.</p>
-                      <p>strategy / market research / product development / UX / UI / visual / branding / project management</p>
-                  </td>
-                  <td><img src="src/assets/work/luna.png" /></td>
-               </tr>
-               <tr>
-                  <td>
-                      <h4><a href="huawei">Huawei Shanghai Internship</a></h4>
-                      <p>I worked on the Mobile OS innovation team and helped explore new concepts for EMUI 7.0 & 8.0. I also made hi-fi prototypes and conducted a variety of user interviws.</p>
-                      <p>strategy / UX / user research / prototyping </p>
-                  </td>
-                  <td><img src="src/assets/work/huawei.gif" /></td>
-                </tr>
-               <tr>
-                  <td>
-                      <h4><a href="noofie">Noofie App</a></h4>
-                      <p>An app I worked on from concept to UI. I even did a little bit of code.</p>
-                      <p>strategy / market research / UX / UI / code </p>
-                  </td>
-                  <td><img src="src/assets/noofie/cover.jpg" /></td>
-               </tr>
-               <tr>
-                  <td>
-                      <h4><a href="freelance">Other Designs</a></h4>
-                      <p>A small collection of visual designs I did.</p>
-                      <p>strategy / market research / UX / UI / code </p>
-                  </td>
-                  <td><img src="src/assets/work/free6.png" /></td>
-               </tr>
-               </tbody>
-           </table>
-               <br />
-            <p>Here are other things my attention goes to:</p>
-            <ul>
-                <li>Maintaining <a href="https://tellmeaboutyourlife.com/">tellmeaboutyourlife.com</a></li>
-                <li><a href="https://www.nonviolentcommunication.com/pdf_files/4part_nvc_process.pdf">Nonviolent Communication</a></li>
-                <li>Design ethics & <a href="http://humanetech.com/designers/">humane technology</a></li>
-                <li><a href="http://freakonomics.com/podcast/richard-thaler/">Nudge</a></li>
-               <li><a href="https://www.goodreads.com/user/show/45864430-jett-wang">Important Social Media</a></li>
-            </ul>
-               <hr />
-               <small>Ironically, this website is built in ReactJS.</small>
+    constructor(props) {
+        super(props);
+        this.bkgX = Math.floor(Math.random() * 75) - 5;
+        this.bkgY = Math.floor(Math.random() * 85) - 5;
 
-        </div>);}
-    
+        this.scrollToTop = this.scrollToTop.bind(this);
+
+        this.items = ["luna","noofie","honeit","huawei","others"];
+        this.name = ["Luna | 壹","Noofie | 贰","honeit | 叁","huawei | 肆","other"];
+    }
+
+    componentDidMount(){
+        Events.scrollEvent.register('begin', function () {  });
+        Events.scrollEvent.register('end', function () {    });
+     }
+
+    scrollToTop() {scroll.scrollToTop();}
+    scrollTo() {scroller.scrollTo('scroll-to-element', {duration: 800,delay: 0,smooth: 'easeInOutQuart'})}
+    scrollToWithContainer() {let goToContainer = new Promise((resolve, reject) => {Events.scrollEvent.register('end', () => {resolve();Events.scrollEvent.remove('end');});scroller.scrollTo('scroll-container', {duration: 800,delay: 0,smooth: 'easeInOutQuart'});});goToContainer.then(() =>scroller.scrollTo('scroll-container-second-element', {duration: 800,delay: 0,smooth: 'easeInOutQuart',containerId: 'scroll-container'}));}
+
+     componentWillUnmount() {
+          Events.scrollEvent.remove('begin');
+          Events.scrollEvent.remove('end');
+     }
+
+
+    render(){
+        return(<div >
+                <div id="header-after" style={{
+                        "backgroundImage" : "url('src/assets/pfp.png')",
+                            "backgroundPosition" : this.bkgX + "vw " + this.bkgY + "vh"
+                    }}>
+                </div>
+
+                <Container>
+                    <Row  id="top">
+                        <Col lg={10}>
+                            <Row className="vertical-center" id="header">
+                                <Col xs lg={{ span: 8, offset: 2 }} >
+                                    <h1> 你好👋 I&#39;m Jett</h1>
+                                    <h2>I&#39;m a <strong>product designer</strong></h2>
+                                    <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.<br/>My background is in front end development and behavioural economics.</p>
+                                    <p className="caption small"><a href="src/assets/resume.pdf" className="text-nowrap">Resume</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
+                                </Col>
+                            </Row>
+
+                            <PjPreview id="luna" name="壹" comesoon/>
+                            <PjPreview id="noofie" name="贰" />
+                            <PjPreview id="honeit" name="叁" />
+                            <PjPreview id="huawei" name="肆" />
+
+                            <div id="others"><Row className="d-flex vertical-center justify-center">
+                                <Col xs md={{span:6,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
+                                    <p>Here are other things my attention goes to</p>
+                                </Col>
+                                 <div className="w-100"></div>
+                                <Col xs md={{span:8,offset:2}} lg={{span:7,offset:5}} className="py-2">
+                                    <ul className="list-unstyled">
+                                        <li>Maintaining <a href="https://tellmeaboutyourlife.com/">tellmeaboutyourlife.com</a></li>
+                                        <li><a href="https://www.nonviolentcommunication.com/pdf_files/4part_nvc_process.pdf">Nonviolent Communication</a></li>
+                                        <li>Design ethics & <a href="http://humanetech.com/designers/">humane technology</a></li>
+                                        <li><a href="http://freakonomics.com/podcast/richard-thaler/">Nudge</a></li>
+                                        <li><a href="https://www.goodreads.com/user/show/45864430-jett-wang">Important Social Media</a></li>
+                                    </ul>
+                                </Col>
+                            </Row></div>
+                        </Col>
+
+                        <MenuLG items={this.items} name={this.name} />
+                    </Row>
+                    <MenuXS items={this.items} name={this.name} />
+                </Container>
+            </div>);}
 }
+
+
+
 
 export default App;
