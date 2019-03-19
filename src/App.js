@@ -85,6 +85,7 @@ class Home extends Component {
                                 <Col xs md={{span:8,offset:2}} lg={{span:7,offset:5}} className="py-2">
                                     <ul className="list-unstyled">
                                         <li>Maintaining <a href="https://tellmeaboutyourlife.com/">tellmeaboutyourlife.com</a></li>
+                                        <li><a href="https://generalassemb.ly/marketing/digital-marketing">Certified Didital Marketing Level 1</a> online course</li>
                                         <li><a href="https://www.nonviolentcommunication.com/pdf_files/4part_nvc_process.pdf">Nonviolent Communication</a></li>
                                         <li>Design ethics & <a href="http://humanetech.com/designers/">humane technology</a></li>
                                         <li><a href="http://freakonomics.com/podcast/richard-thaler/">Nudge</a></li>
