@@ -13,7 +13,7 @@ export const proojs = {
     "blurb":
     "Noofie is a professional social network for students and young professionals. It is a continuum of my final, individual project completed at General Assembly in 2016. I set out to examine **career anxiety** among college students. I conducted **expert interviews** and **comparative studies**, and arrived at networking and **mentorship** as the solution. I then created and iterated, with **user feedback**, from **wireframes** to final **UI design**. I even created a landing page and a pitch deck.",
     "role": 
-    "ideation / UX / UI / research / prototyping / branding / marketing",
+    "ideation / UX / UI / research / prototyping / mobile / branding / marketing",
     "imgCount" : 18
   },
   "huawei": {
@@ -21,15 +21,15 @@ export const proojs = {
     "blurb":
     "I worked under the international innovation team within Huawei\'s mobile OS(EMUI) team.\u2029 I took part in  **brainstorming** defining [EMUI 8.0](https:\/\/consumer.huawei.com\/en\/emui\/emui-8\/)\'s AI assistant module. I also worked on  **high fidelity prototyping**  with [Flinto](https:\/\/www.flinto.com) & [Origami Studio](https:\/\/origami.design\/). I also conducted **guerrilla user research** tasks and collected user data & feedback.",
     "role":
-    "ideation / UX / research / prototyping",
+    "ideation / UX / research / prototyping / mobile",
     "imgCount" : 4
   },
   "luna": {
     "title": "Luminos by Luna",
     "blurb":
-    "I joined [Luna](meetluna.com) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it\'s **[Proof of Concept](http:\/\/luminos.io)**, and shipped the Luminos **MVP**.",
+    "I joined [Luna](meetluna.com) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it's **[Proof of Concept](http://luminos.io)**, and shipped the Luminos **MVP**. I also defined the communication style of Luminos, from **branding** to **visual identity**, to **design systems** and **UI components**.",
     "role":
-    "ideation / research / UX / UI / prototyping / branding / marketing",
+    "ideation / research / UX / UI / prototyping / mobile / branding / marketing",
     "imgCount" : 3
   },
   "honeit": {
@@ -37,7 +37,7 @@ export const proojs = {
     "blurb":
     "HoneIt was a 3-week consulting project with 2 other designers. Our client [HoneIt](https:\/\/www.honeit.com\/), an interview technology startup, wanted to improve the usability of their already shipped product. Together, we ran **usability tests** and **user interviews**, and collected and **synthesized** user feedback. I compiled our deliverables: detailed **documentation** of our usability audit and redesigns.",
     "role":
-    "ideation / UX / research / presentation",
+    "ideation / UX / research / presentation / web",
     "imgCount" : 8
   },
 }

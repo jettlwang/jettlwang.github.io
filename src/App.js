@@ -66,8 +66,8 @@ class Home extends Component {
                             <Row className="vertical-center" id="header">
                                 <Col xs lg={{ span: 8, offset: 2 }} >
                                     <h1> 你好👋 I&#39;m Jett</h1>
-                                    <h2>I&#39;m a <strong>product designer</strong></h2>
-                                    <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.<br/>My background is in front end development and behavioural economics.</p>
+                                    <h2>I&#39;m a <strong>product designer and strategist</strong></h2>
+                                    <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.<br/>Qualities I value are collaboration, authenticity and accountability, and I embody them in both my work and myself.</p>
                                     <p className="caption small"><a href="src/assets/resume.pdf" className="text-nowrap">Resume</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
                                 </Col>
                             </Row>
@@ -87,7 +87,7 @@ class Home extends Component {
                                         <li>Maintaining <a href="https://tellmeaboutyourlife.com/">tellmeaboutyourlife.com</a></li>
                                         <li><a href="https://generalassemb.ly/marketing/digital-marketing">Certified Didital Marketing Level 1</a> online course</li>
                                         <li><a href="https://www.nonviolentcommunication.com/pdf_files/4part_nvc_process.pdf">Nonviolent Communication</a></li>
-                                        <li>Design ethics & <a href="http://humanetech.com/designers/">humane technology</a></li>
+                                        <li><a href="https://humanebydesign.com/">Design ethics</a> & <a href="http://humanetech.com/designers/">humane technology</a></li>
                                         <li><a href="http://freakonomics.com/podcast/richard-thaler/">Nudge</a></li>
                                         <li><a href="https://www.goodreads.com/user/show/45864430-jett-wang">Important Social Media</a></li>
                                     </ul>
