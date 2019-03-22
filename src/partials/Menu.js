@@ -12,7 +12,7 @@ export const MenuLG = (props) => {
             <li className="mb-3"><Link to="top" href='' spy={false} smooth={true} duration={500} ><img id="logo" src="src/assets/jwhy.svg" /></Link></li>
              {props.items.map( (e,i) =>
                    <li key={i}>
-                        <Link className="nav-item" href='' activeClass="active" to={props.items[i]} spy={true} smooth={true} duration={500} >{props.name[i]}</Link>
+                        <Link className="nav-item" href='' activeClass="active" to={props.items[i]} spy smooth hashSpy duration={500} >{props.name[i]}</Link>
                    </li>
               )}
 {/*              <li><Link className="nav-item small-caps" to="top" href='' spy={false} smooth={true} duration={500} >top</Link></li> */}
