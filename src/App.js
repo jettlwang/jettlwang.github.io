@@ -12,6 +12,7 @@ class App extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route exact path='/' component={Home} />
+                        <Route path='/resume' component={() => { window.location.replace('src/assets/JettWangResume_UX.pdf')}} />
 {/*                        <Route exact path='/noofie' component={Noofie}/>
                         <Route exact path='/luna' component={Luna}/>
                         <Route exact path='/freelance' component={Freelance}/>*/}
@@ -66,9 +67,9 @@ class Home extends Component {
                             <Row className="vertical-center" id="header">
                                 <Col xs lg={{ span: 8, offset: 2 }} >
                                     <h1> 你好👋 I&#39;m Jett</h1>
-                                    <h2>I&#39;m a <strong>product designer and strategist</strong></h2>
+                                    <h2>I&#39;m a <strong>product designer</strong></h2>
                                     <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.<br/>Qualities I value are collaboration, authenticity and accountability, and I embody them in both my work and myself.</p>
-                                    <p className="caption small"><a href="src/assets/resume.pdf" className="text-nowrap">Resume</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
+                                    <p className="caption small"><a href="resume" className="text-nowrap">Resume</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
                                 </Col>
                             </Row>
 
@@ -79,7 +80,7 @@ class Home extends Component {
 
                             <div id="others"><Row className="d-flex vertical-center justify-center">
                                 <Col xs md={{span:6,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
-                                    <p>Here are other things my attention goes to</p>
+                                    <p><strong>Here are other things my attention goes to</strong></p>
                                 </Col>
                                  <div className="w-100"></div>
                                 <Col xs md={{span:8,offset:2}} lg={{span:7,offset:5}} className="py-2">
