@@ -140,7 +140,7 @@ a.nav-item.active {
   opacity: 0.45; }
   @media (min-width: 576px) {
     #header-after {
-      opacity: initial; } }
+      opacity: 0.77; } }
   #header-after::before {
     content: '';
     position: absolute;
