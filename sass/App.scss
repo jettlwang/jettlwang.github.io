@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700|Rubik:500');
 $jettred: #9a1612;
-$jettred300: #d24c3a;
-$jettred800: #650000; 
-$jettaqua: #47FFE4;
+$jettaccent: rgba(154,22,18,0.75);
 
 $noofieyellow: #EDAE49;
 $lunanebula: #BA7DD8;
 $emuiaqua: #21F9D9;
 $honeitblue: #6CBEEA;
-$black: rgba(0,0,0,.72);
+$black: rgba(0,0,0,.75);
 $grey1: rgba(0,0,0,.64);
 $grey2: rgba(0,0,0,.24);
 $grey3: rgba(0,0,0,.15);
@@ -17,6 +15,13 @@ $grey3: rgba(0,0,0,.15);
   background-color: $property;
   &>hr { border-color:$property; }
 }
+
+@mixin underline($color) {
+    background-image: linear-gradient(to right, $color 0%, $color 100%);
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    background-size: 100% 2px;
+  }
 
 body {
     font-family: 'Lora', serif;
@@ -46,13 +51,13 @@ body {
 
     strong{
         font-weight: inherit!important;
-        @include setColor($jettaqua);
+        @include underline($jettaccent);
     }
 
-    #noofie strong{ @include setColor($noofieyellow); }
-    #huawei strong{ @include setColor($emuiaqua); }
-    #luna strong{ @include setColor($lunanebula); }
-    #honeit strong{ @include setColor($honeitblue); }
+    #noofie strong{ @include underline($noofieyellow); }
+    #huawei strong{ @include underline($emuiaqua); }
+    #luna strong{ @include underline($lunanebula); }
+    #honeit strong{ @include underline($honeitblue); }
 
     .small{
         font-size: 0.8rem;
@@ -175,7 +180,7 @@ a.nav-item.active {
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.45;
-    @media (min-width: 576px) { opacity: initial;}
+    @media (min-width: 576px) { opacity: 0.77;}
 
     &::before{
         content: '';
@@ -241,4 +246,5 @@ a.nav-item.active {
         }
     }
 }
+
 
