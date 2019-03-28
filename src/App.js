@@ -20,7 +20,7 @@ class App extends Component {
                 </BrowserRouter>
 
                 <Container className="px-4 px-lg-0">
-                    <Row><Col className="text-lg-right small pb-3">Jett Wang 2019 ©</Col></Row>
+                    <Row><Col className="text-lg-right small pb-3">Jett Wang 2019 / <a href="https://github.com/jettlwang/jettlwang.github.io">source code</a></Col></Row>
                 </Container>
             </div>);
     }
@@ -80,7 +80,7 @@ class Home extends Component {
 
                             <div id="others"><Row className="d-flex vertical-center justify-center">
                                 <Col xs md={{span:6,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
-                                    <p><strong>Here are other things my attention goes to</strong></p>
+                                    <p>Here are other things my attention goes to</p>
                                 </Col>
                                  <div className="w-100"></div>
                                 <Col xs md={{span:8,offset:2}} lg={{span:7,offset:5}} className="py-2">
