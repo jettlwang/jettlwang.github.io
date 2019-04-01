@@ -27,7 +27,7 @@ export const proojs = {
   "luna": {
     "title": "Luminos by Luna",
     "blurb":
-    "I joined [Luna](meetluna.com) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it's **Proof of Concept**, and shipped the Luminos **MVP**. I also defined the communication style of Luminos, from **branding** to **visual identity**, to **design systems** and **UI components**.",
+    "I joined [Luna](https://www.meetluna.com/) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it's **Proof of Concept**, and shipped the Luminos **MVP**. I also defined the communication style of Luminos, from **branding** to **visual identity**, to **design systems** and **UI components**.",
     "role":
     "ideation / research / UX / UI / prototyping / research / mobile / branding / marketing",
     "imgCount" : 3
