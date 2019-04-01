@@ -20,7 +20,7 @@ class App extends Component {
                 </BrowserRouter>
 
                 <Container className="px-4 px-lg-0">
-                    <Row><Col className="text-lg-right small pb-3">Jett Wang 2019 / <a href="https://github.com/jettlwang/jettlwang.github.io">source code</a></Col></Row>
+                    <Row><Col className="text-lg-right small pb-3">Designed & Built, Jett Wang 2019 / <a href="https://github.com/jettlwang/jettlwang.github.io">source code</a></Col></Row>
                 </Container>
             </div>);
     }
