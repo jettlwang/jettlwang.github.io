@@ -14,7 +14,7 @@ export const proojs = {
     "Noofie is a professional social network for students and young professionals. It is a continuum of my final, individual project completed at General Assembly in 2016. I set out to examine **career anxiety** among college students. I conducted **expert interviews** and **comparative studies**, and arrived at networking and **mentorship** as the solution. I then created and iterated, with **user feedback**, from **wireframes** to final **UI design**. I even created a landing page and a pitch deck.",
     "role": 
     "ideation / UX / UI / research / prototyping / mobile / branding / marketing",
-    "imgCount" : 16
+    "imgCount" : 9
   },
   "huawei": {
     "title": "Huwei Shanghai Internship",
@@ -30,7 +30,7 @@ export const proojs = {
     "I joined [Luna](https://www.meetluna.com/) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it's **Proof of Concept**, and shipped the Luminos **MVP**. I also defined the communication style of Luminos, from **branding** to **visual identity**, to **design systems** and **UI components**.",
     "role":
     "ideation / research / UX / UI / prototyping / research / mobile / branding / marketing",
-    "imgCount" : 3
+    "imgCount" : 4,
   },
   "honeit": {
     "title": "Honeit UX Consulting",

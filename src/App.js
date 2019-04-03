@@ -13,9 +13,9 @@ class App extends Component {
                     <Switch>
                         <Route exact path='/' component={Home} />
                         <Route path='/resume' component={() => { window.location.replace('src/assets/JettWangResume_UX.pdf')}} />
-{/*                        <Route exact path='/noofie' component={Noofie}/>
-                        <Route exact path='/luna' component={Luna}/>
-                        <Route exact path='/freelance' component={Freelance}/>*/}
+                        <Route path='/noofie' component={() => { window.location.replace('src/assets/cs/noofie.pdf')}} />
+                        <Route path='/luna' component={() => { window.location.replace('src/assets/cs/luna.pdf')}} />
+                        <Route path='/lunafull' component={() => { window.location.replace('https://www.icloud.com/keynote-live/sc:09JKbeC5YOAhh8JUVaX8fE3up7UuOXoQqfr_UMYgGgCHMcg_baTs-DB41lnRIZ6P0T0')}} />
                     </Switch>
                 </BrowserRouter>
 
@@ -73,7 +73,7 @@ class Home extends Component {
                                 </Col>
                             </Row>
 
-                            <PjPreview id="luna" name="壹" comesoon/>
+                            <PjPreview id="luna" name="壹"/>
                             <PjPreview id="noofie" name="贰" />
                             <PjPreview id="honeit" name="叁" />
                             <PjPreview id="huawei" name="肆" />
