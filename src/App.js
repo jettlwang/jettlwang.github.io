@@ -13,8 +13,8 @@ class App extends Component {
                     <Switch>
                         <Route exact path='/' component={Home} />
                         <Route path='/resume' component={() => { window.location.replace('src/assets/JettWangResume_UX.pdf')}} />
-                        <Route path='/noofie' component={() => { window.location.replace('src/assets/cs/noofie.pdf')}} />
-                        <Route path='/luna' component={() => { window.location.replace('src/assets/cs/luna.pdf')}} />
+                        <Route path='/noofie' component={() => { window.location.replace("src/assets/cs/Noofie.pdf")}} />
+                        <Route path='/luna' component={() => { window.location.replace('src/assets/cs/Luna.pdf')}} />
                         <Route path='/lunafull' component={() => { window.location.replace('https://www.icloud.com/keynote-live/sc:09JKbeC5YOAhh8JUVaX8fE3up7UuOXoQqfr_UMYgGgCHMcg_baTs-DB41lnRIZ6P0T0')}} />
                     </Switch>
                 </BrowserRouter>
