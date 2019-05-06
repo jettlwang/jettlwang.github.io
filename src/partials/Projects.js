@@ -4,7 +4,7 @@ import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } 
 import ReactMarkdown from 'react-markdown';
 import ReactImageFallback from "react-image-fallback";
 import {Container , Row, Col }from 'react-bootstrap';
-import { Badge, Carousel, Image } from 'react-bootstrap';
+import { Badge, Carousel, Image, Button } from 'react-bootstrap';
 import { MenuXS, MenuLG } from './Menu'
 
 export const proojs = {
@@ -14,7 +14,8 @@ export const proojs = {
     "Noofie is a professional social network for students and young professionals. It is a continuum of my final, individual project completed at General Assembly in 2016. I set out to examine **career anxiety** among college students. I conducted **expert interviews** and **comparative studies**, and arrived at networking and **mentorship** as the solution. I then created and iterated, with **user feedback**, from **wireframes** to final **UI design**. I even created a landing page and a pitch deck.",
     "role": 
     "ideation / UX / UI / research / prototyping / mobile / branding / marketing",
-    "imgCount" : 9
+    "imgCount" : 9,
+    "cs" : true,
   },
   "huawei": {
     "title": "Huwei Shanghai Internship",
@@ -22,7 +23,8 @@ export const proojs = {
     "I worked under the international innovation team within Huawei\'s mobile OS(EMUI) team.\u2029 I took part in  **brainstorming** defining [EMUI 8.0](https:\/\/consumer.huawei.com\/en\/emui\/emui-8\/)\'s AI assistant module. I also worked on  **high fidelity prototyping**  with [Flinto](https:\/\/www.flinto.com) & [Origami Studio](https:\/\/origami.design\/). I also conducted **guerrilla user research** tasks and collected user data & feedback.",
     "role":
     "ideation / UX / research / prototyping / mobile",
-    "imgCount" : 4
+    "imgCount" : 4,
+    "cs" : false,
   },
   "luna": {
     "title": "Luminos by Luna",
@@ -31,6 +33,7 @@ export const proojs = {
     "role":
     "ideation / research / UX / UI / prototyping / research / mobile / branding / marketing",
     "imgCount" : 4,
+    "cs": true,
   },
   "honeit": {
     "title": "Honeit UX Consulting",
@@ -38,7 +41,8 @@ export const proojs = {
     "HoneIt was a 3-week consulting project with 2 other designers. Our client [HoneIt](https:\/\/www.honeit.com\/), an interview technology startup, wanted to improve the usability of their already shipped product. Together, we ran **usability tests** and **user interviews**, and collected and **synthesized** user feedback. I compiled our deliverables: detailed **documentation** of our usability audit and redesigns.",
     "role":
     "ideation / UX / research / presentation / web",
-    "imgCount" : 8
+    "imgCount" : 8,
+    "cs" : false,
   },
 }
 
@@ -56,16 +60,19 @@ export class PjPreview extends Component {
             casItems.push(item);
         }
         return <div id={this.props.id} className="pt-6">
-            <Row className="align-col-baseline">
-                <Col lg={2}  className="text-lg-right caption"><h6>{this.props.name}</h6></Col>
-                <Col lg={10} className="mt-2">
+            <Row className="align-col-baseline mb-4">
+                <Col lg={2}  className="text-lg-right caption grey2"><h6>{this.props.name}</h6></Col>
+                <Col sm={6} className="mt-2">
                     <h3>{pj.title}
                         {this.props.link && <a href={this.props.id}><Badge className="caption px-2">CASE STUDY</Badge></a>}
                         {this.props.comesoon && <Badge className="caption px-2 small">coming soon</Badge>} </h3>
                 </Col>
+                <Col className="text-sm-right">
+                  {pj.cs && <Button variant="outline-primary"  size="lg" className="caption small" href={"/"+this.props.id}>case study</Button>}
+                </Col>
             </Row>
             <Row  className="">
-                <Col lg={2} className="text-lg-right d-none d-lg-block">
+                <Col lg={2} className="text-lg-right d-none d-lg-block grey1">
                     <strong><hr /></strong>
                     <ul className="nav flex-column justify-right small text-capitalize">
                     {pj.role.split(" / ").map( (e,i) =>
@@ -75,7 +82,7 @@ export class PjPreview extends Component {
                 </Col>
                 <Col lg={{span:10,order:2}}>
                     <Row>
-                        <Col xl={10} className=""><ReactMarkdown source={pj.blurb} /></Col>
+                        <Col xl={11} className=""><ReactMarkdown source={pj.blurb} /></Col>
                         <Col xs className="d-lg-none small">{pj.role}</Col>
                         <Col lg={12}>
                             <Carousel interval={null} className="mt-3">

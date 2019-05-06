@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,700|Rubik:500");
-.grey2 {
-  color: rgba(0, 0, 0, 0.24);
-}
-
-.grey1 {
-  color: rgba(0, 0, 0, 0.64);
-}
-
 body {
   font-family: "Lora", serif;
   font-size: 1rem;
@@ -22,9 +14,6 @@ body a {
   font-weight: 700;
   color: rgba(0, 0, 0, 0.64);
   cursor: pointer !important;
-}
-body a.nav-item {
-  color: rgba(0, 0, 0, 0.24);
 }
 body a:hover, body a:hover > span {
   text-decoration: none !important;
@@ -71,11 +60,11 @@ body #honeit strong {
 }
 body .small, body #menu-lg #menu, #menu-lg body #menu {
   font-size: 0.8rem;
-  /*color: $grey1;*/
+  color: rgba(0, 0, 0, 0.64);
   letter-spacing: 0.1px;
 }
 body .caption, body .nav > li > a, body blockquote, body .blockquote {
-  /*color: $grey2;*/
+  color: rgba(0, 0, 0, 0.24);
   font-family: "Rubik", sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -84,7 +73,6 @@ body .caption > a, body .nav > li > a > a, body blockquote > a, body .blockquote
   color: rgba(0, 0, 0, 0.24);
 }
 body blockquote, body .blockquote {
-  color: rgba(0, 0, 0, 0.38);
   font-size: inherit;
 }
 
@@ -111,16 +99,9 @@ body blockquote, body .blockquote {
   padding-bottom: 3rem !important;
 }
 
-.btn-outline-primary {
-  padding: 0.8rem 1rem;
-  color: rgba(0, 0, 0, 0.38);
-  border-color: rgba(0, 0, 0, 0.24);
-  border-width: 1px;
-}
-.btn-outline-primary:hover {
-  background-color: initial;
-  border-color: rgba(0, 0, 0, 0.64);
-  color: rgba(0, 0, 0, 0.75);
+.btn-cs {
+  color: blueviolet;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 #logo {
@@ -176,7 +157,6 @@ a.nav-item.active {
 }
 #menu-lg #menu .nav .nav-item {
   display: list-item;
-  /*color: $grey2;*/
 }
 
 #header {

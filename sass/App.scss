@@ -10,6 +10,10 @@ $black: rgba(0,0,0,.75);
 $grey1: rgba(0,0,0,.64);
 $grey2: rgba(0,0,0,.24);
 $grey3: rgba(0,0,0,.15);
+$black38: rgba(0,0,0,.38);
+
+.grey2{ color: $grey2 }
+.grey1{ color: $grey1 }
 
 @mixin setColor($property) {
   background-color: $property;
@@ -34,6 +38,7 @@ body {
         font-weight: 700;
         color: $grey1;
         cursor: pointer !important;
+        &.nav-item {color: $grey2 }
 
         &:hover, &:hover > span {
             text-decoration: none !important;
@@ -61,12 +66,12 @@ body {
 
     .small{
         font-size: 0.8rem;
-        color: $grey1;
+        /*color: $grey1;*/
         letter-spacing: 0.1px;
     }
 
     .caption {
-        color: $grey2;
+        /*color: $grey2;*/
         font-family: 'Rubik', sans-serif;
         text-transform: uppercase;
         letter-spacing: 3px;
@@ -76,6 +81,7 @@ body {
 
     blockquote, .blockquote{
         @extend .caption;
+        color: $black38;
         font-size: inherit;
     }
 }
@@ -102,7 +108,19 @@ body {
     padding-bottom: 3rem!important;
 }
 
-//-----
+//----
+
+.btn-outline-primary{
+    padding: .8rem 1rem;
+    color: $black38;
+    border-color: $grey2;
+    border-width: 1px;
+    &:hover{
+        background-color: initial;
+        border-color: $grey1;
+        color: $black;
+    }
+}
 
 #logo{
     width: 52px;
@@ -160,6 +178,8 @@ a.nav-item.active {
         .nav{
             .nav-item{
                 display: list-item;
+                /*color: $grey2;*/
+
             }
         }
     }
