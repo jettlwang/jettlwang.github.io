@@ -232,7 +232,7 @@ a.nav-item.active {
   width: 3rem;
 }
 .carousel .carousel-control-next .carousel-control-next-icon, .carousel .carousel-control-next .carousel-control-prev-icon, .carousel .carousel-control-prev .carousel-control-next-icon, .carousel .carousel-control-prev .carousel-control-prev-icon {
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.18);
   height: 2rem;
   width: 2rem;
   background-size: 10px;
@@ -248,7 +248,7 @@ a.nav-item.active {
   height: 12px;
   border-radius: 50%;
   border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.18);
 }
 .carousel .carousel-indicators li.active {
   background-color: rgba(0, 0, 0, 0.64);

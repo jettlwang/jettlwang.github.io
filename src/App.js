@@ -29,8 +29,8 @@ class App extends Component {
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.bkgX = Math.floor(Math.random() * 75) - 5;
-        this.bkgY = Math.floor(Math.random() * 85) - 5;
+        this.bkgX = Math.floor(Math.random() * 55) - 5;
+        this.bkgY = Math.floor(Math.random() * 65) - 5;
 
         this.scrollToTop = this.scrollToTop.bind(this);
 
@@ -68,7 +68,7 @@ class Home extends Component {
                                 <Col xs lg={{ span: 8, offset: 2 }} >
                                     <h1> 你好👋 I&#39;m Jett</h1>
                                     <h2>I&#39;m a <strong>product designer</strong></h2>
-                                    <p>I&#39;m currently the design lead at <a href="https://meetluna.com">Luna</a>.<br/>Qualities I value are collaboration, authenticity and accountability, and I embody them in both my work and myself.</p>
+                                    <p>Qualities I value are collaboration, authenticity and accountability, and I embody them in both my work and myself.</p>
                                     <p className="caption small"><a href="resume" className="text-nowrap">Resume</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
                                 </Col>
                             </Row>

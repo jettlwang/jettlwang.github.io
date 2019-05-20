@@ -11,7 +11,7 @@ export const proojs = {
   "noofie": {
     "title": "Noofie App",
     "blurb":
-    "Noofie is a professional social network for students and young professionals. It is a continuum of my final, individual project completed at General Assembly in 2016. I set out to examine **career anxiety** among college students. I conducted **expert interviews** and **comparative studies**, and arrived at networking and **mentorship** as the solution. I then created and iterated, with **user feedback**, from **wireframes** to final **UI design**. I even created a landing page and a pitch deck.",
+"Noofie is a professional social network for students and young professionals aiming to address career anxiety among college students. I conducted **expert interviews** and **comparative studies** to arrive to the concept. Then I iterated with 4 **usability tests** from **wireframes** to **UI design**. I even created a landing page and a pitch deck.\r\n",
     "role": 
     "ideation / UX / UI / research / prototyping / mobile / branding / marketing",
     "imgCount" : 9,
@@ -20,7 +20,7 @@ export const proojs = {
   "huawei": {
     "title": "Huwei Shanghai Internship",
     "blurb":
-    "I worked under the international innovation team within Huawei\'s mobile OS(EMUI) team.\u2029 I took part in  **brainstorming** defining [EMUI 8.0](https:\/\/consumer.huawei.com\/en\/emui\/emui-8\/)\'s AI assistant module. I also worked on  **high fidelity prototyping**  with [Flinto](https:\/\/www.flinto.com) & [Origami Studio](https:\/\/origami.design\/). I also conducted **guerrilla user research** tasks and collected user data & feedback.",
+"I worked under the international innovation team within Huawei\'s mobile OS(EMUI) team.\u2029 I took part in  **brainstorming** defining [EMUI 8.0](https:\/\/consumer.huawei.com\/en\/emui\/emui-8\/)\'s AI assistant module and the later  **high fidelity prototyping**  with [Flinto](https:\/\/www.flinto.com) & [Origami Studio](https:\/\/origami.design\/). I also conducted various **guerrilla user research** and collected user data & feedback.\r\n",
     "role":
     "ideation / UX / research / prototyping / mobile",
     "imgCount" : 4,
@@ -29,7 +29,7 @@ export const proojs = {
   "luna": {
     "title": "Luminos by Luna",
     "blurb":
-    "I joined [Luna](https://www.meetluna.com/) during a pivot and quickly became the design lead for the new prototype product later know as Luminos. I facilitated various brainstorms and **sprints**, built **prototypes**, launched it's **Proof of Concept**, and shipped the Luminos **MVP**. I also defined the communication style of Luminos, from **branding** to **visual identity**, to **design systems** and **UI components**.",
+"I joined [Luna](meetluna.com) during a pivot and lead the design of iteration 2.0 later known as Luminos. I facilitated **design sprints**, built **prototypes**, launched the Proof of Concept, and shipped the Luminos **MVP**. I was also responsible for the communication from Luminos, from **branding** to **visual identity**, to **design systems** and **UI components**.\r\n",
     "role":
     "ideation / research / UX / UI / prototyping / research / mobile / branding / marketing",
     "imgCount" : 4,
@@ -38,7 +38,7 @@ export const proojs = {
   "honeit": {
     "title": "Honeit UX Consulting",
     "blurb":
-    "HoneIt was a 3-week consulting project with 2 other designers. Our client [HoneIt](https:\/\/www.honeit.com\/), an interview technology startup, wanted to improve the usability of their already shipped product. Together, we ran **usability tests** and **user interviews**, and collected and **synthesized** user feedback. I compiled our deliverables: detailed **documentation** of our usability audit and redesigns.",
+"I took on a 3-week consulting project with 2 other designers to improve the user experience for [HoneIt](https:\/\/www.honeit.com\/), an interview technology platform. Together, we ran **usability tests** and **user interviews**, synthesized our findings with **affinity mapping**, compiled and presented detailed **documentation** of our **usability audit** and **redesign**.",
     "role":
     "ideation / UX / research / presentation / web",
     "imgCount" : 8,
