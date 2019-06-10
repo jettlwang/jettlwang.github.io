@@ -68,8 +68,8 @@ class Home extends Component {
                                 <Col xs lg={{ span: 8, offset: 2 }} >
                                     <h1> 你好👋 I&#39;m Jett</h1>
                                     <h2>I&#39;m a <strong>product designer</strong></h2>
-                                    <p>Qualities I value are collaboration, authenticity and accountability, and I embody them in both my work and myself.</p>
-                                    <p className="caption small"><a href="resume" className="text-nowrap">Resume</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
+                                    <p>I am an interdiciplinary product designer with consciousness in human comupter interaction, behavioural economics, front-end development, product strategy and design thinking.</p>
+                                    <p className="caption small"><a href="https://twitter.com/hahajett" className="text-nowrap">Twitter</a> / <a href="https://linkedin.com/in/jettlwang" className="text-nowrap">LinkedIn</a> / <a href="mailto:jettlwang@gmail.com" className="text-nowrap">Get in Touch</a></p>
                                 </Col>
                             </Row>
 
