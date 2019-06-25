@@ -3,7 +3,7 @@ import {Route, Switch, BrowserRouter, Redirect} from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import {Container , Row, Col }from 'react-bootstrap';
-import { PjPreview, Luna , Noofie } from './partials/Projects';
+import { PjPreview,PjPreviewSM } from './partials/Projects';
 import { MenuXS, MenuLG } from './partials/Menu'
 
 class App extends Component {
@@ -34,8 +34,8 @@ class Home extends Component {
 
         this.scrollToTop = this.scrollToTop.bind(this);
 
-        this.items = ["luna","noofie","honeit","huawei","others"];
-        this.name = ["Luna | 壹","Noofie | 贰","honeit | 叁","huawei | 肆","other"];
+        this.items = ["luna","noofie","honeit","others"];
+        this.name = ["Luna","Noofie","other","about"];
     }
 
     componentDidMount(){
@@ -75,8 +75,8 @@ class Home extends Component {
 
                             <PjPreview id="luna" name="壹"/>
                             <PjPreview id="noofie" name="贰" />
-                            <PjPreview id="honeit" name="叁" />
-                            <PjPreview id="huawei" name="肆" />
+                            <PjPreviewSM id="honeit" name="叁"/>
+                            <PjPreviewSM id="huawei" name="肆"/>
 
                             <div id="others"><Row className="d-flex vertical-center justify-center">
                                 <Col xs md={{span:6,offset:4}} lg={{span:3,offset:2}} className="text-md-right text-lg-left py-2 blockquote">
