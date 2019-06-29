@@ -16,7 +16,7 @@ class App extends Component {
                         <Route path='/noofie' component={() => { window.location.replace("src/assets/cs/Noofie.pdf")}} />
                         <Route path='/luna' component={() => { window.location.replace('src/assets/cs/Luna.pdf')}} />
                         <Route path='/lunafull' component={() => { window.location.replace('https://www.icloud.com/keynote-live/sc:09JKbeC5YOAhh8JUVaX8fE3up7UuOXoQqfr_UMYgGgCHMcg_baTs-DB41lnRIZ6P0T0')}} />
-                        <Route exact path='/' component={() => { window.location.replace('https://www.notion.so/jettbase/Jett-s-Product-Design-Protfolio-30fd447ab5564d04b882616021cdb02c')}} />
+                        <Route exact path='/' component={() => { window.location.replace('https://www.notion.so/Jett-Wang-Product-Designer-5279090b67644f38b0f2086d995fbd3d')}} />
                     </Switch>
                 </BrowserRouter>
 
