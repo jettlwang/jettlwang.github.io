@@ -11,7 +11,7 @@ class App extends Component {
         return(<div>
                 <BrowserRouter>
                     <Switch>
-                        <Route path='home' component={Home} />
+                        <Route path='/home' component={Home} />
                         <Route path='/resume' component={() => { window.location.replace('src/assets/JettWangResume_UX.pdf')}} />
                         <Route path='/noofie' component={() => { window.location.replace("src/assets/cs/Noofie.pdf")}} />
                         <Route path='/luna' component={() => { window.location.replace('src/assets/cs/Luna.pdf')}} />
